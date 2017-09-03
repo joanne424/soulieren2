@@ -1,0 +1,886 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ECE68C28-94ED-476A-9DE1-C2C21FDF3CC3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DM2.Ent.Client.Views</RootNamespace>
+    <AssemblyName>DM2.Ent.Client.Views</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>http://10.10.9.131/ApplicationPublish/DM2.Ent.Client/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>DM2.Ent.Client</ProductName>
+    <PublisherName>BancLogix Corporation</PublisherName>
+    <SuiteName>Dealing Manager</SuiteName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>12</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\Images\App.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>9C28DED73EC5A70801387AF19206BEBB361ACB8F</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>DM2.Ent.Client.Views_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="ActiproSoftware.Docking.Wpf351, Version=11.1.545.0, Culture=neutral, PublicKeyToken=36ff2196ab5654b9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\ActiproSoftware.Docking.Wpf351.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiproSoftware.Editors.Wpf351, Version=11.1.545.0, Culture=neutral, PublicKeyToken=36ff2196ab5654b9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\ActiproSoftware.Editors.Wpf351.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiproSoftware.Ribbon.Wpf351, Version=11.1.545.0, Culture=neutral, PublicKeyToken=36ff2196ab5654b9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\ActiproSoftware.Ribbon.Wpf351.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiproSoftware.Shared.Wpf351, Version=11.1.545.0, Culture=neutral, PublicKeyToken=36ff2196ab5654b9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\ActiproSoftware.Shared.Wpf351.dll</HintPath>
+    </Reference>
+    <Reference Include="Caliburn.Micro">
+      <HintPath>..\..\Libs\Caliburn.Micro.dll</HintPath>
+    </Reference>
+    <Reference Include="Caliburn.Micro.Platform">
+      <HintPath>..\..\Libs\Caliburn.Micro.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Caliburn.Micro.Platform.Core">
+      <HintPath>..\..\Libs\Caliburn.Micro.Platform.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight">
+      <HintPath>..\..\Libs\GalaSoft.MvvmLight.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.WPF4">
+      <HintPath>..\..\Libs\GalaSoft.MvvmLight.WPF4.dll</HintPath>
+    </Reference>
+    <Reference Include="GifImageLib">
+      <HintPath>..\..\Libs\GifImageLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Infrastructure.Common">
+      <HintPath>..\..\Libs\Infrastructure.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Infrastructure.Log">
+      <HintPath>..\..\Libs\Infrastructure.Log.dll</HintPath>
+    </Reference>
+    <Reference Include="InterProcessCommunication">
+      <HintPath>..\..\Libs\InterProcessCommunication.dll</HintPath>
+    </Reference>
+    <Reference Include="IPCModel">
+      <HintPath>..\..\Libs\IPCModel.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\Libs\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\Libs\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\Libs\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Windows.Shell">
+      <HintPath>..\..\Libs\Microsoft.Windows.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="MouseKeyboardActivityMonitor, Version=3.0.1.29653, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\MouseKeyboardActivityMonitor.dll</HintPath>
+    </Reference>
+    <Reference Include="PerformanceStatisticCore">
+      <HintPath>..\..\Libs\PerformanceStatisticCore.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="PresentationUI, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="ReachFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity">
+      <HintPath>..\..\Libs\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="Xceed.Wpf.Toolkit">
+      <HintPath>..\..\Libs\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AOP\GlobalAspect.cs" />
+    <Compile Include="Common\ControlAttachProperty.cs" />
+    <Compile Include="Customer\NewCustomerView.xaml.cs">
+      <DependentUpon>NewCustomerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ExtendClass\FullScreenManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OrderListToolView.xaml.cs">
+      <DependentUpon>OrderListToolView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Theme\DarkBlue\WindowsResourceDictionary.cs" />
+    <Compile Include="ShellViewModel.Layout.Partial.cs" />
+    <Compile Include="EnumMainWindowMenu.cs" />
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ShellView.xaml.cs">
+      <DependentUpon>ShellView.xaml</DependentUpon>
+      <ExcludeFromStyleCop>True</ExcludeFromStyleCop>
+    </Compile>
+    <Compile Include="ShellViewModel.cs" />
+    <Compile Include="Customer\CustomerListToolView.xaml.cs">
+      <DependentUpon>CustomerListToolView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GoodsListToolView.xaml.cs">
+      <DependentUpon>GoodsListToolView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShopListToolView.xaml.cs">
+      <DependentUpon>ShopListToolView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IShell.cs" />
+    <Compile Include="MEFBootstrapper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Content Include="EmitMapper.dll" />
+    <Content Include="GalaSoft.MvvmLight.dll" />
+    <Content Include="GalaSoft.MvvmLight.WPF4.dll" />
+    <Content Include="historyprice.config.client">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Xceed.Wpf.Toolkit.dll" />
+    <Resource Include="Resources\Images\Alert.png" />
+    <Resource Include="Resources\Images\White\search.png" />
+    <Resource Include="Resources\Theme\DarkBlue\Images\SwitchOver.png" />
+    <Resource Include="Resources\Images\calender.png" />
+    <Resource Include="Resources\Lang\zh-CN\readme.txt" />
+    <Resource Include="Resources\Images\White\Button\9_9_maximize.png" />
+    <Resource Include="Resources\Theme\DarkBlue\Images\CommonClose.png" />
+    <Resource Include="Resources\Images\DarkBlue\add.png" />
+    <Resource Include="Resources\Images\DarkBlue\delete.png" />
+    <Resource Include="Resources\Theme\DarkBlue\Images\logo.png" />
+    <Resource Include="Resources\Theme\DarkBlue\Images\PricingBricks.png" />
+    <Resource Include="Resources\Theme\DarkBlue\Images\PricingBricks_mo.png" />
+    <Resource Include="Resources\Theme\DarkBlue\Images\CashLadder.png" />
+    <Resource Include="Resources\Theme\DarkBlue\Images\CashLadder_mo.png" />
+    <Resource Include="Resources\Theme\DarkBlue\Images\MarketForecast.png" />
+    <Resource Include="Resources\Theme\DarkBlue\Images\MarketForecast_mo.png" />
+    <Resource Include="Resources\Theme\DarkBlue\Images\PriceHistory.png" />
+    <Resource Include="Resources\Theme\DarkBlue\Images\PriceHistory_mo.png" />
+    <Resource Include="Resources\Theme\DarkBlue\Images\News_mo.png" />
+    <Resource Include="Resources\Theme\DarkBlue\Images\News.png" />
+    <Resource Include="Resources\Theme\DarkBlue\Images\Exposure.png" />
+    <Resource Include="Resources\Theme\DarkBlue\Images\Exposure_mo.png" />
+    <Resource Include="Resources\Theme\DarkBlue\Images\Journal_mo.png" />
+    <Resource Include="Resources\Theme\DarkBlue\Images\Journal.png" />
+    <Resource Include="Resources\Images\DarkBlue\lock.png" />
+    <Resource Include="Resources\Images\DarkBlue\unlock.png" />
+    <Resource Include="Resources\Images\DarkBlue\maximize.png" />
+    <Resource Include="Resources\Theme\DarkBlue\Images\TabItemClose.png" />
+    <Resource Include="Resources\Theme\DarkBlue\Images\TabItemMax.png" />
+    <Resource Include="Resources\Theme\DarkBlue\Images\TabItemConfig.png" />
+    <Resource Include="Resources\Images\DarkBlue\window_minimize.png" />
+    <Resource Include="Resources\Images\DarkBlue\window_maximize.png" />
+    <Resource Include="Resources\Images\DarkBlue\window_close.png" />
+    <Resource Include="Resources\Images\DarkBlue\common_add_cancel.png" />
+    <Resource Include="Resources\Images\DarkBlue\window_normal.png" />
+    <Resource Include="Resources\Theme\DarkBlue\Images\HedgeDealList.png" />
+    <Resource Include="Resources\Theme\DarkBlue\Images\HedgeDealList_mo.png" />
+    <Resource Include="Resources\Theme\DarkBlue\Images\HedgeSfDeal.png" />
+    <Resource Include="Resources\Theme\DarkBlue\Images\HedgeSfDeal_mo.png" />
+    <Resource Include="Resources\Theme\DarkBlue\Images\HedgeSwapDeal.png" />
+    <Resource Include="Resources\Theme\DarkBlue\Images\HedgeSwapDeal_mo.png" />
+    <Resource Include="Resources\Theme\DarkBlue\Images\HistoryHedgeDealList.png" />
+    <Resource Include="Resources\Theme\DarkBlue\Images\HistoryHedgeDealList_mo.png" />
+    <Resource Include="Resources\Theme\DarkBlue\Images\Login.png" />
+    <Resource Include="Resources\Theme\DarkBlue\Images\Login_mo.png" />
+    <Resource Include="Resources\Theme\DarkBlue\Images\Logout.png" />
+    <Resource Include="Resources\Theme\DarkBlue\Images\Logout_mo.png" />
+    <Resource Include="Resources\Theme\DarkBlue\Images\splitline.png" />
+    <Resource Include="Resources\Theme\DarkBlue\Images\Decollator.png" />
+    <Resource Include="Resources\Theme\DarkBlue\Images\Connection.png" />
+    <Content Include="InterProcessCommunication.dll" />
+    <Content Include="itextsharp.dll" />
+    <Content Include="log4net.dll" />
+    <Content Include="Microsoft.Windows.Shell.dll" />
+    <Content Include="MouseKeyboardActivityMonitor.dll" />
+    <Content Include="router.config.client">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Resources\Images\White\RefreshButton\RefreshBtnClick.png" />
+    <Content Include="Resources\Sounds\alert.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\connect.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\disconnect.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\email.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\expert.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\news.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\ok.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\request.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\stops.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\tick.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\timeout.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sounds\wait.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Resources\Images\White\Window\click.png" />
+    <Resource Include="Resources\Images\White\Window\hover.png" />
+    <Resource Include="Resources\Images\White\Window\normal.png" />
+    <Resource Include="Resources\Images\White\ScrollBar\click.png" />
+    <Resource Include="Resources\Images\White\ScrollBar\hover.png" />
+    <Resource Include="Resources\Images\White\ScrollBar\life.png" />
+    <Resource Include="Resources\Images\White\ScrollBar\normal.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\about.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\BottomWindow.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\CashDealingBook.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\ConnectAsDealer.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\connectAsdealer_offline.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\CustomerList.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\DealerSettings.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\DealList.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\HedgeManagement.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\log.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\ODAlertReport.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\OrderList.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\OrderPendingProcess.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\quotelist.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\QuoteWatcher.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\RequestHandling.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\RequestQueue.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\SaveLayout.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\SetForwardPoints.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\SuspendOnlineTrading.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\u101.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\VIPCustomerSetting.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\about_mo.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\BottomWindow_mo.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\CashDealingBook_mo.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\ConnectAsDealer_mo.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\CustomerList_mo.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\DealerSettings_mo.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\DealList_mo.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\HedgeManagement_mo.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\log_mo.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\ODAlertReport_mo.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\OrderList_mo.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\OrderPendingProcess_mo .png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\QuoteList_mo.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\QuoteWatcher_mo.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\RequestHandling_mo.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\RequestQueue_mo.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\SaveLayout_mo.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\SetForwardPoints_mo.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\SuspendOnlineTrading_mo.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\VIPCustomerSetting_mo.png" />
+    <Resource Include="Resources\Images\White\ButtonRH\Buy.png" />
+    <Resource Include="Resources\Images\White\ButtonRH\sell.png" />
+    <Resource Include="Resources\Images\White\ButtonRH\上调价_点击.png" />
+    <Resource Include="Resources\Images\White\ButtonRH\上调价_移入.png" />
+    <Resource Include="Resources\Images\White\ButtonRH\上调价_置灰.png" />
+    <Resource Include="Resources\Images\White\ButtonRH\上调价_默认.png" />
+    <Resource Include="Resources\Images\White\ButtonRH\下调价_点击.png" />
+    <Resource Include="Resources\Images\White\ButtonRH\下调价_移入.png" />
+    <Resource Include="Resources\Images\White\ButtonRH\下调价_置灰.png" />
+    <Resource Include="Resources\Images\White\ButtonRH\下调价_默认.png" />
+    <Resource Include="Resources\Images\White\ButtonRH\进度条.png" />
+    <Resource Include="Resources\Images\White\ButtonRH\进度条_底色.png" />
+    <Resource Include="Resources\Images\White\Menu\down_hover.png" />
+    <Resource Include="Resources\Images\White\Menu\Click.png" />
+    <Resource Include="Resources\Images\White\Menu\hover.png" />
+    <Resource Include="Resources\Images\White\Button\90_26_Hover.png" />
+    <Resource Include="Resources\Images\White\Button\90_26_Click.png" />
+    <Resource Include="Resources\Images\White\Button\90_26_Disable.png" />
+    <Resource Include="Resources\Images\White\Button\90_26_Normal.png" />
+    <Resource Include="Resources\Images\White\Button\82_24_Hover.png" />
+    <Resource Include="Resources\Images\White\Button\82_24_Click.png" />
+    <Resource Include="Resources\Images\White\Button\82_24_Disable.png" />
+    <Resource Include="Resources\Images\White\Button\82_24_Normal.png" />
+    <Resource Include="Resources\Images\White\Login\Close.png" />
+    <Resource Include="Resources\Images\White\Login\name.png" />
+    <Resource Include="Resources\Images\White\Login\password.png" />
+    <Resource Include="Resources\Images\White\TabControl\TabItemHover.png" />
+    <Resource Include="Resources\Images\refresh.png" />
+    <None Include="app.manifest" />
+    <None Include="LogConfig.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Resource Include="Resources\Images\White\ClientTabItem\152_25TabItemEnabled.png" />
+    <Resource Include="Resources\Images\White\ClientTabItem\248_25TabItemEnabled.png" />
+    <Resource Include="Resources\Images\White\TabControl\TabItemEnabled.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\Logout.png" />
+    <Resource Include="Resources\Images\White\forexStar_LoadingLogo.png" />
+    <Resource Include="Resources\Images\White\forexStar_MainWindowLogo.png" />
+    <Resource Include="Resources\Images\White\loding.gif" />
+    <Resource Include="Resources\Images\White\logo_loding.png" />
+    <Resource Include="Resources\Images\App.ico" />
+    <Resource Include="Resources\Images\White\Password\ClearTextEye.png" />
+    <Resource Include="Resources\Images\White\Password\CodeTextEye.png" />
+    <Resource Include="Resources\Images\White\eye.png" />
+    <Resource Include="Resources\Images\AcctOnline.png" />
+    <Resource Include="Resources\Images\AcctOffline.png" />
+    <Resource Include="Resources\Images\White\QuoteUpDownHeader.png" />
+    <Resource Include="Resources\Images\White\info.png" />
+    <Resource Include="Resources\Images\White\DealBlotterTabItem\TabItemHover.png" />
+    <Resource Include="Resources\Images\White\DealBlotterTabItem\TabItemNormal.png" />
+    <Resource Include="Resources\Images\White\DealBlotterTabItem\TabItemSelected.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\SearchAccount.png" />
+    <Resource Include="Resources\Images\White\wrong.png" />
+    <Resource Include="Resources\Images\White\Login\loginLock.png" />
+    <Resource Include="Resources\Images\White\Login\loginPassword.png" />
+    <Resource Include="Resources\Images\White\Login\loginUserID.png" />
+    <Resource Include="Resources\Images\White\correct.png" />
+    <Resource Include="Resources\Images\White\question.png" />
+    <Resource Include="Resources\Sounds\new alert.wav" />
+    <Resource Include="Resources\Images\White\Button\55_22_Click.png" />
+    <Resource Include="Resources\Images\White\Button\55_22_Disable.png" />
+    <Resource Include="Resources\Images\White\Button\55_22_Hover.png" />
+    <Resource Include="Resources\Images\White\Button\55_22_Normal.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\ChangePassword.png" />
+    <Resource Include="Resources\Images\White\DocumentWindowTabItem\TabItemNormal.png" />
+    <Resource Include="Resources\Images\White\Button\200_25_Hover.png" />
+    <Resource Include="Resources\Images\White\Button\200_25_Normal.png" />
+    <Resource Include="Resources\Images\White\Button\200_25_Click.png" />
+    <Resource Include="Resources\Images\White\Button\200_25_Disable.png" />
+    <Resource Include="Resources\Images\White\Button\175_25_Click.png" />
+    <Resource Include="Resources\Images\White\Button\175_25_Disable.png" />
+    <Resource Include="Resources\Images\White\Button\175_25_Hover.png" />
+    <Resource Include="Resources\Images\White\Button\175_25_Normal.png" />
+    <Resource Include="Resources\Images\White\ClientTabItem\248_25TabItemNormal.png" />
+    <Resource Include="Resources\Images\White\ClientTabItem\248_25TabItemSelected.png" />
+    <Resource Include="Resources\Images\White\ClientTabItem\152_25TabItemSelected.png" />
+    <Resource Include="Resources\Images\White\ClientTabItem\152_25TabItemNormal.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\Setting.png" />
+    <Resource Include="Resources\Images\White\TabControl\TabItemNormal.png" />
+    <Resource Include="Resources\Images\White\TabControl\TabItemSelected.png" />
+    <Resource Include="Resources\Images\White\CheckBox\Checkbox_checked.png" />
+    <Resource Include="Resources\Images\White\CheckBox\Checkbox_dis_checked.png" />
+    <Resource Include="Resources\Images\White\CheckBox\Checkbox_dis_unchecked.png" />
+    <Resource Include="Resources\Images\White\CheckBox\Checkbox_unchecked.png" />
+    <Resource Include="Resources\Images\White\RadioButton\Radiobtn_checked.png" />
+    <Resource Include="Resources\Images\White\RadioButton\Radiobtn_dis_checked.png" />
+    <Resource Include="Resources\Images\White\RadioButton\Radiobtn_dis_unchecked.png" />
+    <Resource Include="Resources\Images\White\RadioButton\Radiobtn_unchecked.png" />
+    <Resource Include="Resources\Images\White\BuySellBtn\SellClick.png" />
+    <Resource Include="Resources\Images\White\BuySellBtn\SellHover.png" />
+    <Resource Include="Resources\Images\White\BuySellBtn\SellNormal.png" />
+    <Resource Include="Resources\Images\White\BuySellBtn\BSDisable.png" />
+    <Resource Include="Resources\Images\White\BuySellBtn\BuyClick.png" />
+    <Resource Include="Resources\Images\White\BuySellBtn\BuyHover.png" />
+    <Resource Include="Resources\Images\White\BuySellBtn\BuyNormal.png" />
+    <Resource Include="Resources\Images\White\RefreshButton\RefreshBtnDisable.png" />
+    <Resource Include="Resources\Images\White\RefreshButton\RefreshBtnNormal.png" />
+    <Resource Include="Resources\Images\White\Button\121_25_Hover.png" />
+    <Resource Include="Resources\Images\White\Button\121_25_Click.png" />
+    <Resource Include="Resources\Images\White\Button\121_25_Disable.png" />
+    <Resource Include="Resources\Images\White\Button\121_25_Normal.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\RestoreBtnClick.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\RestoreBtnHover.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\RestoreBtnNormal.png" />
+    <Resource Include="Resources\Images\White\Button\89_25_Click.png" />
+    <Resource Include="Resources\Images\White\Button\89_25_Disable.png" />
+    <Resource Include="Resources\Images\White\Button\89_25_Hover.png" />
+    <Resource Include="Resources\Images\White\Button\89_25_Normal.png" />
+    <Resource Include="Resources\Images\White\QueueTabItem\tabctl_current_left.png" />
+    <Resource Include="Resources\Images\White\QueueTabItem\tabctl_current_right.png" />
+    <Resource Include="Resources\Images\White\QueueTabItem\tabctl_history_left.png" />
+    <Resource Include="Resources\Images\White\QueueTabItem\tabctl_history_right.png" />
+    <Resource Include="Resources\Images\White\ScrollBar\left_arrow.png" />
+    <Resource Include="Resources\Images\White\ScrollBar\right_arrow.png" />
+    <Resource Include="Resources\Images\White\ScrollBar\Slider_click.png" />
+    <Resource Include="Resources\Images\White\ScrollBar\Slider_hover.png" />
+    <Resource Include="Resources\Images\White\ScrollBar\Slider_normal.png" />
+    <Resource Include="Resources\Images\White\ComboBox\DropdDisable.png" />
+    <Resource Include="Resources\Images\White\ComboBox\DropdNormal.png" />
+    <Resource Include="Resources\Images\White\ToolWindowTitleSelectedBG.png" />
+    <Resource Include="Resources\Images\White\ToolWindowTitleNormalBG.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\MenuDealerOnline.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\MenuDealerOffline.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\MenuDealingFunction.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\MenuQueue.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\MenuLog.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\MenuRealTimeReport.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\MenuOrderList.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\MenuDealBlotter.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\MenuPositionSummary.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\MenuDealer.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\MenuOnlineAcctList.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\CloseBtnClick.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\CloseBtnHover.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\CloseBtnNormal.png" />
+    <Resource Include="Resources\Images\White\logo.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\MaxBtnClick.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\MaxBtnHover.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\MaxBtnNormal.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\MenuAcctList.png" />
+    <Resource Include="Resources\Images\White\MenuBtnClick.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\MenuQuoteList.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\MinBtnClick.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\MinBtnHover.png" />
+    <Resource Include="Resources\Images\White\MainWindowHeader\MinBtnNormal.png" />
+    <Resource Include="Resources\Images\White\ToggleDown.png" />
+    <Resource Include="Resources\Images\White\ToggleUp.png" />
+    <Resource Include="Resources\Images\White\Btn92Hover.png" />
+    <Resource Include="Resources\Images\White\Btn92Normal.png" />
+    <Resource Include="Resources\Images\White\Btn92Click.png" />
+    <Resource Include="Resources\Images\White\Btn92Disable.png" />
+    <Resource Include="Resources\Images\White\TinyUpPriceHover.png" />
+    <Resource Include="Resources\Images\White\TinyUpPriceNormal.png" />
+    <Resource Include="Resources\Images\White\TinyUpPriceClick.png" />
+    <Resource Include="Resources\Images\White\TinyUpPriceDisable.png" />
+    <Resource Include="Resources\Images\White\TinyDownPriceHover.png" />
+    <Resource Include="Resources\Images\White\TinyDownPriceNormal.png" />
+    <Resource Include="Resources\Images\White\TinyDownPriceClick.png" />
+    <Resource Include="Resources\Images\White\TinyDownPriceDisable.png" />
+    <Resource Include="Resources\Images\White\UpPriceDisable.png" />
+    <Resource Include="Resources\Images\White\DownPriceDisable.png" />
+    <Resource Include="Resources\Images\White\UpPriceHover.png" />
+    <Resource Include="Resources\Images\White\UpPriceNormal.png" />
+    <Resource Include="Resources\Images\White\UpPriceClick.png" />
+    <Resource Include="Resources\Images\White\DownPriceClick.png" />
+    <Resource Include="Resources\Images\White\DownPriceHover.png" />
+    <Resource Include="Resources\Images\White\DownPriceNormal.png" />
+    <Resource Include="Resources\Images\White\RedArrow.png" />
+    <Resource Include="Resources\Images\White\GreenArrow.png" />
+    <Resource Include="Resources\Images\White\DownArrow.png" />
+    <Resource Include="Resources\Images\White\UpArrow.png" />
+    <Resource Include="Resources\Images\loading.png" />
+    <Resource Include="Resources\Images\White\CloseBtn.png" />
+    <Resource Include="Resources\Images\White\DownCorner.png" />
+    <Resource Include="Resources\Images\White\MinBtn.png" />
+    <Resource Include="Resources\Images\down.ico" />
+    <Resource Include="Resources\Images\up.ico" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Exposuredallorsymbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Banclogix.Controls.PagedDataGrid\Banclogix.Controls.PagedDataGrid.csproj">
+      <Project>{ad060c8a-12af-4c1b-89cf-9b41a1edd31b}</Project>
+      <Name>Banclogix.Controls.PagedDataGrid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Banclogix.Controls.WPF\Banclogix.Controls.WPF.csproj">
+      <Project>{23fabd2a-f5dc-4eb2-a775-45bd855e4423}</Project>
+      <Name>Banclogix.Controls.WPF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\BancLogix.ExtendedDataGrid\BancLogix.ExtendedDataGrid.csproj">
+      <Project>{1d378a40-1325-4687-99b8-af5ff9e097f5}</Project>
+      <Name>BancLogix.ExtendedDataGrid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\SOU.Model\SOU.Model.csproj">
+      <Project>{5b73a0a5-e750-4789-95ba-32c96b9f6110}</Project>
+      <Name>SOU.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DM2.Ent.Client.ViewModels\DM2.Ent.Client.ViewModels.csproj">
+      <Project>{71acd4a0-a84e-48f5-9a74-f8d3e5c7de48}</Project>
+      <Name>DM2.Ent.Client.ViewModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Infrastructure.Utils\Infrastructure.Utils.csproj">
+      <Project>{8790e535-0472-478f-88bc-bb057d35ffc9}</Project>
+      <Name>Infrastructure.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Customer\NewCustomerView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="OrderListToolView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Theme\DarkBlue\DarkBlueTheme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Theme\DarkBlue\DatePicker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Theme\DarkBlue\TextBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Theme\DarkBlue\TextElement.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Theme\DarkBlue\DataGrid.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Theme\DarkBlue\Button.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Theme\DarkBlue\Windows.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Theme\DarkBlue\TextBlock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Theme\White\ColorBrush.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Theme\White\Btn_22_11.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Theme\White\DataGrid.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Theme\White\IconButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Theme\White\BtnPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Theme\White\BtnGrid.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Theme\White\PasswordBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Theme\White\ProgressBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Theme\White\TextBlock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Theme\White\Window.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Theme\White\Btn121_25.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Theme\White\Btn_175_25.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Theme\White\Btn_55_22.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Theme\White\Btn_92_22.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Theme\White\CheckBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Converter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Theme\White\CustomTabctl_Settings.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Theme\White\ClientTabItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Theme\White\DatePicker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Theme\White\DealBlotterTabItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Theme\White\DecimalBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Theme\White\Int32Box.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Theme\White\QuoteList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Theme\White\QuoteListRowStyleInDeal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Theme\White\RadioButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Theme\White\PlaceBtn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Theme\White\ComboBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Theme\White\DateTimeEditBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Theme\White\Btn_89_25.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Theme\White\QueueTabItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Theme\White\RefreshBtn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Theme\White\ScrollBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Theme\White\Dialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Theme\White\GroupBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Theme\White\MenuBtn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Theme\White\TabControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Theme\White\TextBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Theme\White\WhiteTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Theme\White\Btn200_25.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Theme\White\DialogWithoutButtom.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Theme\White\DealingFunctionTabControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Theme\White\Menu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Lang\en-US\en-US.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Lang\zh-CN\zh-CN-Txt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Lang\zh-CN\zh-CN-Msg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Lang\zh-CN\zh-CN.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Lang\en-US\en-US-Txt.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Lang\en-US\en-US-Msg.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ShellView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Customer\CustomerListToolView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GoodsListToolView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ShopListToolView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Theme\Chart\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

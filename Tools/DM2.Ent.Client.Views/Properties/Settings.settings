@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="DM2.Ent.Client.Views.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="WindowsPosition" Type="System.Windows.Rect" Scope="User">
+      <Value Profile="(Default)">0,0,0,0</Value>
+    </Setting>
+    <Setting Name="IsMaximized" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ContentTopRow" Type="System.Windows.GridLength" Scope="User">
+      <Value Profile="(Default)">0.5*</Value>
+    </Setting>
+    <Setting Name="ContentBottomRow" Type="System.Windows.GridLength" Scope="User">
+      <Value Profile="(Default)">0.5*</Value>
+    </Setting>
+    <Setting Name="ContentLeftColumn" Type="System.Windows.GridLength" Scope="User">
+      <Value Profile="(Default)">0.5*</Value>
+    </Setting>
+    <Setting Name="ContentRightColumn" Type="System.Windows.GridLength" Scope="User">
+      <Value Profile="(Default)">0.5*</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

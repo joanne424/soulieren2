@@ -1,0 +1,22 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:Controls="clr-namespace:Banclogix.Controls;assembly=Banclogix.Controls.WPF"
+                    xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Classic">
+
+    <!--TextBlock全局默认样式-->
+    <Style TargetType="{x:Type TextBlock}">
+        <Setter Property="FontFamily"
+                Value="Arial,NSimSun" />
+        <Setter Property="HorizontalAlignment"
+                Value="Stretch" />
+        <Setter Property="VerticalAlignment"
+                Value="Center" />
+        <!--<Setter Property="TextOptions.TextFormattingMode"
+                Value="Display" />
+        <Setter Property="TextOptions.TextRenderingMode"
+                Value="Aliased" />-->
+        <Setter Property="FontSize"
+                Value="12" />
+    </Style>
+
+</ResourceDictionary>

@@ -1,0 +1,165 @@
+﻿<Window x:Class="DM2.Ent.Client.Views.BankAccountListView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:cal="http://www.caliburnproject.org"
+        xmlns:docking="http://schemas.actiprosoftware.com/winfx/xaml/docking"
+        xmlns:pagedDataGrid="clr-namespace:Banclogix.Controls.PagedDataGrid;assembly=Banclogix.Controls.PagedDataGrid"
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+        xmlns:extendedDataGrid="clr-namespace:BancLogix.ExtendedDataGrid;assembly=BancLogix.ExtendedDataGrid"
+        Title="{DynamicResource BankAccountList}"
+        Width="1100"
+        Height="600"
+        Style="{StaticResource CommonOnlyCloseWindowStyle}"
+        x:Name="twDealList">
+    <Window.Resources>
+        <ResourceDictionary>
+            <Style x:Key="textCellRight" TargetType="TextBlock">
+                <Setter Property="TextAlignment" Value="Right"></Setter>
+                <Setter Property="Margin" Value="5,0,5,0"></Setter>
+            </Style>
+            <Style x:Key="textCellLeft" TargetType="TextBlock">
+                <Setter Property="TextAlignment" Value="Left"></Setter>
+                <Setter Property="Margin" Value="5,0,5,0"></Setter>
+            </Style>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid Margin="-2,0,2,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <ScrollViewer Grid.Row="0"
+                      HorizontalScrollBarVisibility="Auto"
+                      VerticalScrollBarVisibility="Auto"
+                      MinWidth="250">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="30" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition Width="125" />
+                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition Width="120" />
+                    <ColumnDefinition Width="70" />
+                    <ColumnDefinition Width="90" />
+                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition Width="120" />
+                    <ColumnDefinition Width="110" />
+                    <ColumnDefinition Width="120" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <!--line 0-->
+                <TextBlock Grid.Column="0" Text="{DynamicResource BusinessUnit}" Margin="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                <ComboBox Grid.Column="1"
+                          IsEnabled="True"
+                          ItemsSource="{Binding BusinessUnitList}"
+                          DisplayMemberPath="Name"
+                          SelectedIndex="0"
+                          SelectedValue="{Binding SelectedBusinessUnit}">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="SelectionChanged">
+                            <i:InvokeCommandAction Command="{Binding BuSelectionChangedCommand}" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </ComboBox>
+                <TextBlock Grid.Column="2" Text="{DynamicResource 'FinancialInstitution'}" Margin="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                <ComboBox Grid.Column="3"
+                          IsEnabled="True"
+                          ItemsSource="{Binding FinancialInstitutions}"
+                          DisplayMemberPath="Name"
+                          SelectedIndex="0"
+                          SelectedValue="{Binding FinancialInstitution}" />
+                <TextBlock Grid.Row="0" Grid.Column="4" Text="{DynamicResource 'CCY'}" Margin="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                <ComboBox Grid.Column="5"
+                          IsEnabled="True"
+                          Grid.Row="0"
+                          ItemsSource="{Binding CurrencyList}"
+                          DisplayMemberPath="Name"
+                          SelectedIndex="0"
+                          SelectedValue="{Binding SelectedCurrency}" />
+
+                <TextBlock Grid.Column="6" Grid.Row="0" Text="{DynamicResource 'AccountNo'}" Margin="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                <TextBox Grid.Column="7" Grid.Row="0" Text="{Binding AccountNo}" />
+                <TextBlock Grid.Column="8" Grid.Row="0" Text="{DynamicResource 'AccountName'}" Margin="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                <TextBox Grid.Column="9" Grid.Row="0" Text="{Binding AccountName}" />
+                <!--line 1-->
+                <Button Grid.Row="1"
+                        Grid.Column="7"
+                        Margin="10,0,0,0"
+                        Height="24"
+                        HorizontalAlignment="Center"
+                        Content="{DynamicResource  'New'}"
+                        Style="{StaticResource CommonButtonStle}"
+                        cal:Message.Attach="[Event Click] = [Action New_Click]" />
+                <Button Grid.Column="8"
+                        Grid.Row="1"
+                        Height="24"
+                        HorizontalAlignment="Center"
+                        Margin="10,0,0,0"
+                        Content="{DynamicResource  'Search'}"
+                        Style="{StaticResource CommonButtonStle}"
+                        cal:Message.Attach="[Event Click]=[Action Search]"/>
+                <Button Grid.Column="9"
+                        Grid.Row="1"
+                        Height="24"
+                        HorizontalAlignment="Center"
+                        Margin="10,0,0,0"
+                        Content="{DynamicResource  'Close'}"
+                        Style="{StaticResource CommonButtonStle}"
+                        cal:Message.Attach="[Event Click]=[Action Close]"/>
+            </Grid>
+        </ScrollViewer>
+        <DataGrid Grid.Row="1" MinHeight="450"
+                    Margin="0,10,0,0"
+                    x:Name="TB"
+                    HorizontalScrollBarVisibility="Auto"
+                    VerticalScrollBarVisibility="Auto"
+                    ItemsSource="{Binding BankAccountList}"
+                    SelectedItem="{Binding SelectItem,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"
+                    cal:Message.Attach="[Event MouseDoubleClick] = [Action ModifyBankAcct]"
+                    CanUserSortColumns="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="{DynamicResource BusinessUnit}"  Binding="{Binding BusinessUnitId, Converter={StaticResource BUIDToNameConverter}}" ElementStyle="{StaticResource textCellLeft}"
+                                        MinWidth="140"/>
+                <DataGridTextColumn Header="{DynamicResource FinancialInstitution}" Binding="{Binding InstitutionId, Converter={StaticResource InstitutionIdToNameConverter}}" ElementStyle="{StaticResource textCellLeft}"
+                                        MinWidth="100"/>
+                <DataGridTextColumn Header="{DynamicResource AccountNo}" Binding="{Binding AccountNo}" ElementStyle="{StaticResource textCellLeft}"
+                                        MinWidth="80"/>
+                <DataGridTextColumn Header="{DynamicResource AccountName}" Binding="{Binding AccountName}" ElementStyle="{StaticResource textCellLeft}"
+                                        MinWidth="150"/>
+                <DataGridTextColumn Header="{DynamicResource CCY}" Binding="{Binding CurrencyId, Converter={StaticResource CurrencyIdToNameConverter}}" MinWidth="60"/>
+                <DataGridTextColumn Header="{DynamicResource LedgerBalance}" Width="*" MinWidth="100">
+                    <DataGridTextColumn.Binding>
+                        <MultiBinding Converter="{StaticResource FormatAmountByCurrencyConverter}">
+                            <Binding Path="LedgerBalance"></Binding>
+                            <Binding Path="CurrencyId"></Binding>
+                        </MultiBinding>
+                    </DataGridTextColumn.Binding>
+                    <DataGridTextColumn.CellStyle>
+                        <Style BasedOn="{StaticResource DataGridCellRightStyle}" TargetType="DataGridCell">
+                            <Setter Property="Foreground" Value="{Binding LedgerBalance,Converter={StaticResource DeficitAmountForegroundConverter}}"></Setter>
+                        </Style>
+                    </DataGridTextColumn.CellStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="{DynamicResource AvailableBalance}" Width="*" MinWidth="100">
+                    <DataGridTextColumn.Binding>
+                        <MultiBinding Converter="{StaticResource FormatAmountByCurrencyConverter}">
+                            <Binding Path="AvailableBalance"></Binding>
+                            <Binding Path="CurrencyId"></Binding>
+                        </MultiBinding>
+                    </DataGridTextColumn.Binding>
+                    <DataGridTextColumn.CellStyle>
+                        <Style BasedOn="{StaticResource DataGridCellRightStyle}" TargetType="DataGridCell">
+                            <Setter Property="Foreground" Value="{Binding AvailableBalance,Converter={StaticResource DeficitAmountForegroundConverter}}"></Setter>
+                        </Style>
+                    </DataGridTextColumn.CellStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="{DynamicResource  BankAccountGroup}" Binding="{Binding BankAccountGroup}"/>
+                <DataGridTextColumn Header="{DynamicResource  CreationTime}" MinWidth="160" Binding="{Binding CreationTime, Converter={StaticResource FormatDateTimeByBuConverter}}"/>
+                <DataGridTextColumn Header="{DynamicResource  LastUpdateTime}" MinWidth="160" Binding="{Binding LastUpdateTime, Converter={StaticResource FormatDateTimeByBuConverter}}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

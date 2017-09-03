@@ -1,0 +1,1303 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Infrastructure.Log</name>
+    </assembly>
+    <members>
+        <member name="T:Infrastructure.Log.AsyncAppender">
+            <summary>
+            The AsyncAppender class.
+            </summary>
+            <code>public abstract class AsyncAppender</code>
+        </member>
+        <member name="F:Infrastructure.Log.AsyncAppender.m_IsDisposed">
+            <summary>
+            The m_ is disposed.
+            </summary>
+        </member>
+        <member name="F:Infrastructure.Log.AsyncAppender.m_IsIdle">
+            <summary>
+            The m_ is idle.
+            </summary>
+        </member>
+        <member name="F:Infrastructure.Log.AsyncAppender.m_Logs">
+            <summary>
+            The m_ logs.
+            </summary>
+        </member>
+        <member name="M:Infrastructure.Log.AsyncAppender.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Infrastructure.Log.AsyncAppender"/> class.
+            </summary>
+        </member>
+        <member name="M:Infrastructure.Log.AsyncAppender.Dispose">
+            <summary>
+            The dispose.
+            </summary>
+        </member>
+        <member name="M:Infrastructure.Log.AsyncAppender.Append(log4net.Core.LoggingEvent)">
+            <summary>
+            The append.
+            </summary>
+            <param name="loggingEvent">
+            The logging event.
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.AsyncAppender.AsyncWork(log4net.Core.LoggingEvent)">
+            <summary>
+            The async work.
+            </summary>
+            <param name="log">
+            The log.
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.AsyncAppender.AsyncWork(System.Collections.Generic.IList{log4net.Core.LoggingEvent})">
+            <summary>
+            The async work.
+            </summary>
+            <param name="log">
+            The log.
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.AsyncAppender.Dispose(System.Boolean)">
+            <summary>
+            The dispose.
+            </summary>
+            <param name="disposing">
+            The disposing.
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.AsyncAppender.OnClose">
+            <summary>
+            The on close.
+            </summary>
+        </member>
+        <member name="M:Infrastructure.Log.AsyncAppender.ThreadCallback(System.Object)">
+            <summary>
+            The thread callback.
+            </summary>
+            <param name="state">
+            The state.
+            </param>
+        </member>
+        <member name="T:Infrastructure.Log.FileAppender">
+            <summary>
+            The FileAppender class.
+            </summary>
+            <code>public sealed class FileAppender</code>
+        </member>
+        <member name="F:Infrastructure.Log.FileAppender.basedName">
+            <summary>
+            日志文件基础路径与基础文件名
+            </summary>
+        </member>
+        <member name="F:Infrastructure.Log.FileAppender.currentFileStream">
+            <summary>
+            当前写入日志文件的输出流
+            </summary>
+        </member>
+        <member name="F:Infrastructure.Log.FileAppender.dayUpperLimit">
+            <summary>
+            保留最大天数
+            </summary>
+        </member>
+        <member name="F:Infrastructure.Log.FileAppender.fileFormatLastIndex">
+            <summary>
+            文件命名的最大索引，只有在次序命名的模式下有用
+            </summary>
+        </member>
+        <member name="F:Infrastructure.Log.FileAppender.fileNumberUpperLimit">
+            <summary>
+            保留最大的文件数
+            </summary>
+        </member>
+        <member name="F:Infrastructure.Log.FileAppender.lastFileNewDate">
+            <summary>
+            最后创建文件的时间
+            </summary>
+        </member>
+        <member name="F:Infrastructure.Log.FileAppender.totalFileCount">
+            <summary>
+            总文件数，用于判断是否文件占用超限
+            </summary>
+        </member>
+        <member name="F:Infrastructure.Log.FileAppender.upperLimit">
+            <summary>
+            单个文件的最大字节数
+            </summary>
+        </member>
+        <member name="M:Infrastructure.Log.FileAppender.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Infrastructure.Log.FileAppender"/> class.
+            </summary>
+        </member>
+        <member name="M:Infrastructure.Log.FileAppender.ActivateOptions">
+            <summary>
+            初始化时调用，创建当前的写入文件流
+            </summary>
+        </member>
+        <member name="M:Infrastructure.Log.FileAppender.AsyncWork(log4net.Core.LoggingEvent)">
+            <summary>
+            单个写入日志
+            </summary>
+            <param name="log">
+            The log.
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.FileAppender.AsyncWork(System.Collections.Generic.IList{log4net.Core.LoggingEvent})">
+            <summary>
+            批量写入日志
+            </summary>
+            <param name="logs">
+            日志
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.FileAppender.Dispose(System.Boolean)">
+            <summary>
+            The dispose.
+            </summary>
+            <param name="disposing">
+            The disposing.
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.FileAppender.DeleteTheEarliestBeyondNumberLimt">
+            <summary>
+            删除超过文件数限制的最早的文件
+            </summary>
+        </member>
+        <member name="M:Infrastructure.Log.FileAppender.CheckUpperLimit">
+            <summary>
+            初始化检查文件的上限
+            </summary>
+            <returns>
+            当前日志文件路径，如果需要新建日志文件则为空
+            </returns>
+        </member>
+        <member name="M:Infrastructure.Log.FileAppender.CloseCurrentFileStream">
+            <summary>
+            关闭当前文件写入流
+            </summary>
+        </member>
+        <member name="M:Infrastructure.Log.FileAppender.CreateDirectoryIfNotExist(System.String)">
+            <summary>
+            在目录不存在时创建目录
+            </summary>
+            <param name="path">
+            路径
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.FileAppender.CreateNewLogFile">
+            <summary>
+            创建新的日志文件
+            </summary>
+        </member>
+        <member name="M:Infrastructure.Log.FileAppender.DeleteExpiredFiles(System.DateTime)">
+            <summary>
+            删除过期的日志
+            </summary>
+            <param name="timeNow">
+            当前时间
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.FileAppender.DeleteFile(System.String)">
+            <summary>
+            删除文件
+            </summary>
+            <param name="file">
+            待删除文件路径
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.FileAppender.GenerateName">
+            <summary>
+            生成最新日志文件的完整路径
+            </summary>
+            <returns>
+            日志文件完整路径
+            </returns>
+        </member>
+        <member name="M:Infrastructure.Log.FileAppender.GetFullPath(System.String)">
+            <summary>
+            获取完整路径
+            </summary>
+            <param name="relativePath">
+            相对路径
+            </param>
+            <returns>
+            完整路径
+            </returns>
+        </member>
+        <member name="M:Infrastructure.Log.FileAppender.TidyLogFile">
+            <summary>
+            整理日志文件
+            </summary>
+        </member>
+        <member name="P:Infrastructure.Log.FileAppender.BasedName">
+            <summary>
+            Gets or sets the based name.
+            </summary>
+            <exception cref="T:System.ArgumentException">
+            参数非法
+            </exception>
+        </member>
+        <member name="P:Infrastructure.Log.FileAppender.DayUpperLimit">
+            <summary>
+            保留最大天数
+            </summary>
+        </member>
+        <member name="P:Infrastructure.Log.FileAppender.FileNumberUpperLimit">
+            <summary>
+            保留最大的文件数
+            </summary>
+        </member>
+        <member name="P:Infrastructure.Log.FileAppender.NameFormat">
+            <summary>
+            日志命名模式
+            </summary>
+        </member>
+        <member name="P:Infrastructure.Log.FileAppender.Truncation">
+            <summary>
+            日志截断模式
+            </summary>
+        </member>
+        <member name="P:Infrastructure.Log.FileAppender.UpperLimit">
+            <summary>
+            Gets or sets the upper limit.
+            单个文件的最大上限，会将外部设置直接乘1024×1024，即外部设置的单位为M
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            值必须大于0
+            </exception>
+        </member>
+        <member name="T:Infrastructure.Log.FileAppender.PartialNameFormat">
+            <summary>
+            日志命名模式
+            </summary>
+        </member>
+        <member name="F:Infrastructure.Log.FileAppender.PartialNameFormat.Increment">
+            <summary>
+            在文件名后追加数字
+            </summary>
+        </member>
+        <member name="F:Infrastructure.Log.FileAppender.PartialNameFormat.LongDate">
+            <summary>
+            在文件名后追加日期
+            </summary>
+        </member>
+        <member name="F:Infrastructure.Log.FileAppender.PartialNameFormat.Random">
+            <summary>
+            在文件名后追加随机组合的数字和字母
+            </summary>
+        </member>
+        <member name="T:Infrastructure.Log.FileAppender.TruncationModes">
+            <summary>
+            日志截断模式
+            </summary>
+        </member>
+        <member name="F:Infrastructure.Log.FileAppender.TruncationModes.ByDays">
+            <summary>
+            按日期分割日志
+            </summary>
+        </member>
+        <member name="F:Infrastructure.Log.FileAppender.TruncationModes.BySize">
+            <summary>
+            按大小分割日志
+            </summary>
+        </member>
+        <member name="F:Infrastructure.Log.FileAppender.TruncationModes.ByDaysSize">
+            <summary>
+            根据日期，生成定量大小的
+            </summary>
+        </member>
+        <member name="T:Infrastructure.Log.SocketAppender">
+            <summary>
+            The SocketAppender class.
+            </summary>
+            <code>public sealed class SocketAppender</code>
+        </member>
+        <member name="F:Infrastructure.Log.SocketAppender.m_Address">
+            <summary>
+            The m_ address.
+            </summary>
+        </member>
+        <member name="F:Infrastructure.Log.SocketAppender.m_Port">
+            <summary>
+            The m_ port.
+            </summary>
+        </member>
+        <member name="F:Infrastructure.Log.SocketAppender.m_Socket">
+            <summary>
+            The m_ socket.
+            </summary>
+        </member>
+        <member name="F:Infrastructure.Log.SocketAppender.m_Stream">
+            <summary>
+            The m_ stream.
+            </summary>
+        </member>
+        <member name="M:Infrastructure.Log.SocketAppender.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Infrastructure.Log.SocketAppender"/> class.
+            </summary>
+        </member>
+        <member name="M:Infrastructure.Log.SocketAppender.AsyncWork(log4net.Core.LoggingEvent)">
+            <summary>
+            The async work.
+            </summary>
+            <param name="log">
+            The log.
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.SocketAppender.Dispose(System.Boolean)">
+            <summary>
+            The dispose.
+            </summary>
+            <param name="disposing">
+            The disposing.
+            </param>
+        </member>
+        <member name="P:Infrastructure.Log.SocketAppender.Address">
+            <summary>
+            Gets or sets the address.
+            </summary>
+            <exception cref="T:System.ArgumentException">
+            </exception>
+        </member>
+        <member name="P:Infrastructure.Log.SocketAppender.Port">
+            <summary>
+            Gets or sets the port.
+            </summary>
+            <exception cref="T:System.ArgumentException">
+            </exception>
+        </member>
+        <member name="P:Infrastructure.Log.SocketAppender.Reconnection">
+            <summary>
+            Gets or sets the reconnection.
+            </summary>
+        </member>
+        <member name="T:Infrastructure.Log.ITrace">
+            <summary>
+            The Trace interface.
+            </summary>
+        </member>
+        <member name="M:Infrastructure.Log.ITrace.Write(System.String,System.String,System.Object[])">
+            <summary>
+            The write.
+            </summary>
+            <param name="domain">
+            The domain.
+            </param>
+            <param name="format">
+            The format.
+            </param>
+            <param name="args">
+            The args.
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.ITrace.Write(System.String,System.Exception,System.String,System.Object[])">
+            <summary>
+            The write.
+            </summary>
+            <param name="domain">
+            The domain.
+            </param>
+            <param name="exception">
+            The exception.
+            </param>
+            <param name="format">
+            The format.
+            </param>
+            <param name="args">
+            The args.
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.ITrace.Write(System.String,System.Exception)">
+            <summary>
+            The write.
+            </summary>
+            <param name="domain">
+            The domain.
+            </param>
+            <param name="exception">
+            The exception.
+            </param>        
+        </member>
+        <member name="M:Infrastructure.Log.ITrace.WriteAdditional(System.String,System.Object,System.String,System.Object[])">
+            <summary>
+            The write additional.
+            </summary>
+            <param name="domain">
+            The domain.
+            </param>
+            <param name="token">
+            The token.
+            </param>
+            <param name="format">
+            The format.
+            </param>
+            <param name="args">
+            The args.
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.ITrace.WriteAdditional(System.String,System.Object,System.Exception,System.String,System.Object[])">
+            <summary>
+            The write additional.
+            </summary>
+            <param name="domain">
+            The domain.
+            </param>
+            <param name="token">
+            The token.
+            </param>
+            <param name="exception">
+            The exception.
+            </param>
+            <param name="format">
+            The format.
+            </param>
+            <param name="args">
+            The args.
+            </param>
+        </member>
+        <member name="T:Infrastructure.Log.NullTrace">
+            <summary>
+            The null trace.
+            </summary>
+        </member>
+        <member name="F:Infrastructure.Log.NullTrace.Default">
+            <summary>
+            The default.
+            </summary>
+        </member>
+        <member name="M:Infrastructure.Log.NullTrace.Dispose">
+            <summary>
+            The dispose.
+            </summary>
+        </member>
+        <member name="M:Infrastructure.Log.NullTrace.Write(System.String,System.String,System.Object[])">
+            <summary>
+            The write.
+            </summary>
+            <param name="domain">
+            The domain.
+            </param>
+            <param name="format">
+            The format.
+            </param>
+            <param name="args">
+            The args.
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.NullTrace.Write(System.String,System.Exception,System.String,System.Object[])">
+            <summary>
+            The write.
+            </summary>
+            <param name="domain">
+            The domain.
+            </param>
+            <param name="exception">
+            The exception.
+            </param>
+            <param name="format">
+            The format.
+            </param>
+            <param name="args">
+            The args.
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.NullTrace.WriteAdditional(System.String,System.Object,System.String,System.Object[])">
+            <summary>
+            The write additional.
+            </summary>
+            <param name="domain">
+            The domain.
+            </param>
+            <param name="token">
+            The token.
+            </param>
+            <param name="format">
+            The format.
+            </param>
+            <param name="args">
+            The args.
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.NullTrace.WriteAdditional(System.String,System.Object,System.Exception,System.String,System.Object[])">
+            <summary>
+            The write additional.
+            </summary>
+            <param name="domain">
+            The domain.
+            </param>
+            <param name="token">
+            The token.
+            </param>
+            <param name="exception">
+            The exception.
+            </param>
+            <param name="format">
+            The format.
+            </param>
+            <param name="args">
+            The args.
+            </param>
+        </member>
+        <member name="T:Infrastructure.Log.Refrector">
+            <summary>
+            The refrector.
+            </summary>
+        </member>
+        <member name="M:Infrastructure.Log.Refrector.Refrect(System.Object)">
+            <summary>
+            The refrect.
+            </summary>
+            <param name="obj">
+            The obj.
+            </param>
+            <returns>
+            The <see cref="T:System.String"/>.
+            </returns>
+        </member>
+        <member name="M:Infrastructure.Log.Refrector.Refrect(System.Object,System.Text.StringBuilder)">
+            <summary>
+            The refrect.
+            </summary>
+            <param name="obj">
+            The obj.
+            </param>
+            <param name="builder">
+            The builder.
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.Refrector.IsBaseType(System.Type)">
+            <summary>
+            The is base type.
+            </summary>
+            <param name="type">
+            The type.
+            </param>
+            <returns>
+            The <see cref="T:System.Boolean"/>.
+            </returns>
+        </member>
+        <member name="T:Infrastructure.Log.Stack">
+            <summary>
+            The stack struct.
+            </summary>
+            <code>public struct Stack</code>
+        </member>
+        <member name="F:Infrastructure.Log.Stack.Class">
+            <summary>
+            The Class field.
+            </summary>
+            <code>public Type Class</code>
+        </member>
+        <member name="F:Infrastructure.Log.Stack.Method">
+            <summary>
+            The Class field.
+            </summary>
+            <code>public MethodBase Method</code>
+        </member>
+        <member name="F:Infrastructure.Log.Stack.Parameters">
+            <summary>
+            The Class field.
+            </summary>
+            <code>public ParameterInfo[] Parameters</code>
+        </member>
+        <member name="M:Infrastructure.Log.Stack.Get(System.Int32)">
+            <summary>
+            Gets a new instance of the Stack struct.
+            </summary>
+            <param name="skip">
+            The skipped stack frames
+            </param>
+            <returns>
+            Returns the created instance of the Stack struct.
+            </returns>
+            <code>
+            public static Stack Get(int skip)
+            </code>
+        </member>
+        <member name="M:Infrastructure.Log.Stack.op_Explicit(Infrastructure.Log.Stack)~log4net.Core.LocationInfo">
+            <summary>
+            Turns a instance of the Stack struct to a instance of LocationInfo.
+            </summary>
+            <param name="stack">The instance of Stack struct.</param>
+            <returns>Returns the turned instance of LocationInfo.</returns>
+            <code>public static explicit operator LocationInfo(Stack stack)</code>
+        </member>
+        <member name="M:Infrastructure.Log.Stack.ToString">
+            <summary>
+            Gets the equivalent string of the object.
+            </summary>
+            <returns>Returns the got string.</returns>
+            <code>public override string ToString()</code>
+        </member>
+        <member name="P:Infrastructure.Log.Stack.Applicable">
+            <summary>
+            Gets the Applicable property.
+            </summary>
+            <code>public Type Applicable { get; }</code>
+        </member>
+        <member name="T:Infrastructure.Log.Trace">
+            <summary>
+            The trace class.
+            </summary>
+            <code>public class Trace</code>
+        </member>
+        <member name="F:Infrastructure.Log.Trace.level">
+            <summary>
+            The level.
+            </summary>
+        </member>
+        <member name="F:Infrastructure.Log.Trace.logger">
+            <summary>
+            The logger.
+            </summary>
+        </member>
+        <member name="F:Infrastructure.Log.Trace.logs">
+            <summary>
+            The logs.
+            </summary>
+        </member>
+        <member name="F:Infrastructure.Log.Trace.m_IsDisposed">
+            <summary>
+            The m_ is disposed.
+            </summary>
+        </member>
+        <member name="F:Infrastructure.Log.Trace.m_IsIdle">
+            <summary>
+            The m_ is idle.
+            </summary>
+        </member>
+        <member name="M:Infrastructure.Log.Trace.#ctor(log4net.ILog,log4net.Core.Level)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Infrastructure.Log.Trace"/> class.
+            </summary>
+            <param name="log">
+            The log.
+            </param>
+            <param name="level">
+            The level.
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.Trace.Dispose">
+            <summary>
+            The dispose.
+            </summary>
+        </member>
+        <member name="M:Infrastructure.Log.Trace.Write(System.String,System.String,System.Object[])">
+            <summary>
+            The write.
+            </summary>
+            <param name="domain">
+            The domain.
+            </param>
+            <param name="format">
+            The format.
+            </param>
+            <param name="args">
+            The args.
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.Trace.Write(System.String,System.Exception,System.String,System.Object[])">
+            <summary>
+            The write.
+            </summary>
+            <param name="domain">
+            The domain.
+            </param>
+            <param name="exception">
+            The exception.
+            </param>
+            <param name="format">
+            The format.
+            </param>
+            <param name="args">
+            The args.
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.Trace.Write(System.String,System.Exception)">
+            <summary>
+            The write.
+            </summary>
+            <param name="domain">
+            The domain.
+            </param>
+            <param name="exception">
+            The exception.
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.Trace.WriteAdditional(System.String,System.Object,System.String,System.Object[])">
+            <summary>
+            The write additional.
+            </summary>
+            <param name="domain">
+            The domain.
+            </param>
+            <param name="token">
+            The token.
+            </param>
+            <param name="format">
+            The format.
+            </param>
+            <param name="args">
+            The args.
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.Trace.WriteAdditional(System.String,System.Object,System.Exception,System.String,System.Object[])">
+            <summary>
+            The write additional.
+            </summary>
+            <param name="domain">
+            The domain.
+            </param>
+            <param name="token">
+            The token.
+            </param>
+            <param name="exception">
+            The exception.
+            </param>
+            <param name="format">
+            The format.
+            </param>
+            <param name="args">
+            The args.
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.Trace.Disposing(System.Boolean)">
+            <summary>
+            The disposing.
+            </summary>
+            <param name="disposing">
+            The disposing.
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.Trace.EnqueueLog(log4net.Core.LoggingEvent)">
+            <summary>
+            The enqueue log.
+            </summary>
+            <param name="log">
+            The log.
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.Trace.WriteAsync(System.Object)">
+            <summary>
+            The write async.
+            </summary>
+            <param name="state">
+            The state.
+            </param>
+        </member>
+        <member name="T:Infrastructure.Log.TraceManager">
+            <summary>
+            The TraceManager class.
+            </summary>
+            <code>public static class TraceManager</code>
+        </member>
+        <member name="M:Infrastructure.Log.TraceManager.CreateDefault">
+            <summary>
+            The create default.
+            </summary>
+        </member>
+        <member name="M:Infrastructure.Log.TraceManager.CreateDefault(System.String)">
+            <summary>
+            The create default.
+            </summary>
+            <param name="file">
+            The file.
+            </param>
+        </member>
+        <member name="P:Infrastructure.Log.TraceManager.Debug">
+            <summary>
+            Gets the debug.
+            </summary>
+        </member>
+        <member name="P:Infrastructure.Log.TraceManager.Error">
+            <summary>
+            Gets the error.
+            </summary>
+        </member>
+        <member name="P:Infrastructure.Log.TraceManager.Info">
+            <summary>
+            Gets the info.
+            </summary>
+        </member>
+        <member name="P:Infrastructure.Log.TraceManager.Warn">
+            <summary>
+            Gets the warn.
+            </summary>
+        </member>
+        <member name="T:Infrastructure.Log.ExtendedLogImpl">
+            <summary>
+            扩展的log4net日志类实现
+            </summary>
+        </member>
+        <member name="T:Infrastructure.Log.IExtendedLog">
+            <summary>
+            自定义的日志接口，用来扩展log4net的日志接口
+            </summary>
+        </member>
+        <member name="M:Infrastructure.Log.IExtendedLog.DebugEntity(System.Object,System.Object)">
+            <summary>
+            Debug日志模式下，记录实体信息
+            </summary>
+            <param name="message">
+            需要记录的日志信息内容
+            </param>
+            <param name="obj">
+            需要记录的实体信息，或则实体集合
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.IExtendedLog.ErrorEntity(System.Object,System.Object)">
+            <summary>
+            Error日志模式下，记录实体信息
+            </summary>
+            <param name="message">
+            需要记录的日志信息内容
+            </param>
+            <param name="obj">
+            需要记录的实体信息，或则实体集合
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.IExtendedLog.FatalEntity(System.Object,System.Object)">
+            <summary>
+            Fatal日志模式下，记录实体信息
+            </summary>
+            <param name="message">
+            需要记录的日志信息内容
+            </param>
+            <param name="obj">
+            需要记录的实体信息，或则实体集合
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.IExtendedLog.InfoEntity(System.Object,System.Object)">
+            <summary>
+            Info日志模式下，记录实体信息
+            </summary>
+            <param name="message">
+            需要记录的日志信息内容
+            </param>
+            <param name="obj">
+            需要记录的实体信息，或则实体集合
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.IExtendedLog.WarnEntity(System.Object,System.Object)">
+            <summary>
+            Warn日志模式下，记录实体信息
+            </summary>
+            <param name="message">
+            需要记录的日志信息内容
+            </param>
+            <param name="obj">
+            需要记录的实体信息，或则实体集合
+            </param>
+        </member>
+        <member name="F:Infrastructure.Log.ExtendedLogImpl.ThisDeclaringType">
+            <summary>
+            当前类的类型
+            </summary>
+        </member>
+        <member name="M:Infrastructure.Log.ExtendedLogImpl.#ctor(log4net.Core.ILogger)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Infrastructure.Log.ExtendedLogImpl"/> class.
+            </summary>
+            <param name="logger">
+            log4net的Logger对象
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.ExtendedLogImpl.DebugEntity(System.Object,System.Object)">
+            <summary>
+            Debug日志模式下，记录实体信息
+            </summary>
+            <param name="message">
+            需要记录的日志信息内容
+            </param>
+            <param name="obj">
+            需要记录的实体信息，或则实体集合
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.ExtendedLogImpl.ErrorEntity(System.Object,System.Object)">
+            <summary>
+            Error日志模式下，记录实体信息
+            </summary>
+            <param name="message">
+            需要记录的日志信息内容
+            </param>
+            <param name="obj">
+            需要记录的实体信息，或则实体集合
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.ExtendedLogImpl.FatalEntity(System.Object,System.Object)">
+            <summary>
+            Fatal日志模式下，记录实体信息
+            </summary>
+            <param name="message">
+            需要记录的日志信息内容
+            </param>
+            <param name="obj">
+            需要记录的实体信息，或则实体集合
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.ExtendedLogImpl.InfoEntity(System.Object,System.Object)">
+            <summary>
+            Info日志模式下，记录实体信息
+            </summary>
+            <param name="message">
+            需要记录的日志信息内容
+            </param>
+            <param name="obj">
+            需要记录的实体信息，或则实体集合
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.ExtendedLogImpl.WarnEntity(System.Object,System.Object)">
+            <summary>
+            Warn日志模式下，记录实体信息
+            </summary>
+            <param name="message">
+            需要记录的日志信息内容
+            </param>
+            <param name="obj">
+            需要记录的实体信息，或则实体集合
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.ExtendedLogImpl.IsSystemClass(System.Type)">
+            <summary>
+            是否为系统类型
+            </summary>
+            <param name="type">
+            类型
+            </param>
+            <returns>
+            判定结果
+            </returns>
+        </member>
+        <member name="M:Infrastructure.Log.ExtendedLogImpl.ReflectorEntity(System.Object,System.Int32)">
+            <summary>
+            反射实体或则实体集合 ，目前只实现了反射单个实体，待完善
+            </summary>
+            <param name="obj">
+            实体或则实体集合
+            </param>
+            <param name="level">
+            递归深度
+            </param>
+            <returns>
+            返回反射后组合的字符串
+            </returns>
+        </member>
+        <member name="M:Infrastructure.Log.ExtendedLogImpl.WriteObject(System.Object,System.Object,System.Boolean,log4net.Core.Level)">
+            <summary>
+            记录实体信息
+            </summary>
+            <param name="message">
+            记录的日志内容
+            </param>
+            <param name="obj">
+            需要记录的日志实体信息
+            </param>
+            <param name="isLogEnabled">
+            当前的日志级别的启用状态
+            </param>
+            <param name="level">
+            订单级别
+            </param>
+        </member>
+        <member name="T:Infrastructure.Log.ExtendedLogManager">
+            <summary>
+            扩展的日志管理管理类
+            </summary>
+        </member>
+        <member name="F:Infrastructure.Log.ExtendedLogManager.S_wrapperMap">
+            <summary>
+            初始化WrapperMap对象
+            </summary>
+        </member>
+        <member name="M:Infrastructure.Log.ExtendedLogManager.#ctor">
+            <summary>
+            Prevents a default instance of the <see cref="T:Infrastructure.Log.ExtendedLogManager"/> class from being created.
+            </summary>
+        </member>
+        <member name="M:Infrastructure.Log.ExtendedLogManager.GetLogger(System.Reflection.Assembly,System.String)">
+            <summary>
+            根据对象属性集获取其所属的Logger
+            </summary>
+            <param name="assembly">
+            对象的属性集
+            </param>
+            <param name="name">
+            logger名称
+            </param>
+            <returns>
+            如果存在logger则返回
+            </returns>
+        </member>
+        <member name="M:Infrastructure.Log.ExtendedLogManager.GetLogger(System.Type)">
+            <summary>
+            根据对象类型获取其所属的Logger
+            </summary>
+            <param name="type">
+            对象类型
+            </param>
+            <returns>
+            如果存在logger则返回
+            </returns>
+        </member>
+        <member name="M:Infrastructure.Log.ExtendedLogManager.WrapLogger(log4net.Core.ILogger)">
+            <summary>
+            包装Logger对象
+            </summary>
+            <param name="logger">
+            需要包装的Logger对象
+            </param>
+            <returns>
+            返回包装后的logger对象
+            </returns>
+        </member>
+        <member name="M:Infrastructure.Log.ExtendedLogManager.WrapperCreationHandler(log4net.Core.ILogger)">
+            <summary>
+            包装Logger对象
+            </summary>
+            <param name="logger">
+            需要包装的Logger对象
+            </param>
+            <returns>
+            返回ExtendedLogImpl对象
+            </returns>
+        </member>
+        <member name="T:Infrastructure.Log.LoggerNameAttribute">
+            <summary>
+            用来标记日志的Logger名称
+            </summary>
+        </member>
+        <member name="P:Infrastructure.Log.LoggerNameAttribute.LoggerName">
+            <summary>
+            日志的Logger名称，对应配置文件中的LoggerName
+            </summary>
+        </member>
+        <member name="T:Infrastructure.Log.ICustomLog">
+            <summary>
+            自定义的log接口，去除掉不常用的日志记录方式
+            </summary>
+        </member>
+        <member name="M:Infrastructure.Log.ICustomLog.Debug(System.String)">
+            <summary>
+            提供给客户端调用的Debug方法
+            </summary>
+            <param name="message">
+            需要记录的信息
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.ICustomLog.Debug(System.String,System.Exception)">
+            <summary>
+            提供给客户端调用的Debug方法
+            </summary>
+            <param name="message">
+            需要记录的信息
+            </param>
+            <param name="exception">
+            需要记录的异常信息
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.ICustomLog.DebugEntity(System.String,System.Object)">
+            <summary>
+            提供给客户端调用的DebugEntity方法
+            </summary>
+            <param name="message">
+            需要记录的日志信息
+            </param>
+            <param name="obj">
+            需要记录的实体信息
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.ICustomLog.Error(System.String)">
+            <summary>
+            提供给客户端调用的Error方法
+            </summary>
+            <param name="message">
+            需要记录的信息
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.ICustomLog.Error(System.String,System.Exception)">
+            <summary>
+            提供给客户端调用的Error方法
+            </summary>
+            <param name="message">
+            需要记录的信息
+            </param>
+            <param name="exception">
+            需要记录的异常信息
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.ICustomLog.ErrorEntity(System.String,System.Object)">
+            <summary>
+            ErrorEntity的日志记录接口方法
+            </summary>
+            <param name="message">
+            需要记录的日志信息
+            </param>
+            <param name="obj">
+            需要记录的实体信息
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.ICustomLog.Fatal(System.String)">
+            <summary>
+            提供给客户端调用的Fatal方法
+            </summary>
+            <param name="message">
+            需要记录的信息
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.ICustomLog.Fatal(System.String,System.Exception)">
+            <summary>
+            提供给客户端调用的Fatal方法
+            </summary>
+            <param name="message">
+            需要记录的信息
+            </param>
+            <param name="exception">
+            需要记录的异常信息
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.ICustomLog.FatalEntity(System.String,System.Object)">
+            <summary>
+            FatalEntity的日志记录接口方法
+            </summary>
+            <param name="message">
+            需要记录的日志信息
+            </param>
+            <param name="obj">
+            需要记录的实体信息
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.ICustomLog.Info(System.String)">
+            <summary>
+            提供给客户端调用的Info方法
+            </summary>
+            <param name="message">
+            需要记录的信息
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.ICustomLog.Info(System.String,System.Exception)">
+            <summary>
+            提供给客户端调用的Info方法
+            </summary>
+            <param name="message">
+            需要记录的信息
+            </param>
+            <param name="exception">
+            需要记录的异常信息
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.ICustomLog.InfoEntity(System.String,System.Object)">
+            <summary>
+            InfoEntity的日志记录接口方法
+            </summary>
+            <param name="message">
+            需要记录的日志信息
+            </param>
+            <param name="obj">
+            需要记录的实体信息
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.ICustomLog.Warn(System.String)">
+            <summary>
+            提供给客户端调用的Warn方法
+            </summary>
+            <param name="message">
+            需要记录的信息
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.ICustomLog.Warn(System.String,System.Exception)">
+            <summary>
+            提供给客户端调用的Warn方法
+            </summary>
+            <param name="message">
+            需要记录的信息
+            </param>
+            <param name="exception">
+            需要记录的异常信息
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.ICustomLog.WarnEntity(System.String,System.Object)">
+            <summary>
+            WarnEntity的日志记录接口方法
+            </summary>
+            <param name="message">
+            需要记录的日志信息
+            </param>
+            <param name="obj">
+            需要记录的实体信息
+            </param>
+        </member>
+        <member name="T:Infrastructure.Log.ILogWrite">
+            <summary>
+            提供调用Log4net的接口方法
+            </summary>
+        </member>
+        <member name="M:Infrastructure.Log.ILogWrite.Write(System.String)">
+            <summary>
+            记录message的接口方法，用来传递给log4net
+            </summary>
+            <param name="message">
+            需要记录的日志信息
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.ILogWrite.Write(System.String,System.Exception)">
+            <summary>
+            记录日志信息以及异常信息，最后传递给log4net
+            </summary>
+            <param name="message">
+            需要记录的日志信息
+            </param>
+            <param name="exception">
+            异常信息
+            </param>
+        </member>
+        <member name="M:Infrastructure.Log.ILogWrite.WriteEntity(System.String,System.Object)">
+            <summary>
+            记录日志信息以及实体信息，经过包装后传递给log4net
+            </summary>
+            <param name="message">
+            需要记录的日志信息
+            </param>
+            <param name="obj">
+            需要记录的实体信息
+            </param>
+        </member>
+        <member name="T:Infrastructure.Log.ILogWriteFactory">
+            <summary>
+            ILogWrite的抽象工厂类，用来创建不同的ILogWrite对象
+            </summary>
+        </member>
+        <member name="M:Infrastructure.Log.ILogWriteFactory.CreateDebugLog">
+            <summary>
+            创建DebugLog的接口方法
+            </summary>
+            <returns>返回ILogWrite对象</returns>
+        </member>
+        <member name="M:Infrastructure.Log.ILogWriteFactory.CreateErrorLog">
+            <summary>
+            创建ErrorLog的接口方法
+            </summary>
+            <returns>返回ILogWrite对象</returns>
+        </member>
+        <member name="M:Infrastructure.Log.ILogWriteFactory.CreateFatalLog">
+            <summary>
+            创建FatalLog的接口方法
+            </summary>
+            <returns>返回ILogWrite对象</returns>
+        </member>
+        <member name="M:Infrastructure.Log.ILogWriteFactory.CreateInfoLog">
+            <summary>
+            创建InfoLog的接口方法
+            </summary>
+            <returns>返回ILogWrite对象</returns>
+        </member>
+        <member name="M:Infrastructure.Log.ILogWriteFactory.CreateWarnLog">
+            <summary>
+            创建WarnLog的接口方法
+            </summary>
+            <returns>返回ILogWrite对象</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,59 @@
+﻿<Window x:Class="DM2.Ent.Client.Views.NewCustomerView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:cal="http://www.caliburnproject.org"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        Style="{StaticResource CommonOnlyCloseWindowStyle}"
+        Title="新建客户" Height="450" Width="370">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Right"></Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Text="{DynamicResource BankAccountInformation}" Style="{StaticResource TitleStyle}" VerticalAlignment="Center" />
+            <Grid Grid.Row="1" Background="#F8F8F8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="15"></ColumnDefinition>
+                    <ColumnDefinition Width="80"></ColumnDefinition>
+                    <ColumnDefinition Width="220"></ColumnDefinition>
+                    <ColumnDefinition Width="5"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="1"/>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <!--0-->
+                <!--1-->
+                <TextBlock Text="*" Grid.Column="1" Grid.Row="1" FontSize="16"  Foreground="Red" Margin="0,0,56,0"></TextBlock>
+                <TextBlock Text="客户数量" Grid.Column="1" Grid.Row="1" Margin="0,0,5,0"></TextBlock>
+                <TextBox Grid.Column="2"  Grid.Row="1" Text="{Binding Count, Mode=TwoWay,ValidatesOnDataErrors=True}" ></TextBox>
+                <!--2-->
+                <TextBlock Text="*" Grid.Column="1" Grid.Row="2" FontSize="16"  Foreground="Red" Margin="0,0,55,0"></TextBlock>
+                <TextBlock Text="密码" Grid.Row="2" Grid.Column="1" Margin="0,0,5,0"></TextBlock>
+                <TextBox Grid.Column="2"  Grid.Row="2" Text="{Binding Password, Mode=TwoWay,ValidatesOnDataErrors=True}" ></TextBox>
+
+            </Grid>
+            <StackPanel  Grid.Row="2" Orientation="Horizontal" FlowDirection="RightToLeft">
+                <Button Content="关闭" Width="90" Height="26"  Margin="20,0" Style="{StaticResource CommonButtonStle}"
+                                cal:Message.Attach="[Event Click]=[Action Close]"></Button>
+                <Button Content="保存" Width="90" Height="26"  Margin="20,0" Style="{StaticResource CommonButtonStle}"
+                                cal:Message.Attach="[Event Click]=[Action Save]"></Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

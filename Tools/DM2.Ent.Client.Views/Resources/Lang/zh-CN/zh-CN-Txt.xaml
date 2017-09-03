@@ -1,0 +1,322 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <!--0 ~ 9-->
+    <!--A-->
+    <sys:String x:Key="All">全部</sys:String>
+    <sys:String x:Key="Amount">金额</sys:String>
+    <sys:String x:Key="AverageRate">平均汇率</sys:String>
+    <sys:String x:Key="Ask">买价</sys:String>
+    <sys:String x:Key="AutoRefresh">自动刷新</sys:String>
+    <sys:String x:Key="AccountNo">账号</sys:String>
+    <sys:String x:Key="AccountName">账户名称</sys:String>
+    <sys:String x:Key="AvailableBalance">可用余额</sys:String>
+    <sys:String x:Key="ActionType">业务操作方向</sys:String>
+    <sys:String x:Key="AssetType">资产统计分类</sys:String>
+    <sys:String x:Key="AssetType.HedgingDealPosition">对冲交易仓位</sys:String>
+    <sys:String x:Key="AssetType.InternalDealPosition">内部交易仓位</sys:String>
+    <sys:String x:Key="AssetType.BankBalance">银行余额</sys:String>
+    
+    <!--B-->
+    <sys:String x:Key="Bid">卖价</sys:String>
+    <sys:String x:Key="BusinessUnit">分公司</sys:String>
+    <sys:String x:Key="BusinessUnit1">分公司1</sys:String>
+    <sys:String x:Key="BusinessUnit2">分公司2</sys:String>
+    <sys:String x:Key="BankAccount">银行账户</sys:String>
+    <sys:String x:Key="BankAccount1">银行账户1</sys:String>
+    <sys:String x:Key="BankAccount2">银行账户2</sys:String>
+    <sys:String x:Key="BankAccountInformation">银行账户信息</sys:String>
+    <sys:String x:Key="BankAccountGroup">银行账户组</sys:String>
+    <sys:String x:Key="BankAccountList">查询银行账户列表</sys:String>
+    <sys:String x:Key="BankAccountTitle">银行账户列表</sys:String>
+    <sys:String x:Key="BankName">银行名称</sys:String>
+    <sys:String x:Key="Best">最优价</sys:String>
+    <sys:String x:Key="BusinessUnitListTitle">查询分公司列表</sys:String>
+    <sys:String x:Key="BusinessUnitGroup">分公司组别</sys:String>
+    <sys:String x:Key="BusinessUnitInformation">分公司详细信息</sys:String>
+    <sys:String x:Key="Buy">买入</sys:String>
+    <sys:String x:Key="BuyCCY">买入货币</sys:String>
+    <sys:String x:Key="BuyAmount">买入金额</sys:String>
+    <sys:String x:Key="BankAccountManagement">银行账户管理</sys:String>
+    <sys:String x:Key="Balance">余额</sys:String>
+    <sys:String x:Key="BankAccountTransferInformation">银行转账详细信息</sys:String>
+    <sys:String x:Key="BankCashTransfer">银行转账</sys:String>
+    <sys:String x:Key="BankCashTransferReport">查询银行转账历史</sys:String>
+    <sys:String x:Key="BankAccountActualCash">银行账号资金管理</sys:String>
+    <sys:String x:Key="BankAccountActualCashReport">查询银行资金管理列表</sys:String>
+    <sys:String x:Key="BankAccountActualCashInformation">银行资金管理详细信息</sys:String>
+    <sys:String x:Key="BankCashFlowList">查询银行现金流</sys:String>
+    <sys:String x:Key="BalanceAfterSettlement">结算后余额</sys:String>
+    <sys:String x:Key="ByCounterParty">按交易对手汇总</sys:String>
+    <sys:String x:Key="ByBusinessUnit">按分公司汇总</sys:String>
+
+    <!--C-->
+    <sys:String x:Key="Cancel">取消</sys:String>
+    <sys:String x:Key="Close">关闭</sys:String>
+    <sys:String x:Key="CreationTime">创建时间</sys:String>
+    <sys:String x:Key="CreationTimeFrom">创建时间从</sys:String>
+    <sys:String x:Key="ChangePassword">修改密码</sys:String>
+    <sys:String x:Key="Counterparty">交易对手</sys:String>
+    <sys:String x:Key="CounterpartyGroup">交易对手组</sys:String>
+    <sys:String x:Key="CounterpartyGroupInformation">交易对手组详细信息</sys:String>
+    <sys:String x:Key="CounterpartyGroupListTitle">查询交易对手组</sys:String>
+    <sys:String x:Key="CashLadder">开仓现金流</sys:String>
+    <sys:String x:Key="ConnectionParameters">连接参数</sys:String>
+    <sys:String x:Key="ConnectionType">直通方式</sys:String>
+    <sys:String x:Key="CONNECTION_TYPE_0">手工</sys:String>
+    <sys:String x:Key="CONNECTION_TYPE_1">邮件</sys:String>
+    <sys:String x:Key="CONNECTION_TYPE_2">DM2 金融版</sys:String>
+    <sys:String x:Key="CONNECTION_TYPE_3">DM2 金融试用版</sys:String>
+    <sys:String x:Key="CounterpartyListTitle">交易对手列表</sys:String>
+    <sys:String x:Key="CounterpartyName">交易对手名称</sys:String>
+    <sys:String x:Key="CounterpartyInformation">交易对手详细信息</sys:String>
+    <sys:String x:Key="ConfirmPassword">确认密码</sys:String>
+    <sys:String x:Key="CurrentPassword">当前密码</sys:String>
+    <sys:String x:Key="Comment">备注</sys:String>
+    <sys:String x:Key="Confirm">确认</sys:String>
+    <sys:String x:Key="Contract">商品</sys:String>
+    <sys:String x:Key="ContractRate">合约汇率</sys:String>
+    <sys:String x:Key="CCY1Amount">货币1金额</sys:String>
+    <sys:String x:Key="CCY2Amount">货币2金额</sys:String>
+    <sys:String x:Key="CNY">CNY</sys:String>
+    <sys:String x:Key="ContractName">商品名称</sys:String>
+    <sys:String x:Key="Confirmation">确认信息</sys:String>
+    <sys:String x:Key="CCY">货币</sys:String>
+    <sys:String x:Key="Country">国家</sys:String>
+    <sys:String x:Key="Connected">Connected</sys:String>
+    <!--D-->
+    <sys:String x:Key="Deal">交易</sys:String>
+    <sys:String x:Key="DealID">单号</sys:String>
+    <sys:String x:Key="DealerSpotRate">即期汇率</sys:String>
+    <sys:String x:Key="DetailedInformation">详细信息</sys:String>
+    <sys:String x:Key="Delete">删除</sys:String>
+    <sys:String x:Key="DateFormatEnum.YYYY_MM_DD">YYYY-MM-DD</sys:String>
+    <sys:String x:Key="DateFormatEnum.YYYY_MON_DD">YYYY-MON-DD</sys:String>
+    <sys:String x:Key="DateFormatEnum.MM_DD_YYYY">MM-DD-YYYY</sys:String>
+    <sys:String x:Key="DateFormatEnum.MON_DD_YYYY">MON-DD-YYYY</sys:String>
+    <sys:String x:Key="DateFormatEnum.DD_MM_YYYY">DD-MM-YYYY</sys:String>
+    <sys:String x:Key="DateFormatEnum.DD_MON_YYYY">DD-MON-YYYY</sys:String>
+    <sys:String x:Key="DealtAmount">手工录入金额</sys:String>
+    <sys:String x:Key="DisConnected">DisConnected</sys:String>
+    <sys:String x:Key="DailyExposure">每日资金敞口</sys:String>
+
+    <!--E-->
+    <sys:String x:Key="Exposure">风险敞口</sys:String>
+    <sys:String x:Key="ExposureDetail">详细信息</sys:String>
+    <sys:String x:Key="EditCounterparty">修改交易对手</sys:String>
+    <sys:String x:Key="Email">邮箱</sys:String>
+    <sys:String x:Key="EmailLoginName">邮箱登录名</sys:String>
+    <sys:String x:Key="EmailPassword">邮箱密码</sys:String>
+    <sys:String x:Key="EmailImportTemplate">邮件导入模板</sys:String>
+    <sys:String x:Key="EmailTimeZone">邮件时间所属时区</sys:String>
+    <sys:String x:Key="Enabled">启用</sys:String>
+    <sys:String x:Key="EnsureLogout">是否要退出登录?</sys:String>
+    <sys:String x:Key="EMAIL_IMPORT_TEMPLATE_0">Citibank New Zealand TXT Template</sys:String>
+    <sys:String x:Key="EMAIL_IMPORT_TEMPLATE_1">Citibank Hong Kong PDF Template</sys:String>
+
+    <!--F-->
+    <sys:String x:Key="File(F)">文件(F)</sys:String>
+    <sys:String x:Key="FullName">全称</sys:String>
+    <sys:String x:Key="ForwardPoint">远期点数</sys:String>
+    <sys:String x:Key="ForecastRate">预估汇率</sys:String>
+    <sys:String x:Key="ForecastPL">预估盈亏</sys:String>
+    <sys:String x:Key="FirstName">名</sys:String>
+    <sys:String x:Key="FairRate">KVB 价</sys:String>
+    <sys:String x:Key="FromAccount">转出银行账号</sys:String>
+    <sys:String x:Key="FromBusinessUnit">转出分公司</sys:String>
+    <sys:String x:Key="FromCounterparty">转出银行</sys:String>
+    <sys:String x:Key="FindBankAccount">查找银行账户</sys:String>
+    <sys:String x:Key="FinancialInstitution">金融机构</sys:String>
+    <sys:String x:Key="FarInfo">远期交易信息</sys:String>
+
+
+    <!--G-->
+    <sys:String x:Key="Group">组</sys:String>
+    <sys:String x:Key="GroupInformation">组信息</sys:String>
+    <sys:String x:Key="GroupType">组类型</sys:String>
+    <sys:String x:Key="GroupName">组名称</sys:String>
+    <!--H-->
+    <sys:String x:Key="Help(H)">帮助(H)</sys:String>
+    <sys:String x:Key="HedgeDeal">对冲交易单</sys:String>
+    <sys:String x:Key="HedgeSpotForwardDeal">即期远期交易</sys:String>
+    <sys:String x:Key="HedgeSwapDeal">掉期交易</sys:String>
+    <sys:String x:Key="HedgeDealList">当前对冲交易单列表</sys:String>
+    <sys:String x:Key="HedgeDealTitle">对冲交易单列表</sys:String>
+    <sys:String x:Key="HedgingDealID">上家单号</sys:String>
+    <sys:String x:Key="HedgingExecutionID">上家执行单号</sys:String>
+    <sys:String x:Key="HistoryHedgeDeal">历史交易单</sys:String>
+    <sys:String x:Key="HistoryHedgeDealList">历史对冲交易单列表</sys:String>
+    <sys:String x:Key="HistoryPriceTitle">历史报价图表</sys:String>
+    <!--I-->
+    <sys:String x:Key="Instrument">业务方式</sys:String>
+    <sys:String x:Key="IsSettlementAccount">是否结算账户</sys:String>
+
+    <!--J-->
+    <sys:String x:Key="Journal">日志</sys:String>
+    <!--K-->
+    <sys:String x:Key="Key">关键字</sys:String>
+    <!--L-->
+    <sys:String x:Key="LastUpdateTime">最后修改时间</sys:String>
+    <sys:String x:Key="Logout">注销</sys:String>
+    <sys:String x:Key="Login">登录</sys:String>
+    <sys:String x:Key="LoginName">登录名</sys:String>
+    <sys:String x:Key="LocalTradeDate">交易日</sys:String>
+    <sys:String x:Key="LedgerBalance">财务余额</sys:String>
+    <sys:String x:Key="LocalCCY">货币</sys:String>
+    <sys:String x:Key="DateFormat">日期格式</sys:String>
+    <sys:String x:Key="LastName">姓</sys:String>
+    <sys:String x:Key="Locked">锁定</sys:String>
+    <sys:String x:Key="LoginInfo">登录ID : {0}; 登录名 : {1}</sys:String>
+
+    <!--M-->
+    <sys:String x:Key="Modify">修改</sys:String>
+    <sys:String x:Key="MarketForecast">交易仓位汇总</sys:String>
+    <sys:String x:Key="MarketRate">市场汇率</sys:String>
+    <sys:String x:Key="ModifyForecastRateTitle">修改预估汇率</sys:String>
+    <sys:String x:Key="ModifyBankAccount">修改银行账户</sys:String>
+    <sys:String x:Key="MsgBuy">买</sys:String>
+    <sys:String x:Key="MsgSell">卖</sys:String>
+
+    <!--N-->
+    <sys:String x:Key="NewPassword">新密码</sys:String>
+    <sys:String x:Key="New">创建</sys:String>
+    <sys:String x:Key="News">新闻</sys:String>
+    <sys:String x:Key="NewHedgeSpotForward">手工创建即期远期交易</sys:String>
+    <sys:String x:Key="NewFinancialHedgeDeal">创建即期远期直通交易</sys:String>
+    <sys:String x:Key="NewHedgeSwapDeal">手工创建掉期交易</sys:String>
+    <sys:String x:Key="NewInternalDeal">创建内部交易</sys:String>
+    <sys:String x:Key="NewBankAccount">创建银行账户</sys:String>
+    <sys:String x:Key="NotLogin">Please login!</sys:String>
+    <sys:String x:Key="NetworkInfo">In: {0:#,##0.00} KB/Out: {1:#,##0.00}KB</sys:String>
+    <sys:String x:Key="NextPage">下一页</sys:String>
+    <sys:String x:Key="NonSettlementAccountBalance">非结算账户余额</sys:String>
+    <sys:String x:Key="NearLegInfo">近期交易信息</sys:String>
+    
+    <!--O-->
+    <sys:String x:Key="OK">确认</sys:String>
+    <sys:String x:Key="OperationFailed">失败信息</sys:String>
+    <sys:String x:Key="OperationSuccessful">成功信息</sys:String>
+    <!--P-->
+    <sys:String x:Key="Place">提交</sys:String>
+    <sys:String x:Key="PricingBricks">块状报价</sys:String>
+    <sys:String x:Key="PriceHistory">历史报价</sys:String>
+    <sys:String x:Key="PL">盈亏</sys:String>
+    <sys:String x:Key="Password">密码</sys:String>
+    <sys:String x:Key="ParentGroup">父级组</sys:String>
+    <sys:String x:Key="Permission">权限</sys:String>
+    <sys:String x:Key="Payment">余额减少</sys:String>
+    <sys:String x:Key="PrevPage">上一页</sys:String>
+    <sys:String x:Key="Position">仓位</sys:String>
+    
+    <!--Q-->
+    <!--R-->
+    <sys:String x:Key="Request">请求</sys:String>
+    <sys:String x:Key="ReportCCY">报表货币</sys:String>
+    <sys:String x:Key="RelatedId">关联单号</sys:String>
+    <sys:String x:Key="Role">角色</sys:String>
+    <sys:String x:Key="RoleName">角色名称</sys:String>
+    <sys:String x:Key="Report(R)">报表(R)</sys:String>
+    <sys:String x:Key="Receipt">余额增加</sys:String>
+    <sys:String x:Key="Reset">重置</sys:String>
+    <sys:String x:Key="RegionId">地区</sys:String>
+    <!--S-->
+    <sys:String x:Key="Save">保存</sys:String>
+    <sys:String x:Key="Search">查询</sys:String>
+    <sys:String x:Key="SettlementAccount">结算银行账号</sys:String>
+    <sys:String x:Key="SaveLoginInfo">保存登录名</sys:String>
+    <sys:String x:Key="SnapshotTime">快照时间</sys:String>
+    <sys:String x:Key="SnapshotTimeList">快照时间列表</sys:String>
+    <sys:String x:Key="Sell">卖出</sys:String>
+    <sys:String x:Key="SellCCY">卖出货币</sys:String>
+    <sys:String x:Key="SellAmount">卖出金额</sys:String>
+    <sys:String x:Key="Status">状态</sys:String>
+    <sys:String x:Key="StatusEnum.OPERN">创建</sys:String>
+    <sys:String x:Key="StatusEnum.SETTLE">结算</sys:String>
+    <sys:String x:Key="StatusEnum.PARTIAL_SETTLED">部分结算</sys:String>
+    <sys:String x:Key="StatusEnum.DELETED_PENDING">删除待审批</sys:String>
+    <sys:String x:Key="StatusEnum.DELETED_APPROVAL">删除已审批</sys:String>
+    <sys:String x:Key="StatusEnum.DELETED_CONFIRMED">删除已确认</sys:String>
+    <sys:String x:Key="StatusEnum.DELETED">已删除</sys:String>
+    <sys:String x:Key="StatusEnum.PENDING">待激活</sys:String>
+    <sys:String x:Key="StatusEnum.SLEEPING">休眠</sys:String>
+    <sys:String x:Key="StatusEnum.FILLED">已激活</sys:String>
+    <sys:String x:Key="StatusEnum.CANCELLED">已取消</sys:String>
+    <sys:String x:Key="Staff">代客人员</sys:String>
+    <sys:String x:Key="SignType">金额正负方向</sys:String>
+    <sys:String x:Key="SettlementAccountList">结算银行账号</sys:String>
+    <sys:String x:Key="SelectBankAccount">选择银行账号</sys:String>
+    <sys:String x:Key="SettlementAccountBalance">结算账户余额</sys:String>
+    <sys:String x:Key="SellAccountBalance">扣款账户余额</sys:String>
+    <sys:String x:Key="SellAccountTodayBalance">当日结算后余额</sys:String>
+    
+    <!--T-->
+    <sys:String x:Key="Tools(S)">设置(S)</sys:String>
+    <sys:String x:Key="TradeDateFrom">开始交易日</sys:String>
+    <sys:String x:Key="To">至</sys:String>
+    <sys:String x:Key="Time">时间</sys:String>
+    <sys:String x:Key="TimeZone">时区</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT_12">GMT-12:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT_11">GMT-11:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT_10">GMT-10:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT_9">GMT-9:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT_8">GMT-8:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT_7">GMT-7:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT_6">GMT-6:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT_5">GMT-5:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT_4">GMT-4:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT_3">GMT-3:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT_2">GMT-2:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT_1">GMT-1:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT0">GMT</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT1">GMT+1:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT2">GMT+2:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT3">GMT+3:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT4">GMT+4:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT5">GMT+5:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT6">GMT+6:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT7">GMT+7:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT8">GMT+8:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT9">GMT+9:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT10">GMT+10:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT11">GMT+11:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT12">GMT+12:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT13">GMT+13:00</sys:String>
+    <sys:String x:Key="Total">合计</sys:String>
+    <sys:String x:Key="Trade(T)">交易(T)</sys:String>
+    <sys:String x:Key="TransactionType">交易方向</sys:String>
+    <sys:String x:Key="ToAccount">转入银行账号</sys:String>
+    <sys:String x:Key="ToBusinessUnit">转入分公司</sys:String>
+    <sys:String x:Key="TradableInstrument">可用业务类型</sys:String>
+    <sys:String x:Key="TradableInstrumentEnum.FX_HEDGING_SPOT_FORWARD">FX Hedging Spot&amp;Forward</sys:String>
+    <sys:String x:Key="TradableInstrumentEnum.FX_HEDGING_SWAP">FX Hedging Swap</sys:String>
+    <sys:String x:Key="TradableInstrumentEnum.FX_INTERNAL_SPOT_FORWARD">FX Internal Spot&amp;Forward</sys:String>
+    <sys:String x:Key="TradableInstrumentEnum.FX_INTERNAL_SWAP">FX Internal Spot</sys:String>
+    <sys:String x:Key="TradableInstrumentEnum.INITIALIZATION_BALANCE">余额初始化</sys:String>
+    <sys:String x:Key="TradableInstrumentEnum.DEPOSIT">入金</sys:String>
+    <sys:String x:Key="TradableInstrumentEnum.WITHDRAWAL">出金</sys:String>
+    <sys:String x:Key="TradableInstrumentEnum.FEE">费用</sys:String>
+    <sys:String x:Key="TradableInstrumentEnum.CASH_TRANSFER">银行转账</sys:String>
+    <sys:String x:Key="ToCounterparty">转入银行</sys:String>
+    <sys:String x:Key="ToBankAcctNo">转入银行账号</sys:String>
+    <!--U-->
+    <sys:String x:Key="User">企业用户</sys:String>
+    <sys:String x:Key="UserRole">用户角色</sys:String>
+    <sys:String x:Key="UserRoleListTitle">企业用户角色列表t</sys:String>
+    <sys:String x:Key="UserRoleInformation">企业用户角色详细信息</sys:String>
+    <sys:String x:Key="UserGroup">企业用户组</sys:String>
+    <sys:String x:Key="UserListTitle">企业用户列表</sys:String>
+    <sys:String x:Key="UserInformation">企业用户详细信息</sys:String>
+    <sys:String x:Key="UserKick">您的帐户已被其他用户强制切换账户</sys:String>
+
+    <!--V-->
+    <sys:String x:Key="View(V)">视图(V)</sys:String>
+    <sys:String x:Key="ValueDate">交割日</sys:String>
+    <sys:String x:Key="ValueDateFrom">开始交割日</sys:String>
+    <!--W-->
+    <sys:String x:Key="Window(W)">窗口(W)</sys:String>
+
+    <!--X-->
+    <!--Y-->
+    <!--Z-->
+
+</ResourceDictionary>

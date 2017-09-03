@@ -1,0 +1,448 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<log4net>
+  <root>
+    <level value="WARN" />
+  </root>
+  <appender name="DomainDebugRollingFile" type="log4net.Appender.RollingFileAppender">
+    <file value="./Log/Domain/Debug/" />
+    <appendToFile value="true" />
+    <maximumFileSize value="100000KB" />
+    <rollingStyle value="Composite"/>
+    <staticLogFileName value="false"/>
+    <maxSizeRollBackups value="-1" />
+    <datePattern value="yyyyMMdd&quot;.log&quot;" />
+    <lockingModel type="log4net.Appender.FileAppender+MinimalLock"/>
+    <layout type="log4net.Layout.PatternLayout">
+      <!--<header type="log4net.Util.PatternString" value="&#13;&#10-header-13;&#10;" />
+      <footer type="log4net.Util.PatternString" value="[END LOG] %newline" />-->
+      <conversionPattern value="%utcdate{dd-MM-yyyy HH:mm:ss.fff} GMT %message %newline" />
+    </layout>
+  </appender>
+  <appender name="DomainInfoRollingFile" type="log4net.Appender.RollingFileAppender">
+    <file value="./Log/Domain/Info/" />
+    <appendToFile value="true" />
+    <maximumFileSize value="100000KB" />
+    <rollingStyle value="Composite"/>
+    <staticLogFileName value="false"/>
+    <maxSizeRollBackups value="-1" />
+    <datePattern value="yyyyMMdd&quot;.log&quot;" />
+    <lockingModel type="log4net.Appender.FileAppender+MinimalLock"/>
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%utcdate{dd-MM-yyyy HH:mm:ss.fff} GMT %message %newline" />
+    </layout>
+  </appender>  
+  <appender name="DomainWarnRollingFile" type="log4net.Appender.RollingFileAppender">
+    <file value="./Log/Domain/Warn/" />
+    <appendToFile value="true" />
+    <maximumFileSize value="100000KB" />
+    <rollingStyle value="Composite"/>
+    <staticLogFileName value="false"/>
+    <maxSizeRollBackups value="-1" />
+    <datePattern value="yyyyMMdd&quot;.log&quot;" />
+    <lockingModel type="log4net.Appender.FileAppender+MinimalLock"/>
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%utcdate{dd-MM-yyyy HH:mm:ss.fff} GMT %message %newline" />
+    </layout>
+  </appender>
+  <appender name="DomainErrorRollingFile" type="log4net.Appender.RollingFileAppender">
+    <file value="./Log/Domain/Error/" />
+    <appendToFile value="true" />
+    <maximumFileSize value="100000KB" />
+    <rollingStyle value="Composite"/>
+    <staticLogFileName value="false"/>
+    <maxSizeRollBackups value="-1" />
+    <datePattern value="yyyyMMdd&quot;.log&quot;" />
+    <lockingModel type="log4net.Appender.FileAppender+MinimalLock"/>
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%utcdate{dd-MM-yyyy HH:mm:ss.fff} GMT %message %newline" />
+    </layout>
+  </appender>
+  <appender name="DomainFatalRollingFile" type="log4net.Appender.RollingFileAppender">
+    <file value="./Log/Domain/Fatal/" />
+    <appendToFile value="true" />
+    <maximumFileSize value="100000KB" />
+    <rollingStyle value="Composite"/>
+    <staticLogFileName value="false"/>
+    <maxSizeRollBackups value="-1" />
+    <datePattern value="yyyyMMdd&quot;.log&quot;" />
+    <lockingModel type="log4net.Appender.FileAppender+MinimalLock"/>
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%utcdate{dd-MM-yyyy HH:mm:ss.fff} GMT %message %newline" />
+    </layout>
+  </appender>
+
+  <appender name="CommonDebugRollingFile" type="log4net.Appender.RollingFileAppender">
+    <file value="./Log/Common/Debug/" />
+    <appendToFile value="true" />
+    <maximumFileSize value="100000KB" />
+    <rollingStyle value="Composite"/>
+    <staticLogFileName value="false"/>
+    <maxSizeRollBackups value="-1" />
+    <datePattern value="yyyyMMdd&quot;.log&quot;" />
+    <lockingModel type="log4net.Appender.FileAppender+MinimalLock"/>
+    <layout type="log4net.Layout.PatternLayout">
+      <!--<header type="log4net.Util.PatternString" value="&#13;&#10-header-13;&#10;" />
+      <footer type="log4net.Util.PatternString" value="[END LOG] %newline" />-->
+      <conversionPattern value="%utcdate{dd-MM-yyyy HH:mm:ss.fff} GMT %message %newline" />
+    </layout>
+  </appender>
+  <appender name="CommonInfoRollingFile" type="log4net.Appender.RollingFileAppender">
+    <file value="./Log/Common/Info/" />
+    <appendToFile value="true" />
+    <maximumFileSize value="100000KB" />
+    <rollingStyle value="Composite"/>
+    <staticLogFileName value="false"/>
+    <maxSizeRollBackups value="-1" />
+    <datePattern value="yyyyMMdd&quot;.log&quot;" />
+    <lockingModel type="log4net.Appender.FileAppender+MinimalLock"/>
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%utcdate{dd-MM-yyyy HH:mm:ss.fff} GMT %message %newline" />
+    </layout>
+  </appender>
+  <appender name="CommonWarnRollingFile" type="log4net.Appender.RollingFileAppender">
+    <file value="./Log/Common/Warn/" />
+    <appendToFile value="true" />
+    <maximumFileSize value="100000KB" />
+    <rollingStyle value="Composite"/>
+    <staticLogFileName value="false"/>
+    <maxSizeRollBackups value="-1" />
+    <datePattern value="yyyyMMdd&quot;.log&quot;" />
+    <lockingModel type="log4net.Appender.FileAppender+MinimalLock"/>
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%utcdate{dd-MM-yyyy HH:mm:ss.fff} GMT %message %newline" />
+    </layout>
+  </appender>  
+  <appender name="CommonErrorRollingFile" type="log4net.Appender.RollingFileAppender">
+    <file value="./Log/Common/Error/" />
+    <appendToFile value="true" />
+    <maximumFileSize value="100000KB" />
+    <rollingStyle value="Composite"/>
+    <staticLogFileName value="false"/>
+    <maxSizeRollBackups value="-1" />
+    <datePattern value="yyyyMMdd&quot;.log&quot;" />
+    <lockingModel type="log4net.Appender.FileAppender+MinimalLock"/>
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%utcdate{dd-MM-yyyy HH:mm:ss.fff} GMT %message %newline" />
+    </layout>
+  </appender>
+  <appender name="CommonFatalRollingFile" type="log4net.Appender.RollingFileAppender">
+    <file value="./Log/Common/Fatal/" />
+    <appendToFile value="true" />
+    <maximumFileSize value="100000KB" />
+    <rollingStyle value="Composite"/>
+    <staticLogFileName value="false"/>
+    <maxSizeRollBackups value="-1" />
+    <datePattern value="yyyyMMdd&quot;.log&quot;" />
+    <lockingModel type="log4net.Appender.FileAppender+MinimalLock"/>
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%utcdate{dd-MM-yyyy HH:mm:ss.fff} GMT %message %newline" />
+    </layout>
+  </appender>
+  
+  <appender name="SystemDebugRollingFile" type="log4net.Appender.RollingFileAppender">
+    <file value="./Log/System/Debug/" />
+    <appendToFile value="true" />
+    <maximumFileSize value="100000KB" />
+    <rollingStyle value="Composite"/>
+    <staticLogFileName value="false"/>
+    <maxSizeRollBackups value="-1" />
+    <datePattern value="yyyyMMdd&quot;.log&quot;" />
+    <lockingModel type="log4net.Appender.FileAppender+MinimalLock"/>
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%utcdate{dd-MM-yyyy HH:mm:ss.fff} GMT %message %newline" />
+    </layout>
+  </appender>
+  <appender name="SystemInfoRollingFile" type="log4net.Appender.RollingFileAppender">
+    <file value="./Log/System/Info/" />
+    <appendToFile value="true" />
+    <maximumFileSize value="100000KB" />
+    <rollingStyle value="Composite"/>
+    <staticLogFileName value="false"/>
+    <maxSizeRollBackups value="-1" />
+    <datePattern value="yyyyMMdd&quot;.log&quot;" />
+    <lockingModel type="log4net.Appender.FileAppender+MinimalLock"/>
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%utcdate{dd-MM-yyyy HH:mm:ss.fff} GMT %message %newline" />
+    </layout>
+  </appender>  
+  <appender name="SystemWarnRollingFile" type="log4net.Appender.RollingFileAppender">
+    <file value="./Log/System/Warn/" />
+    <appendToFile value="true" />
+    <maximumFileSize value="100000KB" />
+    <rollingStyle value="Composite"/>
+    <staticLogFileName value="false"/>
+    <maxSizeRollBackups value="-1" />
+    <datePattern value="yyyyMMdd&quot;.log&quot;" />
+    <lockingModel type="log4net.Appender.FileAppender+MinimalLock"/>
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%utcdate{dd-MM-yyyy HH:mm:ss.fff} GMT %message %newline" />
+    </layout>
+  </appender>
+  <appender name="SystemErrorRollingFile" type="log4net.Appender.RollingFileAppender">
+    <file value="./Log/System/Error/" />
+    <appendToFile value="true" />
+    <maximumFileSize value="100000KB" />
+    <rollingStyle value="Composite"/>
+    <staticLogFileName value="false"/>
+    <maxSizeRollBackups value="-1" />
+    <datePattern value="yyyyMMdd&quot;.log&quot;" />
+    <lockingModel type="log4net.Appender.FileAppender+MinimalLock"/>
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%utcdate{dd-MM-yyyy HH:mm:ss.fff} GMT %message %newline" />
+    </layout>
+  </appender>
+  <appender name="SystemFatalRollingFile" type="log4net.Appender.RollingFileAppender">
+    <file value="./Log/System/Fatal/" />
+    <appendToFile value="true" />
+    <maximumFileSize value="100000KB" />
+    <rollingStyle value="Composite"/>
+    <staticLogFileName value="false"/>
+    <maxSizeRollBackups value="-1" />
+    <datePattern value="yyyyMMdd&quot;.log&quot;" />
+    <lockingModel type="log4net.Appender.FileAppender+MinimalLock"/>
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%utcdate{dd-MM-yyyy HH:mm:ss.fff} GMT %message %newline" />
+    </layout>
+  </appender>
+
+  <appender name="ServiceDebugRollingFile" type="log4net.Appender.RollingFileAppender">
+    <file value="./Log/Service/Debug/" />
+    <appendToFile value="true" />
+    <maximumFileSize value="100000KB" />
+    <rollingStyle value="Composite"/>
+    <staticLogFileName value="false"/>
+    <maxSizeRollBackups value="-1" />
+    <datePattern value="yyyyMMdd&quot;.log&quot;" />
+    <lockingModel type="log4net.Appender.FileAppender+MinimalLock"/>
+    <layout type="log4net.Layout.PatternLayout">
+      <!--<header type="log4net.Util.PatternString" value="&#13;&#10-header-13;&#10;" />
+      <footer type="log4net.Util.PatternString" value="[END LOG] %newline" />-->
+      <conversionPattern value="%utcdate{dd-MM-yyyy HH:mm:ss.fff} GMT %message %newline" />
+    </layout>
+  </appender>
+  <appender name="ServiceInfoRollingFile" type="log4net.Appender.RollingFileAppender">
+    <file value="./Log/Service/Info/" />
+    <appendToFile value="true" />
+    <maximumFileSize value="100000KB" />
+    <rollingStyle value="Composite"/>
+    <staticLogFileName value="false"/>
+    <maxSizeRollBackups value="-1" />
+    <datePattern value="yyyyMMdd&quot;.log&quot;" />
+    <lockingModel type="log4net.Appender.FileAppender+MinimalLock"/>
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%utcdate{dd-MM-yyyy HH:mm:ss.fff} GMT %message %newline" />
+    </layout>
+  </appender>
+  <appender name="ServiceWarnRollingFile" type="log4net.Appender.RollingFileAppender">
+    <file value="./Log/Service/Warn/" />
+    <appendToFile value="true" />
+    <maximumFileSize value="100000KB" />
+    <rollingStyle value="Composite"/>
+    <staticLogFileName value="false"/>
+    <maxSizeRollBackups value="-1" />
+    <datePattern value="yyyyMMdd&quot;.log&quot;" />
+    <lockingModel type="log4net.Appender.FileAppender+MinimalLock"/>
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%utcdate{dd-MM-yyyy HH:mm:ss.fff} GMT %message %newline" />
+    </layout>
+  </appender>  
+  <appender name="ServiceErrorRollingFile" type="log4net.Appender.RollingFileAppender">
+    <file value="./Log/Service/Error/" />
+    <appendToFile value="true" />
+    <maximumFileSize value="100000KB" />
+    <rollingStyle value="Composite"/>
+    <staticLogFileName value="false"/>
+    <maxSizeRollBackups value="-1" />
+    <datePattern value="yyyyMMdd&quot;.log&quot;" />
+    <lockingModel type="log4net.Appender.FileAppender+MinimalLock"/>
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%utcdate{dd-MM-yyyy HH:mm:ss.fff} GMT %message %newline" />
+    </layout>
+  </appender>
+  <appender name="ServiceFatalRollingFile" type="log4net.Appender.RollingFileAppender">
+    <file value="./Log/Service/Fatal/" />
+    <appendToFile value="true" />
+    <maximumFileSize value="100000KB" />
+    <rollingStyle value="Composite"/>
+    <staticLogFileName value="false"/>
+    <maxSizeRollBackups value="-1" />
+    <datePattern value="yyyyMMdd&quot;.log&quot;" />
+    <lockingModel type="log4net.Appender.FileAppender+MinimalLock"/>
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%utcdate{dd-MM-yyyy HH:mm:ss.fff} GMT %message %newline" />
+    </layout>
+  </appender>
+
+  <appender name="ViewModelDebugRollingFile" type="log4net.Appender.RollingFileAppender">
+    <file value="./Log/ViewModel/Debug/" />
+    <appendToFile value="true" />
+    <maximumFileSize value="100000KB" />
+    <rollingStyle value="Composite"/>
+    <staticLogFileName value="false"/>
+    <maxSizeRollBackups value="-1" />
+    <datePattern value="yyyyMMdd&quot;.log&quot;" />
+    <lockingModel type="log4net.Appender.FileAppender+MinimalLock"/>
+    <layout type="log4net.Layout.PatternLayout">
+      <!--<header type="log4net.Util.PatternString" value="&#13;&#10-header-13;&#10;" />
+      <footer type="log4net.Util.PatternString" value="[END LOG] %newline" />-->
+      <conversionPattern value="%utcdate{dd-MM-yyyy HH:mm:ss.fff} GMT %message %newline" />
+    </layout>
+  </appender>
+  <appender name="ViewModelInfoRollingFile" type="log4net.Appender.RollingFileAppender">
+    <file value="./Log/ViewModel/Info/" />
+    <appendToFile value="true" />
+    <maximumFileSize value="100000KB" />
+    <rollingStyle value="Composite"/>
+    <staticLogFileName value="false"/>
+    <maxSizeRollBackups value="-1" />
+    <datePattern value="yyyyMMdd&quot;.log&quot;" />
+    <lockingModel type="log4net.Appender.FileAppender+MinimalLock"/>
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%utcdate{dd-MM-yyyy HH:mm:ss.fff} GMT %message %newline" />
+    </layout>
+  </appender>
+  <appender name="ViewModelWarnRollingFile" type="log4net.Appender.RollingFileAppender">
+    <file value="./Log/ViewModel/Warn/" />
+    <appendToFile value="true" />
+    <maximumFileSize value="100000KB" />
+    <rollingStyle value="Composite"/>
+    <staticLogFileName value="false"/>
+    <maxSizeRollBackups value="-1" />
+    <datePattern value="yyyyMMdd&quot;.log&quot;" />
+    <lockingModel type="log4net.Appender.FileAppender+MinimalLock"/>
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%utcdate{dd-MM-yyyy HH:mm:ss.fff} GMT %message %newline" />
+    </layout>
+  </appender>  
+  <appender name="ViewModelErrorRollingFile" type="log4net.Appender.RollingFileAppender">
+    <file value="./Log/ViewModel/Error/" />
+    <appendToFile value="true" />
+    <maximumFileSize value="100000KB" />
+    <rollingStyle value="Composite"/>
+    <staticLogFileName value="false"/>
+    <maxSizeRollBackups value="-1" />
+    <datePattern value="yyyyMMdd&quot;.log&quot;" />
+    <lockingModel type="log4net.Appender.FileAppender+MinimalLock"/>
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%utcdate{dd-MM-yyyy HH:mm:ss.fff} GMT %message %newline" />
+    </layout>
+  </appender>
+  <appender name="ViewModelFatalRollingFile" type="log4net.Appender.RollingFileAppender">
+    <file value="./Log/ViewModel/Fatal/" />
+    <appendToFile value="true" />
+    <maximumFileSize value="100000KB" />
+    <rollingStyle value="Composite"/>
+    <staticLogFileName value="false"/>
+    <maxSizeRollBackups value="-1" />
+    <datePattern value="yyyyMMdd&quot;.log&quot;" />
+    <lockingModel type="log4net.Appender.FileAppender+MinimalLock"/>
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%utcdate{dd-MM-yyyy HH:mm:ss.fff} GMT %message %newline" />
+    </layout>
+  </appender>
+  
+  <logger name="DomainDebug" additivity="false">
+    <level value="DEBUG"/>
+    <appender-ref ref="DomainDebugRollingFile" />
+  </logger>
+  <logger name="DomainInfo" additivity="false">
+    <level value="INFO"/>
+    <appender-ref ref="DomainInfoRollingFile" />
+  </logger>
+  <logger name="DomainWarn" additivity="false">
+    <level value="WARN"/>
+    <appender-ref ref="DomainWarnRollingFile" />
+  </logger>
+  <logger name="DomainError" additivity="false">
+    <level value="ERROR"/>
+    <appender-ref ref="DomainErrorRollingFile" />
+  </logger>
+  <logger name="DomainFatal" additivity="false">
+    <level value="FATAL"/>
+    <appender-ref ref="DomainFatalRollingFile" />
+  </logger>
+
+  <logger name="CommonDebug" additivity="false">
+    <level value="DEBUG"/>
+    <appender-ref ref="CommonDebugRollingFile" />
+  </logger>
+  <logger name="CommonInfo" additivity="false">
+    <level value="INFO"/>
+    <appender-ref ref="CommonInfoRollingFile" />
+  </logger>
+  <logger name="CommonWarn" additivity="false">
+    <level value="WARN"/>
+    <appender-ref ref="CommonWarnRollingFile" />
+  </logger>
+  <logger name="CommonError" additivity="false">
+    <level value="ERROR"/>
+    <appender-ref ref="CommonErrorRollingFile" />
+  </logger>
+  <logger name="CommonFatal" additivity="false">
+    <level value="FATAL"/>
+    <appender-ref ref="CommonFatalRollingFile" />
+  </logger>
+
+  <logger name="SystemDebug" additivity="false">
+    <level value="DEBUG"/>
+    <appender-ref ref="SystemDebugRollingFile" />
+  </logger>
+  <logger name="SystemInfo" additivity="false">
+    <level value="INFO"/>
+    <appender-ref ref="SystemInfoRollingFile" />
+  </logger>
+  <logger name="SystemWarn" additivity="false">
+    <level value="WARN"/>
+    <appender-ref ref="SystemWarnRollingFile" />
+  </logger>
+  <logger name="SystemError" additivity="false">
+    <level value="ERROR"/>
+    <appender-ref ref="SystemErrorRollingFile" />
+  </logger>
+  <logger name="SystemFatal" additivity="false">
+    <level value="FATAL"/>
+    <appender-ref ref="SystemFatalRollingFile" />
+  </logger>
+
+  <logger name="ServiceDebug" additivity="false">
+    <level value="DEBUG"/>
+    <appender-ref ref="ServiceDebugRollingFile" />
+  </logger>
+  <logger name="ServiceInfo" additivity="false">
+    <level value="INFO"/>
+    <appender-ref ref="ServiceInfoRollingFile" />
+  </logger>
+  <logger name="ServiceWarn" additivity="false">
+    <level value="WARN"/>
+    <appender-ref ref="ServiceWarnRollingFile" />
+  </logger>
+  <logger name="ServiceError" additivity="false">
+    <level value="ERROR"/>
+    <appender-ref ref="ServiceErrorRollingFile" />
+  </logger>
+  <logger name="ServiceFatal" additivity="false">
+    <level value="FATAL"/>
+    <appender-ref ref="ServiceFatalRollingFile" />
+  </logger>
+
+  <logger name="ViewModelDebug" additivity="false">
+    <level value="DEBUG"/>
+    <appender-ref ref="ViewModelDebugRollingFile" />
+  </logger>
+  <logger name="ViewModelInfo" additivity="false">
+    <level value="INFO"/>
+    <appender-ref ref="ViewModelInfoRollingFile" />
+  </logger>
+  <logger name="ViewModelWarn" additivity="false">
+    <level value="WARN"/>
+    <appender-ref ref="ViewModelWarnRollingFile" />
+  </logger>
+  <logger name="ViewModelError" additivity="false">
+    <level value="ERROR"/>
+    <appender-ref ref="ViewModelErrorRollingFile" />
+  </logger>
+  <logger name="ViewModelFatal" additivity="false">
+    <level value="FATAL"/>
+    <appender-ref ref="ViewModelFatalRollingFile" />
+  </logger>
+</log4net>

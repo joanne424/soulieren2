@@ -1,0 +1,71 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+   <ControlTemplate x:Key="btn22_11up"
+                     TargetType="Button">
+    <Grid>
+        <Image Name="img"
+                   Source="/Resources/Images/White/ButtonRH/上调价_默认.png"
+                   Stretch="Fill"
+                   RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+        <ContentPresenter Content="{TemplateBinding ContentControl.Content}"
+                              HorizontalAlignment="Center"
+                              VerticalAlignment="Center" />
+    </Grid>
+    <ControlTemplate.Triggers>
+        <Trigger Property="IsMouseOver"
+                     Value="True">
+            <Setter TargetName="img"
+                        Property="Source"
+                        Value="/Resources/Images/White/ButtonRH/上调价_移入.png" />
+        </Trigger>
+        <Trigger Property="IsPressed"
+                     Value="True">
+            <Setter TargetName="img"
+                        Property="Source"
+                        Value="/Resources/Images/White/ButtonRH/上调价_点击.png" />
+        </Trigger>
+        <Trigger Property="IsEnabled"
+                     Value="False">
+            <Setter TargetName="img"
+                        Property="Source"
+                        Value="/Resources/Images/White/ButtonRH/上调价_点击.png" />
+            <Setter Property="Foreground"
+                        Value="#B2B2B2" />
+        </Trigger>
+    </ControlTemplate.Triggers>
+</ControlTemplate>
+    <ControlTemplate x:Key="btn22_11down"
+                     TargetType="Button">
+        <Grid>
+            <Image Name="img"
+                   Source="/Resources/Images/White/ButtonRH/下调价_默认.png"
+                   Stretch="Fill"
+                   RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+            <ContentPresenter Content="{TemplateBinding ContentControl.Content}"
+                              HorizontalAlignment="Center"
+                              VerticalAlignment="Center" />
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver"
+                     Value="True">
+                <Setter TargetName="img"
+                        Property="Source"
+                        Value="/Resources/Images/White/ButtonRH/下调价_移入.png" />
+            </Trigger>
+            <Trigger Property="IsPressed"
+                     Value="True">
+                <Setter TargetName="img"
+                        Property="Source"
+                        Value="/Resources/Images/White/ButtonRH/下调价_点击.png" />
+            </Trigger>
+            <Trigger Property="IsEnabled"
+                     Value="False">
+                <Setter TargetName="img"
+                        Property="Source"
+                        Value="/Resources/Images/White/ButtonRH/下调价_点击.png" />
+                <Setter Property="Foreground"
+                        Value="#B2B2B2" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+</ResourceDictionary>

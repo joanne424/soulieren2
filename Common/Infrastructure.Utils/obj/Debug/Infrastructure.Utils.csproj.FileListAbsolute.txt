@@ -1,0 +1,11 @@
+E:\FileService\soulieren\code\soulieren\Common\Infrastructure.Utils\obj\Debug\Infrastructure.Utils.csprojResolveAssemblyReference.cache
+E:\FileService\soulieren\code\soulieren\Common\Infrastructure.Utils\bin\Debug\Infrastructure.Utils.dll
+E:\FileService\soulieren\code\soulieren\Common\Infrastructure.Utils\bin\Debug\Infrastructure.Utils.pdb
+E:\FileService\soulieren\code\soulieren\Common\Infrastructure.Utils\bin\Debug\Aspose.Cells.dll
+E:\FileService\soulieren\code\soulieren\Common\Infrastructure.Utils\bin\Debug\Infrastructure.Log.dll
+E:\FileService\soulieren\code\soulieren\Common\Infrastructure.Utils\bin\Debug\Newtonsoft.Json.dll
+E:\FileService\soulieren\code\soulieren\Common\Infrastructure.Utils\bin\Debug\Infrastructure.Log.pdb
+E:\FileService\soulieren\code\soulieren\Common\Infrastructure.Utils\bin\Debug\Infrastructure.Log.xml
+E:\FileService\soulieren\code\soulieren\Common\Infrastructure.Utils\bin\Debug\Newtonsoft.Json.xml
+E:\FileService\soulieren\code\soulieren\Common\Infrastructure.Utils\obj\Debug\Infrastructure.Utils.dll
+E:\FileService\soulieren\code\soulieren\Common\Infrastructure.Utils\obj\Debug\Infrastructure.Utils.pdb

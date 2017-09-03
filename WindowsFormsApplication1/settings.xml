@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<settings>
+  <template>
+    <templateItem id="SMS_41490150" name="Name_41490150" content="Content_41490150" />
+    <templateItem id="SMS_41540178" name="Name_41540178" content="Content_41540178" />
+    <templateItem id="SMS_41590309" name="Name_41590309" content="Content_41590309" />
+    <templateItem id="SMS_41600170" name="Name_41600170" content="Content_41600170" />
+    <templateItem id="SMS_66490119" name="Name_66490119" content="Content_66490119" />
+    <templateItem id="SMS_70495005" name="Name_70495005" content="Content_70495005" />
+  </template>
+</settings>

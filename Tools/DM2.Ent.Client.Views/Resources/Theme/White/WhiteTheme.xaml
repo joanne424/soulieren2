@@ -1,0 +1,239 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:PresentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary>
+            
+            <!--窗体边框颜色-->
+            <SolidColorBrush x:Key="WindowBorderBrush">#646464</SolidColorBrush>
+            <!--字体颜色-->
+            <SolidColorBrush x:Key="FontColor">Black</SolidColorBrush>
+            <!--禁用字体颜色-->
+            <SolidColorBrush x:Key="DisabledFontColor">#B2B2B2</SolidColorBrush>
+            <!--控件边框颜色-->
+            <SolidColorBrush x:Key="ControlBorderColor">#FFFFFF</SolidColorBrush>
+            <!--DockSite背景颜色-->
+            <SolidColorBrush x:Key="DockSiteBG">#838383</SolidColorBrush>
+            <!--主页面左右两边竖条的渐变颜色值-->
+            <LinearGradientBrush x:Key="MainWindowBorderBG"
+                                 EndPoint="0.5,1"
+                                 StartPoint="0.5,0">
+                <GradientStop Color="#FFD7D7D7"
+                              Offset="0.997" />
+                <GradientStop Color="#FFE4E4E4" />
+            </LinearGradientBrush>
+            <!--全局控件背景色-->
+            <Color x:Key="ControlBackgroundColor">#FFFFFF</Color>
+            <!--TextBox 获得焦点的边框颜色-->
+            <SolidColorBrush x:Key="TxtBoxHoverColor">#74c5f1</SolidColorBrush>
+            <!--DataContextMenu箭头颜色-->
+            <Color x:Key="CM_GlyphColor">#B8B8B6</Color>
+            <!-- 右键菜单鼠标MouseOver背景颜色-->
+            <SolidColorBrush x:Key="ContectMenuItemHoverBG">#E6EEF0</SolidColorBrush>
+            <!--全局控件背景色-->
+            <SolidColorBrush x:Key="ControlGBBrush">#FFFFFF</SolidColorBrush>
+            <!--控件不可用时 背景颜色-->
+            <Color x:Key="DisableControlBackgroundColor">#FAFAFA</Color>
+            <!--控件不可用时 字体颜色-->
+            <Color x:Key="DisableFontColor">#B2B2B2</Color>
+            <!--DocumentWindow TabItem 选中的颜色-->
+            <SolidColorBrush x:Key="DocWinTabItemSelected">#FFFFFF</SolidColorBrush>
+            <!--Dealer界面报价渐变效果-->
+            <LinearGradientBrush x:Key="dealerQuoteLinear"
+                                 EndPoint="0.5,1"
+                                 StartPoint="0.5,0">
+                <GradientStop Color="White"
+                              Offset="0.5" />
+                <GradientStop Color="#FFEDEDED"
+                              Offset="0.5" />
+                <GradientStop Color="#FFEDEDED"
+                              Offset="0.991" />
+            </LinearGradientBrush>
+            <!--Dealer 列表上面的标题渐变-->
+            <LinearGradientBrush x:Key="dealerDGHeader"
+                                 EndPoint="0.5,1"
+                                 StartPoint="0.5,0">
+                <GradientStop Color="#FFEAEAEA" />
+                <GradientStop Color="#FFC9C9C9"
+                              Offset="1" />
+            </LinearGradientBrush>
+            <SolidColorBrush x:Key="AcctInfoBG">#E7EBEC</SolidColorBrush>
+            <!--[[[[ MainWindow Start ]]]]-->
+            <!--主页面标题的渐变-->
+            <LinearGradientBrush x:Key="mainWindowTitleBrush"
+                                 EndPoint="0.5,1"
+                                 StartPoint="0.5,0">
+                <GradientStop Color="#FFE7E7E7"
+                              Offset="0.01" />
+                <GradientStop Color="#FFD5D5D5"
+                              Offset="1" />
+                <GradientStop Color="#FFE6E6E6"
+                              Offset="0.103" />
+                <GradientStop Color="#FFD5D5D5"
+                              Offset="0.703" />
+                <GradientStop Color="White" />
+                <GradientStop Color="White" />
+            </LinearGradientBrush>
+            <!--主页面状态栏的渐变-->
+            <LinearGradientBrush x:Key="mainWindowStatusBarBrush"
+                                 EndPoint="0.5,1"
+                                 StartPoint="0.5,0">
+                <GradientStop Color="#FFD7D7D7" />
+                <GradientStop Color="#FFE4E4E4"
+                              Offset="0.871" />
+                <GradientStop Color="White"
+                              Offset="1" />
+                <GradientStop Color="White"
+                              Offset="0.958" />
+                <GradientStop Color="#FFE4E4E4"
+                              Offset="0.952" />
+            </LinearGradientBrush>
+            <LinearGradientBrush x:Key="QuoteListHighLightRowBrush"
+                                 EndPoint="0.5,1"
+                                 StartPoint="0.5,0">
+                <GradientStop Color="#FFFFE575" />
+                <GradientStop Color="#FFFFED7A"
+                              Offset="1" />
+            </LinearGradientBrush>
+            <!--下单或修改订单界面的报价列表高亮颜色-->
+            <SolidColorBrush x:Key="QuoteListInDealHLRowBrush">#50FE20C3</SolidColorBrush>
+            <!--[[[[ QuoteList End ]]]]-->
+            <!--[[[[ DataGrid Start ]]]]-->
+            <!--DataGrid网格颜色-->
+            <SolidColorBrush x:Key="GridLineBrush">#E4E4E4</SolidColorBrush>
+            <SolidColorBrush x:Key="AlternatingRowBGBrush">#FFEFEFEF</SolidColorBrush>
+            <!--特殊鼠标MouseOver颜色-->
+            <SolidColorBrush x:Key="MouseOverRow">#e4fde4</SolidColorBrush>
+            <!--特殊选中行颜色-->
+            <SolidColorBrush x:Key="SelectedRowBrush">#f0fef0</SolidColorBrush>
+            <!--特殊选中行颜色-->
+            <Color x:Key="SelectedRowColor">#f0fef0</Color>
+            <!--DataGrid正常行的颜色-->
+            <Color x:Key="NormalRow">#ffffff</Color>
+            <!--DataGrid正常行的颜色-->
+            <SolidColorBrush x:Key="NormalRowBrush">#ffffff</SolidColorBrush>
+            <!--DataGrid隔行的颜色-->
+            <Color x:Key="AlternatingRow">#EFEFEF</Color>
+            <!--特殊DataGrid隔行的颜色-->
+            <SolidColorBrush x:Key="SpecialAlternatingRowBrush">#e7ebec</SolidColorBrush>
+            <!--DataGrid选中行的颜色-->
+            <Color x:Key="SelectedRow">#e4fde4</Color>
+            <Color x:Key="DG_GlyphColor">#FF444444</Color>
+            <!--默认边框颜色-->
+            <LinearGradientBrush x:Key="sortHeader"
+                                 EndPoint="0.5,1"
+                                 StartPoint="0.5,0">
+                <GradientStop Color="#FFE0EFF9"
+                              Offset="0.425" />
+                <GradientStop Color="#FFBFE3F6"
+                              Offset="0.586" />
+                <GradientStop Color="#FF9AD6F4"
+                              Offset="0.652" />
+                <GradientStop Color="#FF9AD6F4"
+                              Offset="0.919" />
+                <GradientStop Color="#FFC5E8FA"
+                              Offset="0.974" />
+            </LinearGradientBrush>
+            <!--[[[[ DataGrid End ]]]]-->
+            <!--[[[[ GroupBox Start ]]]]-->
+            <!--GroupBox内容背景色-->
+            <SolidColorBrush x:Key="groupBoxBG"
+                             PresentationOptions:Freeze="True"
+                             Color="#F8F8F8" />
+            <!--GroupBox头边框色-->
+            <SolidColorBrush x:Key="groupBoxHeaderBorder"
+                             PresentationOptions:Freeze="True"
+                             Color="#999999" />
+            <!--GroupBox头背景色-->
+            <SolidColorBrush x:Key="groupBoxHeaderBG"
+                             PresentationOptions:Freeze="True"
+                             Color="#f0f0f0" />
+            
+            
+            <!--[[[[ GroupBox End ]]]]-->
+            <!--[[[[ 弹出对话框公共样式 End ]]]]-->
+            <!--鼠标滑过的按钮背景渐变色-->
+            <LinearGradientBrush x:Key="mouseOverLinear"
+                                 EndPoint="0.5,1"
+                                 StartPoint="0.5,0">
+                <GradientStop Color="#FFCBCBCB"
+                              Offset="1" />
+                <GradientStop Color="#FFE4E4E4" />
+            </LinearGradientBrush>
+            <!--鼠标按下的按钮背景渐变色-->
+            <LinearGradientBrush x:Key="clickLinear"
+                                 EndPoint="0.5,1"
+                                 StartPoint="0.5,0">
+                <GradientStop Color="#FFB9B9B9"
+                              Offset="1" />
+                <GradientStop Color="#FFA0A0A0" />
+            </LinearGradientBrush>
+            <!--鼠标滑过的按钮外边框色-->
+            <LinearGradientBrush x:Key="outBorderBrush"
+                                 EndPoint="0.5,1"
+                                 StartPoint="0.5,0">
+                <GradientStop Color="#FFE6E6E6" />
+                <GradientStop Color="White"
+                              Offset="1" />
+                <GradientStop Color="#FEFBFBFB"
+                              Offset="0.926" />
+                <GradientStop Color="#FFD8D8D8"
+                              Offset="0.925" />
+            </LinearGradientBrush>
+            <!--鼠标按下的按钮外边框色-->
+            <LinearGradientBrush x:Key="outBorderClickBrush"
+                                 EndPoint="0.5,1"
+                                 StartPoint="0.5,0">
+                <GradientStop Color="#FFE6E6E6" />
+                <GradientStop Color="White"
+                              Offset="1" />
+                <GradientStop Color="#FEFBFBFB"
+                              Offset="0.926" />
+                <GradientStop Color="#FFD8D8D8"
+                              Offset="0.925" />
+            </LinearGradientBrush>
+            <!--[[[[ 弹出对话框公共样式 End ]]]]-->
+        </ResourceDictionary>
+        <ResourceDictionary Source="Dialog.xaml" />
+        <ResourceDictionary Source="Menu.xaml" />
+        <ResourceDictionary Source="MenuBtn.xaml" />
+        <ResourceDictionary Source="GroupBox.xaml" />
+        <ResourceDictionary Source="TextBox.xaml" />
+        <ResourceDictionary Source="ComboBox.xaml" />
+        <ResourceDictionary Source="ScrollBar.xaml" />
+        <!--<ResourceDictionary Source="QueueTabItem.xaml" />-->
+        <ResourceDictionary Source="DateTimeEditBox.xaml" />
+        <ResourceDictionary Source="DataGrid.xaml" />
+        <ResourceDictionary Source="RefreshBtn.xaml" />
+        <ResourceDictionary Source="PlaceBtn.xaml" />
+        <ResourceDictionary Source="Btn121_25.xaml" />
+        <ResourceDictionary Source="Btn_175_25.xaml" />
+        <ResourceDictionary Source="Btn_55_22.xaml" />
+        <ResourceDictionary Source="CheckBox.xaml" />
+        <ResourceDictionary Source="RadioButton.xaml" />
+        <ResourceDictionary Source="TabControl.xaml" />
+        <ResourceDictionary Source="DecimalBox.xaml" />
+        <ResourceDictionary Source="Btn_89_25.xaml" />
+        <ResourceDictionary Source="CustomTabctl_Settings.xaml" />
+        <ResourceDictionary Source="ClientTabItem.xaml" />
+        <ResourceDictionary Source="DatePicker.xaml" />
+        <ResourceDictionary Source="Btn200_25.xaml" />
+        
+        <ResourceDictionary Source="Int32Box.xaml" />
+        <ResourceDictionary Source="DialogWithoutButtom.xaml" />
+        <ResourceDictionary Source="DealBlotterTabItem.xaml" />
+        <ResourceDictionary Source="DealingFunctionTabControl.xaml" />
+        <ResourceDictionary Source="Menu.xaml" />
+        <ResourceDictionary Source="QuoteList.xaml" />
+        <ResourceDictionary Source="QuoteListRowStyleInDeal.xaml" />
+        <ResourceDictionary Source="IconButton.xaml" />
+        <ResourceDictionary Source="Window.xaml" />
+        <ResourceDictionary Source="Btn_22_11.xaml" />
+        <ResourceDictionary Source="BtnGrid.xaml" />
+        <ResourceDictionary Source="BtnPage.xaml" />
+        <ResourceDictionary Source="TextBlock.xaml" />
+        <ResourceDictionary Source="ProgressBar.xaml" />
+        <ResourceDictionary Source="PasswordBox.xaml" />
+        <ResourceDictionary Source="ColorBrush.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

@@ -1,0 +1,186 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:shell="clr-namespace:Microsoft.Windows.Shell;assembly=Microsoft.Windows.Shell"
+                    xmlns:cal="http://www.caliburnproject.org">
+    <!--<converter1:MinMaxConverter x:Key="MinMaxConverter" />
+    <converter1:ResizeConverter x:Key="ResizeConverter" />-->
+    <!--白色-弹出框的Window样式-->
+    <ControlTemplate x:Key="DialogTemplate"
+                     TargetType="{x:Type Window}">
+        <!--设置BORDER的StyleSkinBorder-->
+        <Border Padding="2">
+            <Border Background="#e2e2e2"
+                    BorderThickness="1"
+                    BorderBrush="{DynamicResource WindowBorderBrush}">
+                <!--边框的阴影-->
+                <Border.Effect>
+                    <DropShadowEffect Color="#6e6e6e"
+                                      BlurRadius="5"
+                                      ShadowDepth="0"
+                                      Opacity="0.6" />
+                </Border.Effect>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="23" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="15" />
+                    </Grid.RowDefinitions>
+                    <Grid.Background>
+                        <LinearGradientBrush EndPoint="0.5,1"
+                                             StartPoint="0.5,0">
+                            <GradientStop Color="#FFE9E9E9"
+                                          Offset="0.02" />
+                            <GradientStop Color="#FFEDEDED"
+                                          Offset="0.98" />
+                            <GradientStop Color="#FFCECECE"
+                                          Offset="0.1" />
+                            <GradientStop Color="#FFCECECE"
+                                          Offset="0.9" />
+                            <GradientStop Color="White" />
+                            <GradientStop Color="White"
+                                          Offset="1" />
+                        </LinearGradientBrush>
+                    </Grid.Background>
+                    <!--标题栏样式-->
+                    <Grid x:Name="WindowHeader"
+                          Grid.Row="0">
+                        <DockPanel>
+                            <Button shell:WindowChrome.IsHitTestVisibleInChrome="True"
+                                    Cursor="Hand"
+                                    cal:Message.Attach="[Event Click] = [Action TryClose]"
+                                    Margin="0,0,6,0"
+                                    Width="18"
+                                    Height="18"
+                                    DockPanel.Dock="Right">
+                                <Button.Template>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Grid Background="Transparent">
+                                            <Border BorderThickness="1"
+                                                    Name="outBorder"
+                                                    CornerRadius="2">
+                                                <Border Name="closeBtnBorder"
+                                                        BorderThickness="0"
+                                                        BorderBrush="#646464"
+                                                        CornerRadius="2">
+                                                    <Image Width="10"
+                                                           HorizontalAlignment="Center"
+                                                           VerticalAlignment="Center"
+                                                           Height="10"
+                                                           RenderOptions.BitmapScalingMode="NearestNeighbor"
+                                                           Source="/DM2.Ent.Client.Views;component/Resources/Images/White/CloseBtn.png" />
+                                                </Border>
+                                            </Border>
+                                        </Grid>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver"
+                                                     Value="True">
+                                                <Setter TargetName="closeBtnBorder"
+                                                        Property="Background"
+                                                        Value="{DynamicResource mouseOverLinear}" />
+                                                <Setter TargetName="closeBtnBorder"
+                                                        Property="BorderThickness"
+                                                        Value="1" />
+                                                <Setter TargetName="outBorder"
+                                                        Property="BorderBrush"
+                                                        Value="{DynamicResource outBorderBrush}" />
+                                            </Trigger>
+                                            <Trigger Property="IsPressed"
+                                                     Value="True">
+                                                <Setter TargetName="closeBtnBorder"
+                                                        Property="Background"
+                                                        Value="{DynamicResource clickLinear}" />
+                                                <Setter TargetName="closeBtnBorder"
+                                                        Property="BorderThickness"
+                                                        Value="1" />
+                                                <Setter TargetName="outBorder"
+                                                        Property="BorderBrush"
+                                                        Value="{DynamicResource outBorderClickBrush}" />
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                            <!--Visibility="{TemplateBinding ResizeMode,Converter={StaticResource MinMaxConverter}}"-->
+                            <Button shell:WindowChrome.IsHitTestVisibleInChrome="True"
+                                    Cursor="Hand"
+                                    cal:Message.Attach="[Event Click] = [Action Min]"
+                                    
+                                    Margin="0,0,6,0"
+                                    Width="18"
+                                    Height="18"
+                                    DockPanel.Dock="Right">
+                                <Button.Template>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Grid Background="Transparent">
+                                            <Border BorderThickness="1"
+                                                    Name="outBorder"
+                                                    CornerRadius="2">
+                                                <Border Name="minBtnBorder"
+                                                        BorderBrush="#646464"
+                                                        BorderThickness="0"
+                                                        CornerRadius="2">
+                                                    <Image Width="10"
+                                                           Height="10"
+                                                           RenderOptions.BitmapScalingMode="NearestNeighbor"
+                                                           Source="/DM2.Ent.Client.Views;component/Resources/Images/White/MinBtn.png" />
+                                                </Border>
+                                            </Border>
+                                        </Grid>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver"
+                                                     Value="True">
+                                                <Setter TargetName="minBtnBorder"
+                                                        Property="Background"
+                                                        Value="{DynamicResource mouseOverLinear}" />
+                                                <Setter TargetName="minBtnBorder"
+                                                        Property="BorderThickness"
+                                                        Value="1" />
+                                                <Setter TargetName="outBorder"
+                                                        Property="BorderBrush"
+                                                        Value="{DynamicResource outBorderBrush}" />
+                                            </Trigger>
+                                            <Trigger Property="IsPressed"
+                                                     Value="True">
+                                                <Setter TargetName="minBtnBorder"
+                                                        Property="Background"
+                                                        Value="{DynamicResource clickLinear}" />
+                                                <Setter TargetName="minBtnBorder"
+                                                        Property="BorderThickness"
+                                                        Value="1" />
+                                                <Setter TargetName="outBorder"
+                                                        Property="BorderBrush"
+                                                        Value="{DynamicResource outBorderClickBrush}" />
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                            <!--标题文字-->
+                            <TextBlock Text="{TemplateBinding Title}"
+                                       Foreground="{TemplateBinding Foreground}"
+                                       HorizontalAlignment="Stretch"
+                                       TextAlignment="Left"
+                                       FontSize="12"
+                                       Padding="5,0,0,0"
+                                       VerticalAlignment="Center"></TextBlock>
+                        </DockPanel>
+                    </Grid>
+                    <!--内容部分的边框样式-->
+                    <Border Grid.Row="1"
+                            BorderThickness="1"
+                            BorderBrush="#8b8b8b"
+                            Margin="3,0,3,0">
+                        <ContentPresenter Content="{TemplateBinding Content}" />
+                    </Border>
+                    <!--窗口底部那一条的样式-->
+                    <Border Grid.Row="2">
+                        <!--右下角的三角样式-->
+                        <Image HorizontalAlignment="Right"
+                               Margin="0,0,2,2"
+                               Source="/DM2.Ent.Client.Views;component/Resources/Images/White/DownCorner.png" />
+                    </Border>
+                </Grid>
+            </Border>
+        </Border>
+    </ControlTemplate>
+</ResourceDictionary>

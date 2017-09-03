@@ -1,0 +1,248 @@
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="ExposureReportViewModel.cs" company="">
+//   
+// </copyright>
+// --------------------------------------------------------------------------------------------------------------------
+namespace DM2.Ent.Client.ViewModels.Report
+{
+    using System;
+    using System.Collections.ObjectModel;
+
+    using DM2.Ent.Client.Runtime;
+    using DM2.Ent.Client.ViewModels.Common;
+    using DM2.Ent.Presentation.Models;
+
+    /// <summary>
+    ///     The exposure report view model.
+    /// </summary>
+    public class ExposureReportViewModel : ExposureViewModel
+    {
+        #region Fields
+
+        /// <summary>
+        ///     The business units.
+        /// </summary>
+        private ObservableCollection<BusinessUnitModel> businessUnits;
+
+        /// <summary>
+        ///     The currencies.
+        /// </summary>
+        private ObservableCollection<CurrencyModel> currencies;
+
+        /// <summary>
+        /// The is bank account balance checked.
+        /// </summary>
+        private bool isBankAccountBalanceChecked;
+
+        /// <summary>
+        ///     The is hedging deal position checked.
+        /// </summary>
+        private bool isHedgingDealPositionChecked;
+
+        /// <summary>
+        ///     The is internal deal position checked.
+        /// </summary>
+        private bool isInternalDealPositionChecked;
+
+        /// <summary>
+        ///     The selected business unit id.
+        /// </summary>
+        private string selectedBusinessUnitId;
+
+
+        /// <summary>
+        ///     The selected value date.
+        /// </summary>
+        private DateTime? selectedValueDate;
+
+        #endregion
+
+        #region Constructors and Destructors
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ExposureReportViewModel"/> class.
+        /// </summary>
+        /// <param name="ownerId">
+        /// The owner id.
+        /// </param>
+        public ExposureReportViewModel(string ownerId = null)
+            : base(ownerId)
+        {
+        }
+
+        #endregion
+
+        #region Public Properties
+
+        /// <summary>
+        ///     BU列表
+        /// </summary>
+        public ObservableCollection<BusinessUnitModel> BusinessUnits
+        {
+            get
+            {
+                return this.businessUnits;
+            }
+
+            set
+            {
+                this.businessUnits = value;
+                this.NotifyOfPropertyChange();
+            }
+        }
+
+        /// <summary>
+        ///     货币列表.
+        /// </summary>
+        public ObservableCollection<CurrencyModel> Currencies
+        {
+            get
+            {
+                return this.currencies;
+            }
+
+            set
+            {
+                this.currencies = value;
+                this.NotifyOfPropertyChange();
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether is bank account balance checked.
+        /// </summary>
+        public bool IsBankAccountBalanceChecked
+        {
+            get
+            {
+                return this.isBankAccountBalanceChecked;
+            }
+
+            set
+            {
+                this.isBankAccountBalanceChecked = value;
+                this.NotifyOfPropertyChange();
+            }
+        }
+
+        /// <summary>
+        ///     Gets or sets a value indicating whether is hedging deal position checked.
+        /// </summary>
+        public bool IsHedgingDealPositionChecked
+        {
+            get
+            {
+                return this.isHedgingDealPositionChecked;
+            }
+
+            set
+            {
+                this.isHedgingDealPositionChecked = value;
+                this.NotifyOfPropertyChange();
+            }
+        }
+
+        /// <summary>
+        ///     Gets or sets a value indicating whether is internal deal position checked.
+        /// </summary>
+        public bool IsInternalDealPositionChecked
+        {
+            get
+            {
+                return this.isInternalDealPositionChecked;
+            }
+
+            set
+            {
+                this.isInternalDealPositionChecked = value;
+                this.NotifyOfPropertyChange();
+            }
+        }
+
+        /// <summary>
+        ///     Gets or sets the selected business unit id.
+        /// </summary>
+        public string SelectedBusinessUnitId
+        {
+            get
+            {
+                return this.selectedBusinessUnitId;
+            }
+
+            set
+            {
+                this.selectedBusinessUnitId = value;
+                this.NotifyOfPropertyChange();
+            }
+        }
+
+
+        /// <summary>
+        ///     Gets or sets the search value date.
+        /// </summary>
+        public DateTime? SelectedValueDate
+        {
+            get
+            {
+                return this.selectedValueDate;
+            }
+
+            set
+            {
+                this.selectedValueDate = value;
+                this.NotifyOfPropertyChange();
+            }
+        }
+
+        #endregion
+
+        #region Public Methods and Operators
+
+        /// <summary>
+        ///     关闭操作
+        /// </summary>
+        public void Close()
+        {
+            this.TryClose();
+        }
+
+        /// <summary>
+        ///     The search.
+        /// </summary>
+        public void Search()
+        {
+            this.SearchBusinessUnitId = this.SelectedBusinessUnitId;
+            this.SearchValueDate = this.SelectedValueDate;
+
+            this.ContainHedgingDealPosition = this.IsHedgingDealPositionChecked;
+            this.ContainBankBalance = this.IsBankAccountBalanceChecked;
+
+            this.DataBinding();
+        }
+
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// The initialize.
+        /// </summary>
+        /// <param name="runTime">
+        /// The run time.
+        /// </param>
+        protected override void Initialize(RunTime runTime)
+        {
+            this.BusinessUnits =
+                this.GetRepository<IBusinessUnitRepository>().GetBindCollection().ToComboboxBinding(true);
+            this.Currencies = this.GetRepository<ICurrencyRepository>().GetBindCollection().ToComboboxBinding();
+
+            this.IsHedgingDealPositionChecked = true;
+            this.IsBankAccountBalanceChecked = true;
+            this.ContainBankBalance = true;
+
+            this.Initialize();
+        }
+
+        #endregion
+    }
+}

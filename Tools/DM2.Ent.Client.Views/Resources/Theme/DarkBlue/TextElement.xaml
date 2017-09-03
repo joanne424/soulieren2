@@ -1,0 +1,20 @@
+﻿<!--深蓝主题-->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:presentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options">
+    <!--全局默认字体大小及样式 Start，此设置对TextBlock中字体不起作用，WPF显示文字两个主要的Control，一个是TextElement一个是TextBlock-->
+    <!--TextElement-->
+    <Style TargetType="{x:Type TextElement}">
+        <Setter Property="FontFamily"
+                Value="Arial,NSimSun" />
+        <!--<Setter Property="TextOptions.TextFormattingMode"
+                Value="Display" />
+        <Setter Property="TextOptions.TextRenderingMode"
+                Value="Aliased" />-->
+        <Setter Property="FontSize"
+                Value="12" />
+    </Style>
+    <!--字体大小及样式 End-->
+    
+    
+</ResourceDictionary>

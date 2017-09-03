@@ -1,0 +1,34 @@
+[2017-08-27 18:53:00,215][6] [AutoServer] Program.Main() 
+Message: Initail log complete when start!
+[2017-08-27 18:53:40,465][13] [sms send] SmsOpt.Send() 
+Message: send sms phone:13426464922
+[2017-08-27 18:53:40,830][11] [Sms Send] SmsClient.Send() 
+Message: <?xml version="1.0" encoding="utf-8" ?><error_response><code>15</code><msg>Remote service error</msg><sub_code>isv.SMS_TEMPLATE_ILLEGAL</sub_code><sub_msg>短信模板不合法</sub_msg><request_id>44nz3ze06f24</request_id></error_response><!--top011250241098.eu13-->
+[2017-08-27 18:53:40,830][11] [sms send] SmsOpt.Send() 
+Message: send sms phone:18613319488
+[2017-08-27 18:53:40,964][11] [Sms Send] SmsClient.Send() 
+Message: <?xml version="1.0" encoding="utf-8" ?><error_response><code>15</code><msg>Remote service error</msg><sub_code>isv.SMS_TEMPLATE_ILLEGAL</sub_code><sub_msg>短信模板不合法</sub_msg><request_id>s7tmpvqtbmdy</request_id></error_response><!--top011186113090.eu13-->
+[2017-08-27 18:53:40,964][11] [sms send] SmsOpt.Send() 
+Message: send sms phone:18701388566
+[2017-08-27 18:53:41,328][11] [Sms Send] SmsClient.Send() 
+Message: <?xml version="1.0" encoding="utf-8" ?><error_response><code>15</code><msg>Remote service error</msg><sub_code>isv.SMS_TEMPLATE_ILLEGAL</sub_code><sub_msg>短信模板不合法</sub_msg><request_id>2swc4agbx1mm</request_id></error_response><!--top010150163211.eu13-->
+[2017-08-27 18:54:29,369][11] [AutoServer] Program.Main() 
+Message: Initail log complete when start!
+[2017-08-27 18:54:52,094][13] [sms send] SmsOpt.Send() 
+Message: send sms phone:13426464922
+[2017-08-27 18:54:52,491][12] [Sms Send] SmsClient.Send() 
+Message: <?xml version="1.0" encoding="utf-8" ?><alibaba_aliqin_fc_sms_num_send_response><result><err_code>0</err_code><model>244710103831293092^0</model><msg>*</msg><success>true</success></result><request_id>ryorueuw7cc5</request_id></alibaba_aliqin_fc_sms_num_send_response><!--top011186098133.eu13-->
+[2017-08-27 18:54:52,491][12] [sms send] SmsOpt.Send() 
+Message: send sms phone:18613319488
+[2017-08-27 18:54:52,656][15] [Sms Send] SmsClient.Send() 
+Message: <?xml version="1.0" encoding="utf-8" ?><alibaba_aliqin_fc_sms_num_send_response><result><err_code>0</err_code><model>109658481359^1112845440918</model><msg>*</msg><success>true</success></result><request_id>rxvo7mr8udgm</request_id></alibaba_aliqin_fc_sms_num_send_response><!--top011186097053.eu13-->
+[2017-08-27 18:54:52,656][15] [sms send] SmsOpt.Send() 
+Message: send sms phone:18701388566
+[2017-08-27 18:54:52,829][13] [Sms Send] SmsClient.Send() 
+Message: <?xml version="1.0" encoding="utf-8" ?><alibaba_aliqin_fc_sms_num_send_response><result><err_code>0</err_code><model>234524803831293473^0</model><msg>*</msg><success>true</success></result><request_id>zqce0sx56wsy</request_id></alibaba_aliqin_fc_sms_num_send_response><!--top010178040150.n.et2-->
+[2017-08-27 18:55:42,983][4] [AutoServer] Program.Main() 
+Message: Initail log complete when start!
+[2017-08-27 18:55:55,262][5] [sms send] SmsOpt.Send() 
+Message: send sms phone:15910222675
+[2017-08-27 18:55:55,638][5] [Sms Send] SmsClient.Send() 
+Message: <?xml version="1.0" encoding="utf-8" ?><alibaba_aliqin_fc_sms_num_send_response><result><err_code>0</err_code><model>178906503831356246^0</model><msg>*</msg><success>true</success></result><request_id>uaidsugevoy</request_id></alibaba_aliqin_fc_sms_num_send_response><!--top011250049047.eu13-->

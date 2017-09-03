@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="DM2.Ent.Client.Views.OrderListToolView"
+                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:cal="http://www.caliburnproject.org">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <Style x:Key="textCellRight" TargetType="TextBlock">
+                <Setter Property="TextAlignment" Value="Right"></Setter>
+                <Setter Property="Margin" Value="5,0,5,0"></Setter>
+            </Style>
+            <Style x:Key="textCellLeft" TargetType="TextBlock">
+                <Setter Property="TextAlignment" Value="Left"></Setter>
+                <Setter Property="Margin" Value="5,0,5,0"></Setter>
+            </Style>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid HorizontalAlignment="Left" VerticalAlignment="Top" >
+        <DataGrid Height="500"
+            x:Name="TB"
+            ItemsSource="{Binding DealList}"
+            SelectedItem="{Binding DealItem}"
+            cal:Message.Attach="[Event MouseDoubleClick] = [Action ModifyDeal_DoubleClick]"
+            CanUserSortColumns="True"
+            HorizontalContentAlignment="Stretch"
+            HorizontalAlignment="Stretch">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="{DynamicResource 'DealID'}" CanUserSort="True" Width="2*" Binding="{Binding Id}" ElementStyle="{StaticResource textCellRight}"/>
+                <DataGridTextColumn Header="{DynamicResource 'Counterparty'}" Width="5*" Binding="{Binding CounterpartyId}" ElementStyle="{StaticResource textCellLeft}" />
+                <DataGridTextColumn Header="{DynamicResource 'BuyCCY'}" Width="2*" Binding="{Binding BuyCCY }" />
+                <DataGridTextColumn Header="{DynamicResource 'BuyAmount'}" Width="3*" ElementStyle="{StaticResource textCellRight}" Foreground="{Binding BuyAmount}">
+                    <!--<DataGridTextColumn.Binding>
+                        <MultiBinding Converter="{StaticResource FormatAmountByCurrencyConverter}">
+                            <Binding Path="BuyAmount"></Binding>
+                            <Binding Path="BuyCCY"></Binding>
+                        </MultiBinding>
+                    </DataGridTextColumn.Binding>-->
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="{DynamicResource 'SellCCY'}" Width="2*" Binding="{Binding SellCCY}"/>
+                <DataGridTextColumn Header="{DynamicResource 'SellAmount'}" Width="3*" Foreground="{Binding SellAmount}" ElementStyle="{StaticResource textCellRight}">
+                    <!--<DataGridTextColumn.Binding>
+                        <MultiBinding Converter="{StaticResource FormatAmountByCurrencyConverter}" >
+                            <Binding Path="SellAmount"></Binding>
+                            <Binding Path="SellCCY"></Binding>
+                        </MultiBinding>
+                    </DataGridTextColumn.Binding>-->
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="{DynamicResource 'ContractRate'}" Width="3*" Binding="{Binding ContractRate}" ElementStyle="{StaticResource textCellRight}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

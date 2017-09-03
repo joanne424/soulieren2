@@ -1,0 +1,319 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <!--0 ~ 9-->
+    <!--A-->
+    <sys:String x:Key="All">All</sys:String>
+    <sys:String x:Key="Amount">Amount</sys:String>
+    <sys:String x:Key="AverageRate">Average Rate</sys:String>
+    <sys:String x:Key="Ask">Ask</sys:String>
+    <sys:String x:Key="AutoRefresh">Auto Refresh</sys:String>
+    <sys:String x:Key="AccountNo">Account No</sys:String>
+    <sys:String x:Key="AccountName">Account Name</sys:String>
+    <sys:String x:Key="AvailableBalance">Available Balance</sys:String>
+    <sys:String x:Key="ActionType">ActionType</sys:String>
+    <sys:String x:Key="AssetType">Asset Type</sys:String>
+    <sys:String x:Key="AssetType.HedgingDealPosition">FX Hedging Deal Position</sys:String>
+    <sys:String x:Key="AssetType.InternalDealPosition">FX Internal Deal Position</sys:String>
+    <sys:String x:Key="AssetType.BankBalance">Bank Balance</sys:String>
+    
+    <!--B-->
+    <sys:String x:Key="Bid">Bid</sys:String>
+    <sys:String x:Key="BusinessUnit">Business Unit</sys:String>
+    <sys:String x:Key="BankAccount">Bank Account</sys:String>
+    <sys:String x:Key="BankAccountInformation">Bank Account Information</sys:String>
+    <sys:String x:Key="BankAccountGroup">Bank Account Group</sys:String>
+    <sys:String x:Key="BankAccountList">Bank Account List</sys:String>
+    <sys:String x:Key="BankAccountTitle">Bank Account List</sys:String>
+    <sys:String x:Key="BankName">Bank Name</sys:String>
+    <sys:String x:Key="Best">BEST</sys:String>
+    <sys:String x:Key="BusinessUnitListTitle">Business Unit List</sys:String>
+    <sys:String x:Key="BankTransferListTitle">Bank Cash Transfer List</sys:String>
+    <sys:String x:Key="BusinessUnitGroup">Business Unit Group</sys:String>
+    <sys:String x:Key="BusinessUnitInformation">Business Unit Information</sys:String>
+    <sys:String x:Key="Buy">Buy</sys:String>
+    <sys:String x:Key="BuyCCY">Buy CCY</sys:String>
+    <sys:String x:Key="BuyAmount">Buy Amount</sys:String>
+    <sys:String x:Key="BankAccountManagement">Bank Account Management</sys:String>
+    <sys:String x:Key="Balance">Balance</sys:String>
+    <sys:String x:Key="BankAccountTransferInformation">Bank Account Transfer Information</sys:String>
+    <sys:String x:Key="BankCashTransfer">Bank Cash Transfer</sys:String>
+    <sys:String x:Key="BankCashTransferReport">Bank Cash Transfer Report</sys:String>
+    <sys:String x:Key="BankAccountActualCash">Bank Account Actual Cash</sys:String>
+    <sys:String x:Key="BankAccountActualCashReport">Bank Account Actual Cash Report</sys:String>
+    <sys:String x:Key="BankAccountActualCashInformation">Bank Account Actual Cash Information</sys:String>
+    <sys:String x:Key="BankCashFlowList">Bank Cash Flow List</sys:String>
+    <sys:String x:Key="BalanceAfterSettlement">Balance After Settlement</sys:String>
+    <sys:String x:Key="ByCounterParty">By Counterparty</sys:String>
+    <sys:String x:Key="ByBusinessUnit">By Business Unit</sys:String>
+
+    <!--C-->
+    <sys:String x:Key="Cancel">Cancel</sys:String>
+    <sys:String x:Key="Close">Close</sys:String>
+    <sys:String x:Key="CreationTime">Creation Time</sys:String>
+    <sys:String x:Key="CreationTimeFrom">From Creation Time</sys:String>
+    <sys:String x:Key="ChangePassword">Change Password</sys:String>
+    <sys:String x:Key="Counterparty">Counterparty</sys:String>
+    <sys:String x:Key="CounterpartyGroup">Counterparty Group</sys:String>
+    <sys:String x:Key="CounterpartyGroupInformation">Counterparty Group Information</sys:String>
+    <sys:String x:Key="CounterpartyGroupListTitle">Counterparty Group List</sys:String>
+    <sys:String x:Key="CashLadder">Cash Ladder</sys:String>
+    <sys:String x:Key="ConnectionParameters">Connection Parameters</sys:String>
+    <sys:String x:Key="ConnectionType">Connection Type</sys:String>
+    <sys:String x:Key="CONNECTION_TYPE_0">Manual</sys:String>
+    <sys:String x:Key="CONNECTION_TYPE_1">Email</sys:String>
+    <sys:String x:Key="CONNECTION_TYPE_2">Dm2 Financial</sys:String>
+    <sys:String x:Key="CONNECTION_TYPE_3">DM2 Simulate Source</sys:String>
+    <sys:String x:Key="CounterpartyListTitle">Counterparty List</sys:String>
+    <sys:String x:Key="CounterpartyName">Counterparty Name</sys:String>
+    <sys:String x:Key="CounterpartyInformation">Counterparty Information</sys:String>
+    <sys:String x:Key="ConfirmPassword">Confirm Password</sys:String>
+    <sys:String x:Key="CurrentPassword">Current Password</sys:String>
+    <sys:String x:Key="Comment">Comment</sys:String>
+    <sys:String x:Key="Confirm">Confirm</sys:String>
+    <sys:String x:Key="Contract">Contract</sys:String>
+    <sys:String x:Key="ContractRate">Contract Rate</sys:String>
+    <sys:String x:Key="CCY1Amount">CCY1 Amount</sys:String>
+    <sys:String x:Key="CCY2Amount">CCY2 Amount</sys:String>
+    <sys:String x:Key="CNY">CNY</sys:String>
+    <sys:String x:Key="ContractName">Contract Name</sys:String>
+    <sys:String x:Key="Confirmation">Confirmation</sys:String>
+    <sys:String x:Key="CCY">CCY</sys:String>
+    <sys:String x:Key="Country">Country</sys:String>
+    <sys:String x:Key="Connected">Connected</sys:String>
+    <!--D-->
+    <sys:String x:Key="Deal">Deal</sys:String>
+    <sys:String x:Key="DealID">Deal ID</sys:String>
+    <sys:String x:Key="DealerSpotRate">Dealer Spot Rate</sys:String>
+    <sys:String x:Key="DetailedInformation">Detailed Information</sys:String>
+    <sys:String x:Key="Delete">Delete</sys:String>
+    <sys:String x:Key="DateFormatEnum.YYYY_MM_DD">YYYY-MM-DD</sys:String>
+    <sys:String x:Key="DateFormatEnum.YYYY_MON_DD">YYYY-MON-DD</sys:String>
+    <sys:String x:Key="DateFormatEnum.MM_DD_YYYY">MM-DD-YYYY</sys:String>
+    <sys:String x:Key="DateFormatEnum.MON_DD_YYYY">MON-DD-YYYY</sys:String>
+    <sys:String x:Key="DateFormatEnum.DD_MM_YYYY">DD-MM-YYYY</sys:String>
+    <sys:String x:Key="DateFormatEnum.DD_MON_YYYY">DD-MON-YYYY</sys:String>
+    <sys:String x:Key="DealtAmount">Dealt Amount</sys:String>
+    <sys:String x:Key="DisConnected">DisConnected</sys:String>
+    <sys:String x:Key="DailyExposure">Daily Exposure</sys:String>
+
+    <!--E-->
+    <sys:String x:Key="Exposure">Exposure</sys:String>
+    <sys:String x:Key="ExposureDetail">Exposure Detail</sys:String>
+    <sys:String x:Key="EditCounterparty">Modify Counterparty</sys:String>
+    <sys:String x:Key="Email">Email</sys:String>
+    <sys:String x:Key="EmailLoginName">Email Login name</sys:String>
+    <sys:String x:Key="EmailPassword">Email Password</sys:String>
+    <sys:String x:Key="EmailImportTemplate">Email Import Template</sys:String>
+    <sys:String x:Key="EmailTimeZone">Email Time Zone</sys:String>
+    <sys:String x:Key="Enabled">Enabled</sys:String>
+    <sys:String x:Key="EnsureLogout">Do you want to logout?</sys:String>
+    <sys:String x:Key="EMAIL_IMPORT_TEMPLATE_0">Citibank New Zealand TXT Template</sys:String>
+    <sys:String x:Key="EMAIL_IMPORT_TEMPLATE_1">Citibank Hong Kong PDF Template</sys:String>
+
+    <!--F-->
+    <sys:String x:Key="File(F)">File(F)</sys:String>
+    <sys:String x:Key="FullName">Full Name</sys:String>
+    <sys:String x:Key="ForwardPoint">Forward Point</sys:String>
+    <sys:String x:Key="ForecastRate">Forecast Rate</sys:String>
+    <sys:String x:Key="ForecastPL">Forecast P/L</sys:String>
+    <sys:String x:Key="FirstName">First Name</sys:String>
+    <sys:String x:Key="FairRate">KVB Price</sys:String>
+    <sys:String x:Key="FromAccount">From Account</sys:String>
+    <sys:String x:Key="FromBusinessUnit">From BusinessUnit</sys:String>
+    <sys:String x:Key="FromCounterparty">From Counterparty</sys:String>
+    <sys:String x:Key="FindBankAccount">FindBankAccount</sys:String>
+    <sys:String x:Key="FinancialInstitution">Financial Institution</sys:String>
+    <sys:String x:Key="FarInfo">Far Info</sys:String>
+
+
+    <!--G-->
+    <sys:String x:Key="Group">Group</sys:String>
+    <sys:String x:Key="GroupInformation">Group Information</sys:String>
+    <sys:String x:Key="GroupType">Group Type</sys:String>
+    <sys:String x:Key="GroupName">Group Name</sys:String>
+    <!--H-->
+    <sys:String x:Key="Help(H)">Help(H)</sys:String>
+    <sys:String x:Key="HedgeDeal">Hedge Deal</sys:String>
+    <sys:String x:Key="HedgeSpotForwardDeal">Hedge Spot/Forward Deal</sys:String>
+    <sys:String x:Key="HedgeSwapDeal">Hedge Swap Deal</sys:String>
+    <sys:String x:Key="HedgeDealList">Hedge Deal List</sys:String>
+    <sys:String x:Key="HedgeDealTitle">Hedge Deal List</sys:String>
+    <sys:String x:Key="HedgingDealID">Hedging Deal ID</sys:String>
+    <sys:String x:Key="HistoryHedgeDeal">History Hedge Deal</sys:String>
+    <sys:String x:Key="HistoryHedgeDealList">History Hedge Deal List</sys:String>
+    <sys:String x:Key="HistoryPriceTitle">History Price chart</sys:String>
+    <sys:String x:Key="HedgingExecutionID">Hedging Execution ID</sys:String>
+    
+    <!--I-->
+    <sys:String x:Key="Instrument">Instrument</sys:String>
+    <sys:String x:Key="IsSettlementAccount">Is Settlement Account</sys:String>
+
+    <!--J-->
+    <sys:String x:Key="Journal">Journal</sys:String>
+    <!--K-->
+    <sys:String x:Key="Key">Key</sys:String>
+    <!--L-->
+    <sys:String x:Key="LastUpdateTime">Last Update Time</sys:String>
+    <sys:String x:Key="Logout">Logout</sys:String>
+    <sys:String x:Key="Login">Login</sys:String>
+    <sys:String x:Key="LoginName">Login Name</sys:String>
+    <sys:String x:Key="LocalTradeDate">Local Trade Date</sys:String>
+    <sys:String x:Key="LedgerBalance">Ledger Balance</sys:String>
+    <sys:String x:Key="LocalCCY">Local CCY</sys:String>
+    <sys:String x:Key="DateFormat">Date Format</sys:String>
+    <sys:String x:Key="LastName">Last Name</sys:String>
+    <sys:String x:Key="Locked">Locked</sys:String>
+    <sys:String x:Key="LoginInfo">User Id : {0}; User Name : {1}</sys:String>
+
+    <!--M-->
+    <sys:String x:Key="Modify">Modify</sys:String>
+    <sys:String x:Key="MarketForecast">Trading Positions</sys:String>
+    <sys:String x:Key="MarketRate">Market Rate</sys:String>
+    <sys:String x:Key="ModifyForecastRateTitle">Modify Forecast Rate</sys:String>
+    <sys:String x:Key="ModifyBankAccount">Modify Bank Account</sys:String>
+    <sys:String x:Key="MsgBuy">Buy</sys:String>
+    <sys:String x:Key="MsgSell">Sell</sys:String>
+
+    <!--N-->
+    <sys:String x:Key="NewPassword">New Password</sys:String>
+    <sys:String x:Key="New">New</sys:String>
+    <sys:String x:Key="News">News</sys:String>
+    <sys:String x:Key="NewHedgeSpotForward">New Hedge Deal</sys:String>
+    <sys:String x:Key="NewFinancialHedgeDeal">New Financial Hedge Deal</sys:String>
+    <sys:String x:Key="NewInternalDeal">New Internal Deal</sys:String>
+    <sys:String x:Key="NewBankAccount">New Bank Account</sys:String>
+    <sys:String x:Key="NotLogin">Please login!</sys:String>
+    <sys:String x:Key="NetworkInfo">In: {0} KB/Out: {2}KB</sys:String>
+    <sys:String x:Key="NextPage">Next Page</sys:String>
+    <sys:String x:Key="NonSettlementAccountBalance">Non Settlement Account Balance</sys:String>
+    <sys:String x:Key="NearLegInfo">NearLeg Info</sys:String>
+
+    <!--O-->
+    <sys:String x:Key="OK">OK</sys:String>
+    <sys:String x:Key="OperationFailed">Operation Failed</sys:String>
+    <sys:String x:Key="OperationSuccessful">Operation Successful</sys:String>
+    <!--P-->
+    <sys:String x:Key="Place">Place</sys:String>
+    <sys:String x:Key="PricingBricks">Pricing Bricks</sys:String>
+    <sys:String x:Key="PriceHistory">Price History</sys:String>
+    <sys:String x:Key="PL">P/L</sys:String>
+    <sys:String x:Key="Password">Password</sys:String>
+    <sys:String x:Key="ParentGroup">Parent Group</sys:String>
+    <sys:String x:Key="Permission">Permission</sys:String>
+    <sys:String x:Key="Payment">Payment</sys:String>
+    <sys:String x:Key="PrevPage">Previous Page</sys:String>
+    <sys:String x:Key="Position">Position</sys:String>
+    
+    <!--Q-->
+    <!--R-->
+    <sys:String x:Key="Request">Request</sys:String>
+    <sys:String x:Key="ReportCCY">Report CCY</sys:String>
+    <sys:String x:Key="Role">Role</sys:String>
+    <sys:String x:Key="RoleName">Role Name</sys:String>
+    <sys:String x:Key="Report(R)">Report(R)</sys:String>
+    <sys:String x:Key="Receipt">Receipt</sys:String>
+    <sys:String x:Key="Reset">Reset</sys:String>
+    <sys:String x:Key="RelatedId">Related Id</sys:String>
+    <sys:String x:Key="RegionId">Region ID</sys:String>
+    <!--S-->
+    <sys:String x:Key="Save">Save</sys:String>
+    <sys:String x:Key="Search">Search</sys:String>
+    <sys:String x:Key="SettlementAccount">Settlement Account</sys:String>
+    <sys:String x:Key="SaveLoginInfo">Save Information</sys:String>
+    <sys:String x:Key="SnapshotTime">Snapshot Time</sys:String>
+    <sys:String x:Key="SnapshotTimeList">Snapshot Time List</sys:String>
+    <sys:String x:Key="Sell">Sell</sys:String>
+    <sys:String x:Key="SellCCY">Sell CCY</sys:String>
+    <sys:String x:Key="SellAmount">Sell Amount</sys:String>
+    <sys:String x:Key="Status">Status</sys:String>
+    <sys:String x:Key="StatusEnum.OPERN">Open</sys:String>
+    <sys:String x:Key="StatusEnum.SETTLE">Settled</sys:String>
+    <sys:String x:Key="StatusEnum.PARTIAL_SETTLED">Partial Settled</sys:String>
+    <sys:String x:Key="StatusEnum.DELETED_PENDING">Deleted Pending</sys:String>
+    <sys:String x:Key="StatusEnum.DELETED_APPROVAL">Deleted Approval</sys:String>
+    <sys:String x:Key="StatusEnum.DELETED_CONFIRMED">Deleted Confirmed</sys:String>
+    <sys:String x:Key="StatusEnum.DELETED">Deleted</sys:String>
+    <sys:String x:Key="StatusEnum.PENDING">Pending</sys:String>
+    <sys:String x:Key="StatusEnum.SLEEPING">Sleeping</sys:String>
+    <sys:String x:Key="StatusEnum.FILLED">Filled</sys:String>
+    <sys:String x:Key="StatusEnum.CANCELLED">Cancelled</sys:String>
+    <sys:String x:Key="Staff">Staff</sys:String>
+    <sys:String x:Key="SignType">Sign Type</sys:String>
+    <sys:String x:Key="SettlementAccountList">Settlement Account List</sys:String>
+    <sys:String x:Key="SelectBankAccount">Select Bank Account</sys:String>
+    <sys:String x:Key="SellAccountBalance">扣款账户余额</sys:String>
+    <sys:String x:Key="SellAccountTodayBalance">当日结算后余额</sys:String>
+    <sys:String x:Key="SettlementAccountBalance">Settlement Account Balance</sys:String>
+    
+    <!--T-->
+    <sys:String x:Key="Tools(S)">Tools(S)</sys:String>
+    <sys:String x:Key="TradeDateFrom">Trade Date From</sys:String>
+    <sys:String x:Key="To">To</sys:String>
+    <sys:String x:Key="Time">Time</sys:String>
+    <sys:String x:Key="TimeZone">Time Zone</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT_12">GMT-12:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT_11">GMT-11:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT_10">GMT-10:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT_9">GMT-9:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT_8">GMT-8:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT_7">GMT-7:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT_6">GMT-6:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT_5">GMT-5:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT_4">GMT-4:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT_3">GMT-3:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT_2">GMT-2:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT_1">GMT-1:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT0">GMT</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT1">GMT+1:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT2">GMT+2:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT3">GMT+3:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT4">GMT+4:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT5">GMT+5:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT6">GMT+6:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT7">GMT+7:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT8">GMT+8:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT9">GMT+9:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT10">GMT+10:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT11">GMT+11:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT12">GMT+12:00</sys:String>
+    <sys:String x:Key="TimeZoneEnum.GMT13">GMT+13:00</sys:String>
+    <sys:String x:Key="Total">Total</sys:String>
+    <sys:String x:Key="Trade(T)">Trade(V)</sys:String>
+    <sys:String x:Key="TransactionType">Transaction Type</sys:String>
+    <sys:String x:Key="ToAccount">To Account</sys:String>
+    <sys:String x:Key="ToBusinessUnit">To Business Unit</sys:String>
+    <sys:String x:Key="TradableInstrument">Tradable Instrument</sys:String>
+    <sys:String x:Key="TradableInstrumentEnum.FX_HEDGING_SPOT_FORWARD">FX Hedging Spot&amp;Forward</sys:String>
+    <sys:String x:Key="TradableInstrumentEnum.FX_HEDGING_SWAP">FX Hedging Swap</sys:String>
+    <sys:String x:Key="TradableInstrumentEnum.FX_INTERNAL_SPOT_FORWARD">FX Internal Spot&amp;Forward</sys:String>
+    <sys:String x:Key="TradableInstrumentEnum.FX_INTERNAL_SWAP">FX Internal Spot</sys:String>
+    <sys:String x:Key="TradableInstrumentEnum.INITIALIZATION_BALANCE">Initialization Balance</sys:String>
+    <sys:String x:Key="TradableInstrumentEnum.DEPOSIT">Deposit</sys:String>
+    <sys:String x:Key="TradableInstrumentEnum.WITHDRAWAL">Withdrawal</sys:String>
+    <sys:String x:Key="TradableInstrumentEnum.FEE">Fee</sys:String>
+    <sys:String x:Key="TradableInstrumentEnum.CASH_TRANSFER">Cash Transfer</sys:String>
+    <sys:String x:Key="ToCounterparty">To Counterparty</sys:String>
+    <sys:String x:Key="ToBankAcctNo">To BankAcctNo.</sys:String>
+    <!--U-->
+    <sys:String x:Key="User">User</sys:String>
+    <sys:String x:Key="UserRole">User Role</sys:String>
+    <sys:String x:Key="UserRoleListTitle">User Role List</sys:String>
+    <sys:String x:Key="UserRoleInformation">User Role Information</sys:String>
+    <sys:String x:Key="UserGroup">User Group</sys:String>
+    <sys:String x:Key="UserListTitle">User List</sys:String>
+    <sys:String x:Key="UserInformation">User Information</sys:String>
+    <sys:String x:Key="UserKick">Your account has been forced logout by other login.</sys:String>
+
+    <!--V-->
+    <sys:String x:Key="View(V)">View(V)</sys:String>
+    <sys:String x:Key="ValueDate">Value Date</sys:String>
+    <sys:String x:Key="ValueDateFrom">Value Date From</sys:String>
+    <!--W-->
+    <sys:String x:Key="Window(W)">Window(W)</sys:String>
+
+    <!--X-->
+    <!--Y-->
+    <!--Z-->
+
+</ResourceDictionary>

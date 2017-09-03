@@ -1,0 +1,94 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+                    xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Classic">
+    <ControlTemplate x:Key="btn92_22"
+                     TargetType="Button">
+        <Grid>
+            <Image Name="img"
+                   Source="/Resources/Images/White/Btn92Normal.png"
+                   Stretch="Fill"
+                   RenderOptions.BitmapScalingMode="NearestNeighbor"
+                   Width="92"
+                   Height="22" />
+            <ContentPresenter Content="{TemplateBinding ContentControl.Content}"
+                              HorizontalAlignment="Center"
+                              VerticalAlignment="Center" />
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver"
+                     Value="True">
+                <Setter TargetName="img"
+                        Property="Source"
+                        Value="/Resources/Images/White/Btn92Hover.png" />
+            </Trigger>
+            <Trigger Property="IsPressed"
+                     Value="True">
+                <Setter TargetName="img"
+                        Property="Source"
+                        Value="/Resources/Images/White/Btn92Click.png" />
+            </Trigger>
+            <Trigger Property="IsEnabled"
+                     Value="False">
+                <Setter TargetName="img"
+                        Property="Source"
+                        Value="/Resources/Images/White/Btn92Disable.png" />
+                <Setter Property="Foreground"
+                        Value="#B2B2B2" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <Style x:Key="Btn92_221" TargetType="Button">
+        <Setter Property="SnapsToDevicePixels"
+                Value="true" />
+        <Setter Property="OverridesDefaultStyle"
+                Value="true" />
+        <Setter Property="FocusVisualStyle"
+                Value="{StaticResource ButtonFocusVisual}" />
+        <Setter Property="Height"
+                Value="22" />
+        <Setter Property="Width"
+                Value="92" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate
+                                 TargetType="Button">
+                    <Grid>
+                        <Image Name="img"
+                               Source="/Resources/Images/White/Btn92Normal.png"
+                               Stretch="Fill"
+                               RenderOptions.BitmapScalingMode="NearestNeighbor"
+                               Width="92"
+                               Height="22" />
+                        <ContentPresenter Content="{TemplateBinding ContentControl.Content}"
+                                          HorizontalAlignment="Center"
+                                          VerticalAlignment="Center" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+                            <Setter TargetName="img"
+                                    Property="Source"
+                                    Value="/Resources/Images/White/Btn92Hover.png" />
+                        </Trigger>
+                        <Trigger Property="IsPressed"
+                                 Value="True">
+                            <Setter TargetName="img"
+                                    Property="Source"
+                                    Value="/Resources/Images/White/Btn92Click.png" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled"
+                                 Value="False">
+                            <Setter TargetName="img"
+                                    Property="Source"
+                                    Value="/Resources/Images/White/Btn92Disable.png" />
+                            <Setter Property="Foreground"
+                                    Value="#B2B2B2" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        
+    </Style>
+
+</ResourceDictionary>

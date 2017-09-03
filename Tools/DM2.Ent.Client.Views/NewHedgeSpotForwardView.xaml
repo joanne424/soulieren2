@@ -1,0 +1,257 @@
+﻿<Window x:Class="DM2.Ent.Client.Views.NewHedgeSpotForwardView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:cal="http://www.caliburnproject.org"
+        xmlns:control="clr-namespace:Banclogix.Controls;assembly=Banclogix.Controls.WPF"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        mc:Ignorable="d"
+        Height="605"
+        Width="680"
+        Style="{StaticResource CommonOnlyCloseWindowStyle}"
+        Title="{DynamicResource NewHedgeSpotForward}">
+    <Window.Resources>
+        <ToolTip x:Key="dealtAmountTip">
+            <StackPanel>
+                <TextBlock Text="{DynamicResource DealtAmount}" />
+                <TextBlock Text="Mark which Amount is DealtAmount" />
+            </StackPanel>
+        </ToolTip>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <Border Background="#F8F8F8" Margin="0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="2"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="220" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="6*" />
+                    <ColumnDefinition Width="10*" />
+                    <ColumnDefinition Width="6*" />
+                    <ColumnDefinition Width="10*" />
+                </Grid.ColumnDefinitions>
+                <!--line1 -->
+                <Label Content="{DynamicResource  Counterparty}" VerticalAlignment="Center" Margin="0,0,10,0" HorizontalAlignment="Right"
+                       Grid.Row="0" Grid.Column="0" />
+                <ComboBox ItemsSource="{Binding CounterPartys}" DisplayMemberPath="Name"
+                      IsEditable="True"
+                          SelectedValue="{Binding CounterParty,ValidatesOnDataErrors=True}"
+                          Height="24" Width="165" Margin="0,0,20,0" Grid.Row="0" Grid.Column="1">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="SelectionChanged">
+                            <i:InvokeCommandAction Command="{Binding CounterPartySelectionChangedCommand}" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </ComboBox>
+
+                <Label Content="{DynamicResource  HedgingDealID}" VerticalAlignment="Center" Margin="0,0,10,0" HorizontalAlignment="Right"
+                       Grid.Row="0" Grid.Column="2" />
+                <TextBox Width="165" Margin="0,0,20,0" TextWrapping="Wrap" Height="24"
+                         Text="{Binding HedgingDealId,ValidatesOnDataErrors=True,Mode=TwoWay}"
+                         Grid.Row="0" Grid.Column="3" />
+
+                <!--line2-->
+                <Label Content="{DynamicResource  SellAccountBalance}" VerticalAlignment="Center" Margin="0,0,10,0" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right"/>
+                <Grid Grid.Row="1" Grid.Column="1" Width="165" HorizontalAlignment="Left" Margin="10,0,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"></ColumnDefinition>
+                        <ColumnDefinition Width="115"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBox IsEnabled="False"
+                          VerticalAlignment="Center"
+                          HorizontalAlignment="Left"
+                          Height="24" Width="50" Margin="0,0,0,0" Text="{Binding SellAccount.Currency.Name}" />
+                    <TextBox Grid.Column="1"
+                     Width="112"
+                     Margin="3,0,0,0"
+                     TextWrapping="Wrap"
+                     TextAlignment="Right"
+                     IsEnabled="False" Foreground="{Binding SellAccount.BankAccount.AvailableBalance,Converter={StaticResource DeficitAmountForegroundConverter}}">
+                        <TextBox.Text>
+                            <MultiBinding Converter="{StaticResource FormatAmountByCurrencyConverter}">
+                                <Binding Path="SellAccount.BankAccount.AvailableBalance"></Binding>
+                                <Binding Path="SellAccount.Currency.Id"></Binding>
+                            </MultiBinding>
+                        </TextBox.Text>
+                    </TextBox>
+                </Grid>
+                <Label Content="{DynamicResource  SellAccountTodayBalance}" VerticalAlignment="Center" Margin="0,0,10,0" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Right"/>
+                <Grid Grid.Row="1" Grid.Column="3" Width="165" HorizontalAlignment="Left" Margin="10,0,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"></ColumnDefinition>
+                        <ColumnDefinition Width="115"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBox IsEnabled="False"
+                          VerticalAlignment="Center"
+                          HorizontalAlignment="Left"
+                          Height="24" Width="50" Margin="0,0,0,0" 
+                             Text="{Binding SellAccount.Currency.Name}">
+                    </TextBox>
+                    <TextBox Grid.Column="1" 
+                     Width="112"
+                     Margin="3,0,0,0"
+                     TextWrapping="Wrap"
+                     TextAlignment="Right"
+                     IsEnabled="False" Foreground="{Binding SellAccount.TodayBalance,Converter={StaticResource DeficitAmountForegroundConverter}}">
+                        <TextBox.Text>
+                            <MultiBinding Converter="{StaticResource FormatAmountByCurrencyConverter}">
+                                <Binding Path="SellAccount.TodayBalance"></Binding>
+                                <Binding Path="SellAccount.Currency.Id"></Binding>
+                            </MultiBinding>
+                        </TextBox.Text>
+                    </TextBox>
+                </Grid>
+                <!--line3 -->
+                <Border Grid.ColumnSpan="4" Grid.Column="1" Grid.Row="2" BorderBrush="LightSteelBlue" BorderThickness="2" CornerRadius="5" HorizontalAlignment="Center"/>
+                <!--line4 -->
+                <Label Content="{DynamicResource BuyCCY}" VerticalAlignment="Center" Margin="0,0,10,0" Grid.Row="3" HorizontalAlignment="Right"
+                       Grid.Column="0" />
+                <ComboBox ItemsSource="{Binding CCYList}"
+                      IsEnabled="True"
+                          DisplayMemberPath="Name"
+                          SelectedValuePath="Id"
+                          SelectedIndex="{Binding BuyCCYIndex}"
+                          SelectedValue="{Binding CustBuyCCY,ValidatesOnDataErrors=True}"
+                          Height="24" Width="165" Margin="0,0,20,0" Grid.Row="3" Grid.Column="1">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="SelectionChanged">
+                            <i:InvokeCommandAction Command="{Binding BuyCurrencySelectionChangedCommand}" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </ComboBox>
+
+                <Label Content="{DynamicResource  Amount}" VerticalAlignment="Center" Margin="0,0,10,0" Grid.Row="3" Grid.Column="2" HorizontalAlignment="Right"/>
+                <control:NumericBox Grid.Row="3"
+                                    Grid.Column="3"
+                                    Width="165"
+                                    Margin="0,0,20,0"
+                                    TextWrapping="Wrap"
+                                    TextAlignment="Right"
+                                    Amount="{Binding CustBuyAmount,Mode=TwoWay, ValidatesOnDataErrors=True}"
+                                    IsEnabled="{Binding IsCustBuyAmountEnable,Mode=OneWay}"
+                                    Decimals="{Binding CustBuyCCY,Converter={StaticResource CurrencyIdToAmountDecimals}}"
+                                    cal:Message.Attach="[Event LostFocus]=[Action FocusedBuyAmount]" />
+                <RadioButton Grid.Row="3" Grid.Column="3" Width="20" Height="20" IsChecked="{Binding IsDealtBuyCCY}"
+                             HorizontalAlignment="Right" Margin="0,14,5,5" ToolTip="{StaticResource dealtAmountTip}">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <i:InvokeCommandAction Command="{Binding BuyClickCommand}" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </RadioButton>
+                <!--line5 -->
+                <Label Content="{DynamicResource  SellCCY}" VerticalAlignment="Center" Margin="0,0,10,0" Grid.Row="4" HorizontalAlignment="Right"
+                       Grid.Column="0" />
+                <ComboBox IsEnabled="True"
+                          Height="24" ItemsSource="{Binding CCYList}" DisplayMemberPath="Name"
+                          SelectedValuePath="Id"
+                          SelectedIndex="{Binding SellCCYIndex}"
+                          SelectedValue="{Binding CustSellCCY,ValidatesOnDataErrors=True}"
+                          Width="165" Margin="0,0,20,0" Grid.Row="4" Grid.Column="1">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="SelectionChanged">
+                            <i:InvokeCommandAction Command="{Binding SellCurrencySelectionChangedCommand}" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </ComboBox>
+
+                <Label Content="{DynamicResource  Amount}" VerticalAlignment="Center" Margin="0,0,10,0" Grid.Row="4" Grid.Column="2" HorizontalAlignment="Right"/>
+                <control:NumericBox Grid.Row="4" 
+                                    Grid.Column="3" 
+                                    Width="165" 
+                                    Margin="0,0,20,0" 
+                                    TextWrapping="Wrap"
+                                    TextAlignment="Right"
+                                    Amount="{Binding CustSellAmount, Mode=TwoWay, ValidatesOnDataErrors=True}"
+                                    IsEnabled="{Binding IsCustSellAmountEnable,Mode=OneWay}"
+                                    Decimals="{Binding CustSellCCY,Converter={StaticResource CurrencyIdToAmountDecimals}}"
+                                    cal:Message.Attach="[Event LostFocus]=[Action FocusedSellAmount]" />
+                <RadioButton Grid.Row="4" Grid.Column="3" Width="20" Height="20" IsChecked="{Binding IsDealtSellCCY}"
+                             HorizontalAlignment="Right" Margin="0,14,5,5" ToolTip="{StaticResource dealtAmountTip}">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <i:InvokeCommandAction Command="{Binding SellClickCommand}" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </RadioButton>
+                <!--line6 -->
+                <Label Content="{DynamicResource  DealerSpotRate}" VerticalAlignment="Center" Margin="0,0,10,0" HorizontalAlignment="Right"
+                       Grid.Row="5" Grid.Column="0" />
+                <control:NotPointNumericBox Grid.Row="5" Grid.Column="1" Height="20" Width="165" Margin="0,0,20,0" Name="SpotRate"
+                                IsAllowNegative="False" TextAlignment="Right"
+                                Text="{Binding SpotRate,ValidatesOnDataErrors=True,Mode=TwoWay}"/>
+                <Label Content="{DynamicResource  ForwardPoint}" VerticalAlignment="Center" Margin="0,0,10,0" HorizontalAlignment="Right"
+                       Grid.Row="5" Grid.Column="2" />
+                <control:NotPointNumericBox Grid.Row="5" Grid.Column="3" Height="20" Width="165" Margin="0,0,20,0" Name="ForwardPoint" 
+                                    IsAllowNegative="False" TextAlignment="Right"
+                                        Text="{Binding ForwardPointStr,ValidatesOnDataErrors=True,Mode=TwoWay}"/>
+                <!--line7 -->
+                <Label Content="{DynamicResource  ContractRate}" VerticalAlignment="Center" Margin="0,0,10,0" HorizontalAlignment="Right"
+                       Grid.Row="6" Grid.Column="0" />
+                <control:NotPointNumericBox Grid.Row="6" Grid.Column="1" Height="20" Width="165" Margin="0,0,20,0" Name="ContractRate" 
+                                    IsEnabled="False" TextAlignment="Right"
+                                    IsAllowNegative="False"
+                                     Text="{Binding  OpenRate, ValidatesOnDataErrors=True,Mode=TwoWay}"/>
+                <Label Content="{DynamicResource  Instrument}" VerticalAlignment="Center" Margin="0,0,10,0" HorizontalAlignment="Right"
+                       Grid.Row="6" Grid.Column="2" />
+                <ComboBox Height="24" ItemsSource="{Binding EntInstrument}"
+                      IsEnabled="True"
+                      SelectedValuePath="Key"
+                      DisplayMemberPath="Value"
+                      Width="165" Margin="0,0,20,0" SelectedValue="{Binding Instrument,ValidatesOnDataErrors=True}"
+                      Grid.Row="6" Grid.Column="3" />
+                <!--line8 -->
+                <Label Content="{DynamicResource  LocalTradeDate}" VerticalAlignment="Center" Margin="0,0,10,0" HorizontalAlignment="Right"
+                       Grid.Row="7" Grid.Column="0" />
+                <DatePicker Text="{Binding LocalTradeDate,Mode=TwoWay, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}"
+                            SelectedDateFormat="Short"
+                            Height="24" Width="165" Margin="0,0,20,0" Grid.Row="7" Grid.Column="1">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="SelectedDateChanged">
+                            <i:InvokeCommandAction Command="{Binding LocalTradeDateChangedCommand}" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </DatePicker>
+                <Label Content="{DynamicResource  ValueDate}" VerticalAlignment="Center" Margin="0,0,10,0" Grid.Row="7" HorizontalAlignment="Right"
+                       Grid.Column="2" />
+                <DatePicker  Height="24" Width="165" Margin="0,0,20,0" Grid.Row="7" Grid.Column="3"
+                    Text="{Binding ValueDate,Mode=TwoWay, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}"
+                            SelectedDateFormat="Short">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="SelectedDateChanged">
+                            <i:InvokeCommandAction Command="{Binding ValueDateChangeCommand}" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </DatePicker>
+                <!--line9 -->
+                <Label Content="{DynamicResource  Comment}" VerticalAlignment="Center" Margin="10,0,10,0" Grid.Row="8" HorizontalAlignment="Right"
+                       Grid.Column="0" />
+                <TextBox Grid.ColumnSpan="3" Grid.Column="1" Height="160" Width="500" Margin="0,10,20,0" Grid.Row="8"
+                         TextWrapping="Wrap" VerticalAlignment="Top"
+                         Text="{Binding Comment}" />
+            </Grid>
+        </Border>
+        <!--line10 -->
+        <Button Content="{DynamicResource  Confirm}" Style="{StaticResource CommonButtonStle}" Grid.Row="1"
+                cal:Message.Attach="[Event Click] = [Action Confirm_Click()]"
+                HorizontalAlignment="Right" VerticalAlignment="Top" Margin=" 0,10,150,0" />
+        <Button Content="{DynamicResource  Close}" Style="{StaticResource CommonButtonStle}" HorizontalAlignment="Right"
+                VerticalAlignment="Top" Margin=" 0,10,20,0"
+                cal:Message.Attach="[Event Click] = [Action Cancel_Click()]"
+                Grid.Row="1" />
+    </Grid>
+</Window>

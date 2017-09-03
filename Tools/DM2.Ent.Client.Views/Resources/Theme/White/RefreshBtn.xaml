@@ -1,0 +1,18 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--刷新报价按钮样式-->
+    <ControlTemplate x:Key="refreshBtnTemplate"
+                     TargetType="Button">
+        <Image Name="refreshBtnImg"
+               Source="/Resources/Images/White/RefreshButton/RefreshBtnNormal.png"
+               Stretch="Fill" Width="12" Height="12"></Image>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsEnabled"
+                     Value="False">
+                <Setter TargetName="refreshBtnImg"
+                        Property="Source"
+                        Value="/Resources/Images/White/RefreshButton/RefreshBtnDisable.png" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+</ResourceDictionary>

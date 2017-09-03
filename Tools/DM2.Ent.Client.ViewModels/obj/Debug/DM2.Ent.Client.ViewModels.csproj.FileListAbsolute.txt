@@ -1,0 +1,1 @@
+C:\SourceCode\DM2_Ent\DM2-ENT\DM2.Ent.Presentation\DM2.Ent.Client.ViewModels\obj\Debug\DM2.Ent.Client.ViewModels.csprojResolveAssemblyReference.cache

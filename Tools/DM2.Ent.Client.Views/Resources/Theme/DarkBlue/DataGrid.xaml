@@ -1,0 +1,138 @@
+﻿<!--深蓝主题-->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:presentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
+                    xmlns:exDataGrid="clr-namespace:BancLogix.ExtendedDataGrid;assembly=BancLogix.ExtendedDataGrid"
+                    xmlns:pagedDataGrid="clr-namespace:Banclogix.Controls.PagedDataGrid;assembly=Banclogix.Controls.PagedDataGrid">
+    <!--DataGrid通用样式-->
+    <Style TargetType="{x:Type DataGrid}">
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="FontFamily" Value="{StaticResource FontFamily}" />
+        <Setter Property="CanUserAddRows" Value="False" />
+        <Setter Property="CanUserDeleteRows" Value="False" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="IsReadOnly" Value="True" />
+        <Setter Property="AlternatingRowBackground" Value="#F6F6F6" />
+        <Setter Property="AutoGenerateColumns" Value="False" />
+        <Setter Property="HeadersVisibility" Value="Column" />
+        <Setter Property="VerticalGridLinesBrush" Value="#DADADA" />
+        <Setter Property="HorizontalGridLinesBrush" Value="#DADADA" />
+    </Style>
+
+    <Style x:Key="DataGridColumnHeaderStyle" TargetType="{x:Type DataGridColumnHeader}">
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="Height" Value="22" />
+        <Setter Property="BorderBrush" Value="#DADADA"></Setter>
+        <Setter Property="BorderThickness" Value="1 1 0 0"></Setter>
+        <Setter Property="Background" Value="#7A90A9"></Setter>
+        <Setter Property="Foreground" Value="#FFFFFF" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+    </Style>
+
+    <!--DataGrid 列标题通用设置-->
+    <Style BasedOn="{StaticResource DataGridColumnHeaderStyle}" TargetType="{x:Type DataGridColumnHeader}">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="Height" Value="30" />
+    </Style>
+
+    <Style x:Key="DataGridRowStyle" TargetType="{x:Type DataGridRow}">
+        <Setter Property="Height" Value="22"></Setter>
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="BorderBrush" Value="#DADADA"></Setter>
+        <Setter Property="BorderThickness" Value="1 0 0 0"></Setter>
+    </Style>
+
+    <!--DataGrid 数据行通用设置-->
+    <Style BasedOn="{StaticResource DataGridRowStyle}" TargetType="{x:Type DataGridRow}">
+        <Setter Property="Height" Value="24"></Setter>
+        <Style.Triggers>
+            <Trigger Property="Selector.IsSelected" Value="True">
+                <Setter Property="Background" Value="#CDDEFF"/>
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="#CDDEFF"/>
+                <!--<Setter Property="Foreground" Value="#FFFFFF" />-->
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!--DataGrid 数据列通用设置边距-->
+    <Style TargetType="{x:Type DataGridCell}">
+        <Setter Property="Foreground" Value="{DynamicResource FontColor}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="DataGridCell">
+                    <ContentPresenter VerticalAlignment="Center" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="DataGridCellLeftStyle" BasedOn="{StaticResource {x:Type DataGridCell}}" TargetType="{x:Type DataGridCell}">
+        <Setter Property="TextBlock.TextAlignment" Value="Left"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="DataGridCell">
+                    <ContentPresenter Margin="5,0,0,0" VerticalAlignment="Center" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="DataGridCellRightStyle" BasedOn="{StaticResource {x:Type DataGridCell}}" TargetType="{x:Type DataGridCell}">
+        <Setter Property="TextBlock.TextAlignment" Value="Right"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="DataGridCell">
+                    <ContentPresenter Margin="0,0,5,0" VerticalAlignment="Center" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="DailyExposureByCounterpartyHeaderStyle" BasedOn="{StaticResource DataGridColumnHeaderStyle}" TargetType="{x:Type DataGridColumnHeader}">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="IsTabStop" Value="False"></Setter>
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Grid Width="302" Height="51" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition Height="1" />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="1" />
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="1" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Text="{TemplateBinding DataGridRowHeader.Content}" Grid.ColumnSpan="5" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+                        <Rectangle Fill="#DADADA" VerticalAlignment="Stretch" Height="1" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5"></Rectangle>
+                        <TextBlock Grid.Row="2" Grid.Column="0" Text="{DynamicResource SettlementAccountBalance}" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+                        <Rectangle Fill="#DADADA" VerticalAlignment="Stretch" Width="1" Grid.Row="2" Grid.Column="1"></Rectangle>
+                        <TextBlock Grid.Row="2" Grid.Column="2" Text="{DynamicResource Position}" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+                        <Rectangle Fill="#DADADA" VerticalAlignment="Stretch" Width="1" Grid.Row="2" Grid.Column="3"></Rectangle>
+                        <TextBlock Grid.Row="2" Grid.Column="4" Text="{DynamicResource BalanceAfterSettlement}" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+                    </Grid>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--ExtendedDataGrid通用样式-->
+    <Style BasedOn="{StaticResource {x:Type DataGrid}}" TargetType="{x:Type exDataGrid:ExtendedDataGrid}">
+        
+    </Style>
+
+    <Style BasedOn="{StaticResource {x:Type DataGrid}}" TargetType="{x:Type pagedDataGrid:PagingDataGrid}">
+
+    </Style>
+    
+</ResourceDictionary>

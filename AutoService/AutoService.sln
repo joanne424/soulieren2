@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoService", "AutoService\AutoService.csproj", "{DD68D42F-8153-46AF-A892-5A5617B7BA53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedisTest", "RedisTest\RedisTest.csproj", "{6A591DE4-25B5-408E-A137-1364492FEB29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoServiceApp", "AutoServiceApp\AutoServiceApp.csproj", "{4F36EA94-4F11-4E80-B7A7-A8CB53ED4411}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopSdk", "C:\Users\ryan\Downloads\sdk-net-2016-06-07\taobao-sdk-net-auto_1455552377940-20160607-source\TopSdk.csproj", "{9C11CAE5-5188-4E71-825B-68FC3135728A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD68D42F-8153-46AF-A892-5A5617B7BA53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD68D42F-8153-46AF-A892-5A5617B7BA53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD68D42F-8153-46AF-A892-5A5617B7BA53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD68D42F-8153-46AF-A892-5A5617B7BA53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A591DE4-25B5-408E-A137-1364492FEB29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A591DE4-25B5-408E-A137-1364492FEB29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A591DE4-25B5-408E-A137-1364492FEB29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A591DE4-25B5-408E-A137-1364492FEB29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F36EA94-4F11-4E80-B7A7-A8CB53ED4411}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F36EA94-4F11-4E80-B7A7-A8CB53ED4411}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F36EA94-4F11-4E80-B7A7-A8CB53ED4411}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F36EA94-4F11-4E80-B7A7-A8CB53ED4411}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C11CAE5-5188-4E71-825B-68FC3135728A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C11CAE5-5188-4E71-825B-68FC3135728A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C11CAE5-5188-4E71-825B-68FC3135728A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C11CAE5-5188-4E71-825B-68FC3135728A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

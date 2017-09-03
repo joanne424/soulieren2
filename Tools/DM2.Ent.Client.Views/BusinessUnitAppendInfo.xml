@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?><ArrayOfBusinessUnitAppendInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BusinessUnitAppendInfo>
+<BusinessName>AKL</BusinessName><CompanyName>KVB FX Limited</CompanyName><ContactAddress>Level 10, Tower 1, 205 Queen Street</ContactAddress><ContactCity>Auckland</ContactCity><ContactRegion></ContactRegion><ContactCountry>New Zealand</ContactCountry><ContactPostcode></ContactPostcode>
+</BusinessUnitAppendInfo>
+<BusinessUnitAppendInfo>
+<BusinessName>YTO</BusinessName><CompanyName>KVB Kunlun Capital (Canada) Inc.</CompanyName><ContactAddress>Level 36,Exchange Tower, 130 King St. West</ContactAddress><ContactCity>	
+Toronto</ContactCity><ContactRegion>Ontario</ContactRegion><ContactCountry>Canada</ContactCountry><ContactPostcode>M5X 1B1</ContactPostcode>
+</BusinessUnitAppendInfo>
+<BusinessUnitAppendInfo>
+<BusinessName>Auckland Cash Unit</BusinessName><CompanyName>KVB FX Limited</CompanyName><ContactAddress>Level 10, Tower 1, 205 Queen Street</ContactAddress><ContactCity>Auckland</ContactCity><ContactRegion></ContactRegion><ContactCountry>New Zealand</ContactCountry><ContactPostcode></ContactPostcode>
+</BusinessUnitAppendInfo>
+<BusinessUnitAppendInfo>
+<BusinessName>HK Tdg Int Cash Unit</BusinessName><CompanyName>KVB Kunlun Trading (Hong Kong) Limited</CompanyName><ContactAddress>Suites 6801, 68/F, International Commerce Centre</ContactAddress><ContactCity>1 Austin Road West</ContactCity><ContactRegion>Kowloon</ContactRegion><ContactCountry>Hong Kong</ContactCountry><ContactPostcode></ContactPostcode>
+</BusinessUnitAppendInfo>
+<BusinessUnitAppendInfo>
+<BusinessName>Melbourne Cash Unit</BusinessName><CompanyName>KVB FX Pty Ltd</CompanyName><ContactAddress>Level 38, 120 Collins Street</ContactAddress><ContactCity>	
+Melbourne</ContactCity><ContactRegion>VIC</ContactRegion><ContactCountry>Australia</ContactCountry><ContactPostcode>3000</ContactPostcode>
+</BusinessUnitAppendInfo>
+<BusinessUnitAppendInfo>
+<BusinessName>Sydney Cash Unit</BusinessName><CompanyName>KVB FX Pty Ltd</CompanyName><ContactAddress>Level 18, Citigroup Centre, 2 Park Street</ContactAddress><ContactCity>	
+Sydney</ContactCity><ContactRegion>NSW</ContactRegion><ContactCountry>Australia</ContactCountry><ContactPostcode>2000</ContactPostcode>
+</BusinessUnitAppendInfo>
+<BusinessUnitAppendInfo>
+<BusinessName>Toronto Cash Unit</BusinessName><CompanyName>KVB Kunlun Capital (Canada) Inc.</CompanyName><ContactAddress>Level 36,Exchange Tower, 130 King St. West</ContactAddress><ContactCity>	
+Toronto</ContactCity><ContactRegion>Ontario</ContactRegion><ContactCountry>Canada</ContactCountry><ContactPostcode>M5X 1B1</ContactPostcode>
+</BusinessUnitAppendInfo>
+<BusinessUnitAppendInfo>
+<BusinessName>BusinessName</BusinessName><CompanyName>CompanyName</CompanyName><ContactAddress>ContactAddress</ContactAddress><ContactCity>ContactCity</ContactCity><ContactRegion>ContactRegion</ContactRegion><ContactCountry>ContactCountry</ContactCountry><ContactPostcode>ContactPostcode</ContactPostcode>
+</BusinessUnitAppendInfo>
+</ArrayOfBusinessUnitAppendInfo>

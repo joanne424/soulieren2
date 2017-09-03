@@ -1,0 +1,1109 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    >
+    <!--
+    xmlns:exDataGrid="clr-namespace:BancLogix.ExtendedDataGrid;assembly=BancLogix.ExtendedDataGrid"
+                    xmlns:pageDataGrid="clr-namespace:Banclogix.Controls.PagedDataGrid;assembly=Banclogix.Controls.PagedDataGrid"
+                    xmlns:controls="clr-namespace:Banclogix.Controls;assembly=Banclogix.Controls.WPF"
+   
+    <Style TargetType="controls:DataGrid">
+        <Setter Property="FontFamily"
+                Value="Arial,NSimSun" />
+        <Setter Property="FontSize"
+                Value="12" />
+        <Setter Property="HorizontalAlignment"
+                Value="Stretch" />
+        <Setter Property="VerticalAlignment"
+                Value="Stretch" />
+        <Setter Property="AutoGenerateColumns"
+                Value="False" />
+        <Setter Property="Background"
+                Value="{DynamicResource ControlGBBrush}" />
+        <Setter Property="AlternatingRowBackground"
+                Value="{DynamicResource AlternatingRowBGBrush}" />
+        <Setter Property="HorizontalGridLinesBrush"
+                Value="{DynamicResource GridLineBrush}" />
+        <Setter Property="VerticalGridLinesBrush"
+                Value="{DynamicResource GridLineBrush}" />
+        <Setter Property="CanUserAddRows"
+                Value="False" />
+        <Setter Property="CanUserDeleteRows"
+                Value="False" />
+        <Setter Property="HeadersVisibility"
+                Value="Column" />
+        <Setter Property="IsReadOnly"
+                Value="True" />
+        <Setter Property="ColumnHeaderHeight"
+                Value="24" />
+        <Setter Property="RowHeight"
+                Value="21" />
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility"
+                Value="Auto" />
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility"
+                Value="Auto" />
+        <Setter Property="BorderBrush"
+                Value="DarkGray" />
+        <Setter Property="BorderThickness"
+                Value="0" />
+        <Setter Property="VirtualizingStackPanel.VirtualizationMode"
+                Value="Recycling" />
+        <Setter Property="VirtualizingStackPanel.IsVirtualizing"
+                Value="True" />
+    </Style>
+    
+    
+    <Style TargetType="pageDataGrid:PagingDataGrid">
+        <Setter Property="FontFamily"
+                Value="Arial,NSimSun" />
+        <Setter Property="FontSize"
+                Value="12" />
+        <Setter Property="HorizontalAlignment"
+                Value="Stretch" />
+        <Setter Property="VerticalAlignment"
+                Value="Stretch" />
+        <Setter Property="AutoGenerateColumns"
+                Value="False" />
+        <Setter Property="AlternatingRowBackground"
+                Value="{DynamicResource AlternatingRowBGBrush}" />
+        <Setter Property="BorderBrush"
+                Value="{DynamicResource ControlBorderColor}" />
+        <Setter Property="HorizontalGridLinesBrush"
+                Value="{DynamicResource GridLineBrush}" />
+        <Setter Property="VerticalGridLinesBrush"
+                Value="{DynamicResource GridLineBrush}" />
+        <Setter Property="CanUserAddRows"
+                Value="False" />
+        <Setter Property="CanUserDeleteRows"
+                Value="False" />
+        <Setter Property="HeadersVisibility"
+                Value="Column" />
+        <Setter Property="IsReadOnly"
+                Value="True" />
+        <Setter Property="ColumnHeaderHeight"
+                Value="24" />
+        <Setter Property="RowHeight"
+                Value="21" />
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility"
+                Value="Auto" />
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility"
+                Value="Auto" />
+        <Setter Property="VirtualizingStackPanel.VirtualizationMode"
+                Value="Recycling" />
+        <Setter Property="VirtualizingStackPanel.IsVirtualizing"
+                Value="True" />
+    </Style> -->
+    <!--<Style TargetType="{x:Type exDataGrid:ExtendedDataGrid}">
+       
+        <Setter Property="FontFamily"
+                Value="Arial,NSimSun" />
+        <Setter Property="FontSize"
+                Value="12" />
+        <Setter Property="HorizontalAlignment"
+                Value="Stretch" />
+        <Setter Property="VerticalAlignment"
+                Value="Stretch" />
+        <Setter Property="ColumnHeaderHeight"
+                Value="24" />
+        <Setter Property="RowHeight"
+                Value="21" />
+        <Setter Property="AutoGenerateColumns"
+                Value="False" />
+        <Setter Property="CanUserAddRows"
+                Value="False" />
+        <Setter Property="CanUserDeleteRows"
+                Value="False" />
+        <Setter Property="IsReadOnly"
+                Value="True" />
+        <Setter Property="HeadersVisibility"
+                Value="Column" />
+        <Setter Property="BorderBrush"
+                Value="{DynamicResource ControlBorderColor}" />
+        <Setter Property="BorderThickness"
+                Value="0" />
+        <Setter Property="Foreground"
+                Value="{DynamicResource FontColor}" />
+        <Setter Property="AlternatingRowBackground"
+                Value="Yellow" />
+        <Setter Property="AlternationCount"
+                Value="0" />
+        <Setter Property="HorizontalGridLinesBrush"
+                Value="{DynamicResource GridLineBrush}" />
+        <Setter Property="VerticalGridLinesBrush"
+                Value="{DynamicResource GridLineBrush}" />
+        <Setter Property="RowDetailsVisibilityMode"
+                Value="VisibleWhenSelected" />
+        <Setter Property="ScrollViewer.CanContentScroll"
+                Value="true" />
+        <Setter Property="ScrollViewer.PanningMode"
+                Value="Both" />
+        <Setter Property="Stylus.IsFlicksEnabled"
+                Value="False" />
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility"
+                Value="Visible" />
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility"
+                Value="Auto" />
+        <Setter Property="VirtualizingStackPanel.VirtualizationMode"
+                Value="Recycling" />
+        <Setter Property="VirtualizingStackPanel.IsVirtualizing"
+                Value="True" />
+    </Style>-->
+    <!--Style and template for the button in the upper left corner of the DataGrid.-->
+    <Style TargetType="{x:Type Button}"
+           x:Key="{ComponentResourceKey ResourceId=DataGridSelectAllButtonStyle, TypeInTargetAssembly={x:Type DataGrid}}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal">
+                                    <Storyboard>
+                                        <ColorAnimationUsingKeyFrames Storyboard.TargetName="Border"
+                                                                      Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+                                            <EasingColorKeyFrame KeyTime="0"
+                                                                 Value="{DynamicResource DG_HeaderTopColor}" />
+                                        </ColorAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="MouseOver">
+                                    <!--<Storyboard>
+                                            <ColorAnimationUsingKeyFrames Storyboard.TargetName="Border"
+                                                Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)">
+                                                <EasingColorKeyFrame KeyTime="0" Value="{DynamicResource DG_ControlMouseOverColor}" />
+                                            </ColorAnimationUsingKeyFrames>
+                                        </Storyboard>-->
+                                    <Storyboard>
+                                        <ColorAnimationUsingKeyFrames Storyboard.TargetName="Border"
+                                                                      Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+                                            <EasingColorKeyFrame KeyTime="0"
+                                                                 Value="{DynamicResource DG_HeaderTopColor}" />
+                                        </ColorAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Pressed">
+                                    <!--<Storyboard>
+                                            <ColorAnimationUsingKeyFrames Storyboard.TargetName="Border"
+                                                Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)">
+                                                <EasingColorKeyFrame KeyTime="0" Value="{DynamicResource DG_ControlPressedColor}" />
+                                            </ColorAnimationUsingKeyFrames>
+                                        </Storyboard>-->
+                                    <Storyboard>
+                                        <ColorAnimationUsingKeyFrames Storyboard.TargetName="Border"
+                                                                      Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+                                            <EasingColorKeyFrame KeyTime="0"
+                                                                 Value="{DynamicResource DG_HeaderTopColor}" />
+                                        </ColorAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Disabled">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)"
+                                                                       Storyboard.TargetName="Arrow">
+                                            <DiscreteObjectKeyFrame KeyTime="0"
+                                                                    Value="{x:Static Visibility.Collapsed}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Rectangle x:Name="Border"
+                                   SnapsToDevicePixels="True">
+                            <Rectangle.Stroke>
+                                <!--<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="{DynamicResource BorderLightColor}" Offset="0" />
+                                        <GradientStop Color="{DynamicResource BorderMediumColor}" Offset="1" />
+                                    </LinearGradientBrush>-->
+                                <SolidColorBrush Color="Transparent" />
+                            </Rectangle.Stroke>
+                            <Rectangle.Fill>
+                                <!--<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="{DynamicResource DG_ControlLightColor}" Offset="0" />
+                                        <GradientStop Color="{DynamicResource DG_ControlMediumColor}" Offset="1" />
+                                    </LinearGradientBrush>-->
+                                <SolidColorBrush Color="Transparent" />
+                            </Rectangle.Fill>
+                        </Rectangle>
+                        <Polygon x:Name="Arrow"
+                                 HorizontalAlignment="Right"
+                                 Margin="8,8,3,3"
+                                 Opacity="0.15"
+                                 Points="0,10 10,10 10,0"
+                                 Stretch="Uniform"
+                                 VerticalAlignment="Bottom">
+                            <Polygon.Fill>
+                                <SolidColorBrush Color="{DynamicResource DG_GlyphColor}" />
+                            </Polygon.Fill>
+                        </Polygon>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--Style and template for the DataGrid.-->
+    
+    
+    <Style TargetType="{x:Type DataGrid}">
+        <!--<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />-->
+        <!--<Setter Property="TextOptions.TextFormattingMode"
+                Value="Display" />
+        <Setter Property="TextOptions.TextRenderingMode"
+                Value="Aliased" />-->
+        <Setter Property="FontFamily"
+                Value="Arial,NSimSun" />
+        <Setter Property="FontSize"
+                Value="12" />
+        <Setter Property="HorizontalAlignment"
+                Value="Stretch" />
+        <Setter Property="VerticalAlignment"
+                Value="Stretch" />
+        <Setter Property="ColumnHeaderHeight"
+                Value="24" />
+        <Setter Property="RowHeight"
+                Value="21" />
+        <Setter Property="AutoGenerateColumns"
+                Value="False" />
+        <Setter Property="CanUserAddRows"
+                Value="False" />
+        <Setter Property="CanUserDeleteRows"
+                Value="False" />
+        <Setter Property="IsReadOnly"
+                Value="True" />
+        <Setter Property="HeadersVisibility"
+                Value="Column" />
+        <Setter Property="BorderBrush"
+                Value="{DynamicResource ControlBorderColor}" />
+        <Setter Property="BorderThickness"
+                Value="0" />
+        <Setter Property="Foreground"
+                Value="{DynamicResource FontColor}" />
+        <Setter Property="AlternatingRowBackground"
+                Value="{DynamicResource AlternatingRowBGBrush}" />
+        <Setter Property="AlternationCount"
+                Value="2" />
+        <Setter Property="HorizontalGridLinesBrush"
+                Value="{DynamicResource GridLineBrush}" />
+        <Setter Property="VerticalGridLinesBrush"
+                Value="{DynamicResource GridLineBrush}" />
+        <Setter Property="RowDetailsVisibilityMode"
+                Value="VisibleWhenSelected" />
+        <Setter Property="ScrollViewer.CanContentScroll"
+                Value="true" />
+        <Setter Property="ScrollViewer.PanningMode"
+                Value="Both" />
+        <Setter Property="Stylus.IsFlicksEnabled"
+                Value="False" />
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility"
+                Value="Auto" />
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility"
+                Value="Auto" />
+        <Setter Property="VirtualizingStackPanel.VirtualizationMode"
+                Value="Recycling" />
+        <Setter Property="VirtualizingStackPanel.IsVirtualizing"
+                Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type DataGrid}">
+                    <Border x:Name="border"
+                            SnapsToDevicePixels="True"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Padding="{TemplateBinding Padding}">
+                        <Border.Background>
+                            <!--<SolidColorBrush Color="{DynamicResource DG_ControlLightColor}" />-->
+                            <SolidColorBrush Color="Transparent" />
+                        </Border.Background>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Disabled">
+                                    <Storyboard>
+                                        <ColorAnimationUsingKeyFrames Storyboard.TargetName="border"
+                                                                      Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)">
+                                            <EasingColorKeyFrame KeyTime="0"
+                                                                 Value="{DynamicResource DG_DisabledDG_ControlLightColor}" />
+                                        </ColorAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Normal">
+                                    <Storyboard>
+                                        <ColorAnimationUsingKeyFrames Storyboard.TargetName="border"
+                                                                      Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)">
+                                            <EasingColorKeyFrame KeyTime="0"
+                                                                 Value="{DynamicResource DG_ControlColor}" />
+                                        </ColorAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <ScrollViewer x:Name="DG_ScrollViewer"
+                                      Focusable="false">
+                            <ScrollViewer.Template>
+                                <ControlTemplate TargetType="{x:Type ScrollViewer}">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+                                        <Button Focusable="false"
+                                                Command="{x:Static DataGrid.SelectAllCommand}"
+                                                Style="{DynamicResource {ComponentResourceKey ResourceId=DataGridSelectAllButtonStyle, 
+                                                TypeInTargetAssembly={x:Type DataGrid}}}"
+                                                Visibility="{Binding HeadersVisibility, ConverterParameter={x:Static DataGridHeadersVisibility.All}, 
+                                              Converter={x:Static DataGrid.HeadersVisibilityConverter}, 
+                                              RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"
+                                                Width="{Binding CellsPanelHorizontalOffset, 
+                                              RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}" />
+                                        <DataGridColumnHeadersPresenter x:Name="PART_ColumnHeadersPresenter"
+                                                                        Grid.Column="1"
+                                                                        Visibility="{Binding HeadersVisibility, 
+                                                    ConverterParameter={x:Static DataGridHeadersVisibility.Column}, 
+                                                    Converter={x:Static DataGrid.HeadersVisibilityConverter}, 
+                                                    RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}" />
+                                        <ScrollContentPresenter x:Name="PART_ScrollContentPresenter"
+                                                                Grid.ColumnSpan="2"
+                                                                Grid.Row="1"
+                                                                CanContentScroll="{TemplateBinding CanContentScroll}" />
+                                        <ScrollBar x:Name="PART_VerticalScrollBar"
+                                                   Background="Transparent"
+                                                   Grid.Column="2"
+                                                   Grid.Row="1"
+                                                   Orientation="Vertical"
+                                                   ViewportSize="{TemplateBinding ViewportHeight}"
+                                                   Maximum="{TemplateBinding ScrollableHeight}"
+                                                   Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}"
+                                                   Value="{Binding VerticalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}" />
+                                        <Grid Grid.Column="1"
+                                              Grid.Row="2">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="{Binding NonFrozenColumnsViewportHorizontalOffset, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+                                            <ScrollBar x:Name="PART_HorizontalScrollBar"
+                                                       Background="Transparent"
+                                                       Grid.Column="1"
+                                                       Orientation="Horizontal"
+                                                       ViewportSize="{TemplateBinding ViewportWidth}"
+                                                       Maximum="{TemplateBinding ScrollableWidth}"
+                                                       Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}"
+                                                       Value="{Binding HorizontalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}" />
+                                        </Grid>
+                                    </Grid>
+                                </ControlTemplate>
+                            </ScrollViewer.Template>
+                            <ItemsPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                        </ScrollViewer>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsGrouping"
+                     Value="true">
+                <Setter Property="ScrollViewer.CanContentScroll"
+                        Value="false" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style  x:Key="quoteListDataGridRow"   TargetType="{x:Type DataGrid}">
+        <!--<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />-->
+        <!--<Setter Property="TextOptions.TextFormattingMode"
+                Value="Display" />
+        <Setter Property="TextOptions.TextRenderingMode"
+                Value="Aliased" />-->
+        <Setter Property="Visibility"
+                Value="{Binding LocalVisibility}" />
+        <Setter Property="FontFamily"
+                Value="Arial,NSimSun" />
+        <Setter Property="FontSize"
+                Value="12" />
+        <Setter Property="HorizontalAlignment"
+                Value="Stretch" />
+        <Setter Property="VerticalAlignment"
+                Value="Stretch" />
+        <Setter Property="ColumnHeaderHeight"
+                Value="24" />
+        <Setter Property="RowHeight"
+                Value="21" />
+        <Setter Property="AutoGenerateColumns"
+                Value="False" />
+        <Setter Property="CanUserAddRows"
+                Value="False" />
+        <Setter Property="CanUserDeleteRows"
+                Value="False" />
+        <Setter Property="IsReadOnly"
+                Value="True" />
+        <Setter Property="HeadersVisibility"
+                Value="Column" />
+        <Setter Property="BorderBrush"
+                Value="{DynamicResource ControlBorderColor}" />
+        <Setter Property="BorderThickness"
+                Value="0" />
+        <Setter Property="Foreground"
+                Value="{DynamicResource FontColor}" />
+        <Setter Property="AlternatingRowBackground"
+                Value="{DynamicResource AlternatingRowBGBrush}" />
+        <Setter Property="AlternationCount"
+                Value="2" />
+        <Setter Property="HorizontalGridLinesBrush"
+                Value="{DynamicResource GridLineBrush}" />
+        <Setter Property="VerticalGridLinesBrush"
+                Value="{DynamicResource GridLineBrush}" />
+        <Setter Property="RowDetailsVisibilityMode"
+                Value="VisibleWhenSelected" />
+        <Setter Property="ScrollViewer.CanContentScroll"
+                Value="true" />
+        <Setter Property="ScrollViewer.PanningMode"
+                Value="Both" />
+        <Setter Property="Stylus.IsFlicksEnabled"
+                Value="False" />
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility"
+                Value="Auto" />
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility"
+                Value="Auto" />
+        <Setter Property="VirtualizingStackPanel.VirtualizationMode"
+                Value="Recycling" />
+        <Setter Property="VirtualizingStackPanel.IsVirtualizing"
+                Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type DataGrid}">
+                    <Border x:Name="border"
+                            SnapsToDevicePixels="True"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Padding="{TemplateBinding Padding}">
+                        <Border.Background>
+                            <!--<SolidColorBrush Color="{DynamicResource DG_ControlLightColor}" />-->
+                            <SolidColorBrush Color="Transparent" />
+                        </Border.Background>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Disabled">
+                                    <Storyboard>
+                                        <ColorAnimationUsingKeyFrames Storyboard.TargetName="border"
+                                                                      Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)">
+                                            <EasingColorKeyFrame KeyTime="0"
+                                                                 Value="{DynamicResource DG_DisabledDG_ControlLightColor}" />
+                                        </ColorAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Normal">
+                                    <Storyboard>
+                                        <ColorAnimationUsingKeyFrames Storyboard.TargetName="border"
+                                                                      Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)">
+                                            <EasingColorKeyFrame KeyTime="0"
+                                                                 Value="{DynamicResource DG_ControlColor}" />
+                                        </ColorAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <ScrollViewer x:Name="DG_ScrollViewer"
+                                      Focusable="false">
+                            <ScrollViewer.Template>
+                                <ControlTemplate TargetType="{x:Type ScrollViewer}">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+                                        <Button Focusable="false"
+                                                Command="{x:Static DataGrid.SelectAllCommand}"
+                                                Style="{DynamicResource {ComponentResourceKey ResourceId=DataGridSelectAllButtonStyle, 
+                                                TypeInTargetAssembly={x:Type DataGrid}}}"
+                                                Visibility="{Binding HeadersVisibility, ConverterParameter={x:Static DataGridHeadersVisibility.All}, 
+                                              Converter={x:Static DataGrid.HeadersVisibilityConverter}, 
+                                              RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"
+                                                Width="{Binding CellsPanelHorizontalOffset, 
+                                              RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}" />
+                                        <DataGridColumnHeadersPresenter x:Name="PART_ColumnHeadersPresenter"
+                                                                        Grid.Column="1"
+                                                                        Visibility="{Binding HeadersVisibility, 
+                                                    ConverterParameter={x:Static DataGridHeadersVisibility.Column}, 
+                                                    Converter={x:Static DataGrid.HeadersVisibilityConverter}, 
+                                                    RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}" />
+                                        <ScrollContentPresenter x:Name="PART_ScrollContentPresenter"
+                                                                Grid.ColumnSpan="2"
+                                                                Grid.Row="1"
+                                                                CanContentScroll="{TemplateBinding CanContentScroll}" />
+                                        <ScrollBar x:Name="PART_VerticalScrollBar"
+                                                   Background="Transparent"
+                                                   Grid.Column="2"
+                                                   Grid.Row="1"
+                                                   Orientation="Vertical"
+                                                   ViewportSize="{TemplateBinding ViewportHeight}"
+                                                   Maximum="{TemplateBinding ScrollableHeight}"
+                                                   Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}"
+                                                   Value="{Binding VerticalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}" />
+                                        <Grid Grid.Column="1"
+                                              Grid.Row="2">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="{Binding NonFrozenColumnsViewportHorizontalOffset, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+                                            <ScrollBar x:Name="PART_HorizontalScrollBar"
+                                                       Background="Transparent"
+                                                       Grid.Column="1"
+                                                       Orientation="Horizontal"
+                                                       ViewportSize="{TemplateBinding ViewportWidth}"
+                                                       Maximum="{TemplateBinding ScrollableWidth}"
+                                                       Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}"
+                                                       Value="{Binding HorizontalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}" />
+                                        </Grid>
+                                    </Grid>
+                                </ControlTemplate>
+                            </ScrollViewer.Template>
+                            <ItemsPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                        </ScrollViewer>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsGrouping"
+                     Value="true">
+                <Setter Property="ScrollViewer.CanContentScroll"
+                        Value="false" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+
+
+
+
+    <!--Style and template for the DataGridCell.-->
+    <Style TargetType="{x:Type DataGridCell}">
+        <Setter Property="Foreground"
+                Value="{DynamicResource FontColor}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type DataGridCell}">
+                    <Border x:Name="border"
+                            BorderBrush="Transparent"
+                            BorderThickness="0"
+                            Background="Transparent"
+                            SnapsToDevicePixels="True">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="FocusStates">
+                                <VisualState x:Name="Unfocused" />
+                                <VisualState x:Name="Focused" />
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="CurrentStates">
+                                <VisualState x:Name="Regular" />
+                                <VisualState x:Name="Current">
+                                    <!--<Storyboard>
+                                            <ColorAnimationUsingKeyFrames 
+                                                Storyboard.TargetName="border" 
+                                                Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)">
+                                                <EasingColorKeyFrame KeyTime="0" Value="{StaticResource DatagridCurrentCellBorderColor}" />
+                                            </ColorAnimationUsingKeyFrames>
+                                        </Storyboard>-->
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <ContentPresenter VerticalAlignment="Center"
+                                          SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+   
+        <Style.Triggers>
+            <Trigger Property="IsSelected" Value="True">
+                <Setter Property="Background" Value="{DynamicResource QuoteListMouseOverRowBrush}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <!--Style and template for the DataGridRow.-->
+    <Style TargetType="{x:Type DataGridRow}">
+        <Setter Property="Background">
+            <Setter.Value>
+                <SolidColorBrush Color="Transparent" />
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Foreground"
+                Value="Black" />
+        <Setter Property="SnapsToDevicePixels"
+                Value="true" />
+        <Setter Property="OverridesDefaultStyle"
+                Value="True" />
+        <Setter Property="Validation.ErrorTemplate"
+                Value="{x:Null}" />
+        <Setter Property="ValidationErrorTemplate">
+            <Setter.Value>
+                <ControlTemplate>
+                    <TextBlock Foreground="Red"
+                               Margin="2,0,0,0"
+                               Text="!"
+                               VerticalAlignment="Center" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type DataGridRow}">
+                    <Border x:Name="DGR_Border"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            SnapsToDevicePixels="True">
+                        <Border.Background>
+                            <SolidColorBrush Color="{DynamicResource NormalRow}" />
+                        </Border.Background>
+                        <Grid>
+                            <Border Name="TopBorder"
+                                    Background="Transparent">
+                                <Border Name="innerTopBorder"
+                                        BorderThickness="0"
+                                        Margin="1,0,1,1"></Border>
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup x:Name="CommonStates">
+                                        <!--Provide a different appearance for every other row.-->
+                                        <VisualState x:Name="Normal_AlternatingRow">
+                                            <Storyboard>
+                                                <ColorAnimationUsingKeyFrames Storyboard.TargetName="TopBorder"
+                                                                              Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)">
+                                                    <EasingColorKeyFrame KeyTime="0"
+                                                                         Value="{DynamicResource SelectedRowColor}" />
+                                                </ColorAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState x:Name="Normal">
+                                        </VisualState>
+                                        <VisualState x:Name="Normal_Selected">
+                                            <Storyboard>
+                                                <ColorAnimationUsingKeyFrames Storyboard.TargetName="TopBorder"
+                                                                              Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)">
+                                                    <EasingColorKeyFrame KeyTime="0"
+                                                                         Value="{DynamicResource SelectedRowColor}" />
+                                                </ColorAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState x:Name="Unfocused_Selected">
+                                            <Storyboard>
+                                                <ColorAnimationUsingKeyFrames Storyboard.TargetName="TopBorder"
+                                                                              Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)">
+                                                    <EasingColorKeyFrame KeyTime="0"
+                                                                         Value="{DynamicResource SelectedRowColor}" />
+                                                </ColorAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState x:Name="Normal_Editing"></VisualState>
+                                        <VisualState x:Name="MouseOver_Editing"></VisualState>
+                                        <VisualState x:Name="MouseOver_Unfocused_Editing">
+                                            <Storyboard>
+                                                <ColorAnimationUsingKeyFrames Storyboard.TargetName="TopBorder"
+                                                                              Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)">
+                                                    <EasingColorKeyFrame KeyTime="0"
+                                                                         Value="{DynamicResource SelectedRowColor}" />
+                                                </ColorAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState x:Name="Unfocused_Editing"></VisualState>
+                                        <VisualState x:Name="MouseOver">
+                                            <Storyboard>
+                                                <ColorAnimationUsingKeyFrames Storyboard.TargetName="TopBorder"
+                                                                              Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)">
+                                                    <EasingColorKeyFrame KeyTime="0"
+                                                                         Value="{DynamicResource SelectedRowColor}" />
+                                                </ColorAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState x:Name="MouseOver_Selected">
+                                            <Storyboard>
+                                                <ColorAnimationUsingKeyFrames Storyboard.TargetName="TopBorder"
+                                                                              Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)">
+                                                    <EasingColorKeyFrame KeyTime="0"
+                                                                         Value="{DynamicResource SelectedRowColor}" />
+                                                </ColorAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState x:Name="MouseOver_Unfocused_Selected">
+                                            <Storyboard>
+                                                <ColorAnimationUsingKeyFrames Storyboard.TargetName="TopBorder"
+                                                                              Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)">
+                                                    <EasingColorKeyFrame KeyTime="0"
+                                                                         Value="{DynamicResource SelectedRowColor}" />
+                                                </ColorAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
+                            </Border>
+                            <!--这是商品高亮要设置的Border的背景颜色-->
+                            <Border Name="hightBorder"
+                                    ClipToBounds="True"
+                                    BorderThickness="0"
+                                    Background="Transparent">
+                                <Border Name="innerShadow"
+                                        BorderThickness="0"
+                                        Margin="1,0,1,1"></Border>
+                            </Border>
+                            <SelectiveScrollingGrid>
+                                <SelectiveScrollingGrid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </SelectiveScrollingGrid.ColumnDefinitions>
+                                <SelectiveScrollingGrid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="Auto" />
+                                </SelectiveScrollingGrid.RowDefinitions>
+                                <DataGridCellsPresenter Grid.Column="1"
+                                                        ItemsPanel="{TemplateBinding ItemsPanel}"
+                                                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                                <DataGridDetailsPresenter Grid.Column="1"
+                                                          Grid.Row="1"
+                                                          Visibility="{TemplateBinding DetailsVisibility}"
+                                                          SelectiveScrollingGrid.SelectiveScrollingOrientation="{Binding AreRowDetailsFrozen, 
+                                        ConverterParameter={x:Static SelectiveScrollingOrientation.Vertical},
+                                        Converter={x:Static DataGrid.RowDetailsScrollingConverter}, 
+                                        RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}" />
+                                <DataGridRowHeader Grid.RowSpan="2"
+                                                   SelectiveScrollingGrid.SelectiveScrollingOrientation="Vertical"
+                                                   Visibility="{Binding HeadersVisibility, 
+                                        ConverterParameter={x:Static DataGridHeadersVisibility.Row}, 
+                                        Converter={x:Static DataGrid.HeadersVisibilityConverter}, 
+                                        RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}" />
+                            </SelectiveScrollingGrid>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+                            <Setter Property="Background"
+                                    TargetName="hightBorder"
+                                    Value="{DynamicResource QuoteListMouseOverRowBrush}" />
+                        </Trigger>
+                        <!--<Trigger Property="IsSelected"
+                                 Value="True">
+                            <Setter Property="Background"
+                                    TargetName="TopBorder"
+                                    Value="{DynamicResource QuoteListSelectedRowBrush}" />
+                            <Setter TargetName="innerTopBorder"
+                                    Property="BorderThickness"
+                                    Value="0,1,0,1" />
+                            <Setter Property="BorderBrush"
+                                    TargetName="innerTopBorder"
+                                    Value="#709cfd" />
+                        </Trigger>-->
+                        <Trigger Property="ItemsControl.AlternationIndex"
+                                 Value="1">
+                            <Setter Property="Background"
+                                    Value="{DynamicResource SpecialAlternatingRowBrush}"
+                                    TargetName="DGR_Border"></Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        
+        </Setter>   
+        <Style.Triggers>
+                <Trigger Property="Selector.IsSelected" Value="True">
+                <Setter Property="Background" Value="{DynamicResource QuoteListMouseOverRowBrush}"/>
+                <Setter Property="Foreground" Value="{DynamicResource QuoteListMouseOverForegroundRowBrush}" />
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{DynamicResource QuoteListMouseOverRowBrush}"/>
+                <Setter Property="Foreground" Value="{DynamicResource QuoteListMouseOverForegroundRowBrush}"  />
+                </Trigger>
+            </Style.Triggers>
+    </Style>
+    <!--Style and template for the resize control on the DataGridRowHeader.-->
+    <Style x:Key="RowHeaderGripperStyle"
+           TargetType="{x:Type Thumb}">
+        <Setter Property="Height"
+                Value="8" />
+        <Setter Property="Background"
+                Value="Transparent" />
+        <Setter Property="Cursor"
+                Value="Arrow" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Thumb}">
+                    <Border Background="{TemplateBinding Background}"
+                            Padding="{TemplateBinding Padding}" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--Style and template for the DataGridRowHeader.-->
+    <Style TargetType="{x:Type DataGridRowHeader}">
+        <Setter Property="OverridesDefaultStyle"
+                Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type DataGridRowHeader}">
+                    <Grid>
+                        <VisualStateManager.VisualStateGroups>
+                            <!--This example does not specify an appearance for every
+                                state.  You can add storyboard to the states that are listed
+                                to change the appearance of the DataGridRowHeader when it is
+                                in a specific state.-->
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal">
+                                    <Storyboard>
+                                        <ColorAnimationUsingKeyFrames Storyboard.TargetName="rowHeaderBorder"
+                                                                      Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)">
+                                            <EasingColorKeyFrame KeyTime="0"
+                                                                 Value="{DynamicResource NormalRow}" />
+                                        </ColorAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Normal_CurrentRow">
+                                    <Storyboard>
+                                        <ColorAnimationUsingKeyFrames Storyboard.TargetName="rowHeaderBorder"
+                                                                      Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)">
+                                            <EasingColorKeyFrame KeyTime="0"
+                                                                 Value="{DynamicResource SelectedRow}" />
+                                        </ColorAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Unfocused_EditingRow" />
+                                <VisualState x:Name="Normal_EditingRow" />
+                                <VisualState x:Name="MouseOver">
+                                    <Storyboard>
+                                        <!--<ColorAnimationUsingKeyFrames Storyboard.TargetName="rowHeaderBorder"
+                                                Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops)[1].(GradientStop.Color)">
+                                                <EasingColorKeyFrame KeyTime="0"
+                                                Value="{DynamicResource DG_ControlMouseOverColor}" />
+                                            </ColorAnimationUsingKeyFrames>-->
+                                        <ColorAnimationUsingKeyFrames Storyboard.TargetName="rowHeaderBorder"
+                                                                      Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)">
+                                            <EasingColorKeyFrame KeyTime="0"
+                                                                 Value="{DynamicResource SelectedRow}" />
+                                        </ColorAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="MouseOver_CurrentRow">
+                                    <Storyboard>
+                                        <ColorAnimationUsingKeyFrames Storyboard.TargetName="rowHeaderBorder"
+                                                                      Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)">
+                                            <EasingColorKeyFrame KeyTime="0"
+                                                                 Value="{DynamicResource SelectedRow}" />
+                                        </ColorAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="MouseOver_Unfocused_EditingRow" />
+                                <VisualState x:Name="MouseOver_EditingRow" />
+                                <VisualState x:Name="MouseOver_Unfocused_Selected">
+                                    <Storyboard>
+                                        <ColorAnimationUsingKeyFrames Storyboard.TargetName="rowHeaderBorder"
+                                                                      Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)">
+                                            <EasingColorKeyFrame KeyTime="0"
+                                                                 Value="{DynamicResource SelectedRow}" />
+                                        </ColorAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="MouseOver_Selected">
+                                    <Storyboard>
+                                        <ColorAnimationUsingKeyFrames Storyboard.TargetName="rowHeaderBorder"
+                                                                      Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)">
+                                            <EasingColorKeyFrame KeyTime="0"
+                                                                 Value="{DynamicResource SelectedRow}" />
+                                        </ColorAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="MouseOver_Unfocused_CurrentRow_Selected">
+                                    <Storyboard>
+                                        <ColorAnimationUsingKeyFrames Storyboard.TargetName="rowHeaderBorder"
+                                                                      Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)">
+                                            <EasingColorKeyFrame KeyTime="0"
+                                                                 Value="{DynamicResource SelectedRow}" />
+                                        </ColorAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="MouseOver_CurrentRow_Selected">
+                                    <Storyboard>
+                                        <ColorAnimationUsingKeyFrames Storyboard.TargetName="rowHeaderBorder"
+                                                                      Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)">
+                                            <EasingColorKeyFrame KeyTime="0"
+                                                                 Value="{DynamicResource SelectedRow}" />
+                                        </ColorAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Unfocused_Selected">
+                                    <Storyboard>
+                                        <ColorAnimationUsingKeyFrames Storyboard.TargetName="rowHeaderBorder"
+                                                                      Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)">
+                                            <EasingColorKeyFrame KeyTime="0"
+                                                                 Value="{DynamicResource SelectedRow}" />
+                                        </ColorAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Unfocused_CurrentRow_Selected">
+                                    <Storyboard>
+                                        <ColorAnimationUsingKeyFrames Storyboard.TargetName="rowHeaderBorder"
+                                                                      Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)">
+                                            <EasingColorKeyFrame KeyTime="0"
+                                                                 Value="{DynamicResource SelectedRow}" />
+                                        </ColorAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Normal_CurrentRow_Selected">
+                                    <Storyboard>
+                                        <ColorAnimationUsingKeyFrames Storyboard.TargetName="rowHeaderBorder"
+                                                                      Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)">
+                                            <EasingColorKeyFrame KeyTime="0"
+                                                                 Value="{DynamicResource SelectedRow}" />
+                                        </ColorAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Normal_Selected">
+                                    <Storyboard>
+                                        <ColorAnimationUsingKeyFrames Storyboard.TargetName="rowHeaderBorder"
+                                                                      Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)">
+                                            <EasingColorKeyFrame KeyTime="0"
+                                                                 Value="{DynamicResource SelectedRow}" />
+                                        </ColorAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Border x:Name="rowHeaderBorder"
+                                Width="10"
+                                BorderBrush="{DynamicResource ControlBorderColor}"
+                                Background="{DynamicResource ControlBorderColor}"
+                                BorderThickness="1">
+                            <StackPanel Orientation="Horizontal">
+                                <ContentPresenter VerticalAlignment="Center"
+                                                  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                                <!--<Control SnapsToDevicePixels="false"
+                                         Template="{Binding ValidationErrorTemplate, 
+                                        RelativeSource={RelativeSource AncestorType={x:Type DataGridRow}}}"
+                                         Visibility="{Binding (Validation.HasError), 
+                                        Converter={StaticResource bool2VisibilityConverter}, 
+                                        RelativeSource={RelativeSource AncestorType={x:Type DataGridRow}}}" />-->
+                            </StackPanel>
+                        </Border>
+                        <Thumb x:Name="PART_TopHeaderGripper"
+                               Style="{StaticResource RowHeaderGripperStyle}"
+                               VerticalAlignment="Top" />
+                        <Thumb x:Name="PART_BottomHeaderGripper"
+                               Style="{StaticResource RowHeaderGripperStyle}"
+                               VerticalAlignment="Bottom" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--Style and template for the resize control on the DataGridColumnHeader.-->
+    <Style x:Key="ColumnHeaderGripperStyle"
+           TargetType="{x:Type Thumb}">
+        <Setter Property="Width"
+                Value="8" />
+        <Setter Property="Background"
+                Value="Transparent" />
+        <Setter Property="Cursor"
+                Value="SizeWE" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Thumb}">
+                    <Border Background="{TemplateBinding Background}"
+                            Padding="{TemplateBinding Padding}" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--Style and template for the DataGridColumnHeader.-->
+    <Style TargetType="{x:Type DataGridColumnHeader}">
+        <Setter Property="VerticalContentAlignment"
+                Value="Center" />
+        <Setter Property="HorizontalAlignment"
+                Value="Stretch" />
+        <Setter Property="HorizontalContentAlignment"
+                Value="Center" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type DataGridColumnHeader}">
+                    <Grid>
+                        <Border x:Name="columnHeaderBorder"
+                                BorderThickness="0,0,1,1"
+                                Padding="10,0,10,0">
+                            <Border.BorderBrush>#d1d1cf</Border.BorderBrush>
+                            <Border.Background>
+                                <LinearGradientBrush EndPoint="0.5,1"
+                                                     StartPoint="0.5,0">
+                                    <GradientStop Color="White"
+                                                  Offset="0.58" />
+                                    <GradientStop Color="#FFEDEDED"
+                                                  Offset="0.621" />
+                                    <GradientStop Color="#FFEDEDED"
+                                                  Offset="0.991" />
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                        </Border>
+                        <Image Name="upOrDownArrow"
+                               Visibility="Collapsed"
+                               Width="7"
+                               Height="8"
+                               RenderOptions.BitmapScalingMode="NearestNeighbor"
+                               HorizontalAlignment="Right"
+                               Margin="0,0,2,0" />
+                        <Thumb x:Name="PART_LeftHeaderGripper"
+                               HorizontalAlignment="Left"
+                               Style="{StaticResource ColumnHeaderGripperStyle}" />
+                        <Thumb x:Name="PART_RightHeaderGripper"
+                               HorizontalAlignment="Right"
+                               Style="{StaticResource ColumnHeaderGripperStyle}" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="SortDirection"
+                                 Value="Ascending">
+                            <Setter Property="Background"
+                                    TargetName="columnHeaderBorder"
+                                    Value="{DynamicResource sortHeader}" />
+                            <Setter TargetName="upOrDownArrow"
+                                    Property="Visibility"
+                                    Value="Visible" />
+                            <Setter TargetName="upOrDownArrow"
+                                    Property="Source"
+                                    Value="/DM2.Ent.Client.Views;component/Resources/Images/White/UpArrow.png" />
+                        </Trigger>
+                        <Trigger Property="SortDirection"
+                                 Value="Descending">
+                            <Setter Property="Background"
+                                    TargetName="columnHeaderBorder"
+                                    Value="{DynamicResource sortHeader}" />
+                            <Setter TargetName="upOrDownArrow"
+                                    Property="Visibility"
+                                    Value="Visible" />
+                            <Setter TargetName="upOrDownArrow"
+                                    Property="Source"
+                                    Value="/DM2.Ent.Client.Views;component/Resources/Images/White/DownArrow.png" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--Style and template for the DataGridColumnHeadersPresenter.-->
+    <Style TargetType="{x:Type DataGridColumnHeadersPresenter}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type DataGridColumnHeadersPresenter}">
+                    <Grid>
+                        <DataGridColumnHeader x:Name="PART_FillerColumnHeader"
+                                              IsHitTestVisible="False" />
+                        <ItemsPresenter />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

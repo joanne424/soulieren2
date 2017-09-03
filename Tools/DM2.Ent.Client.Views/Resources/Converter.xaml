@@ -1,0 +1,45 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--   
+                    xmlns:converters="clr-namespace:DM2.Ent.Client.Views.Converters"
+                    xmlns:converter="clr-namespace:Infrastructure.ViewExtend.Converter;assembly=Infrastructure.ViewExtend"
+    -->
+    <!--<converter:DeficitAmountForegroundDisabledConverter x:Key="DeficitAmountForegroundDisabledConverter" />
+    <converter:DeficitAmountForegroundConverter x:Key="DeficitAmountForegroundConverter" />
+    <converter:DeficitAmountDisplayConverter x:Key="DeficitAmountDisplayConverter" />
+    <converter:CheckedToSymbolsConverter x:Key="CheckedToSymbolsConverter" />
+    <converter:ConnectionTypeDisplayConverter x:Key="ConnectionTypeDisplayConverter" />
+    <converter:TimeZoneDisplayConverter x:Key="TimeZoneDisplayConverter" />
+    <converter:StatusDisplayConverter x:Key="StatusDisplayConverter" />
+    <converter:SignTypeDisplayConverter x:Key="SignTypeDisplayConverter" />
+    <converters:FormatAmountByCurrencyConverter x:Key="FormatAmountByCurrencyConverter" />
+    <converters:FormatPriceByContractConverter x:Key="FormatPriceByContractConverter" />
+    <converters:BUIDToNameConverter x:Key="BUIDToNameConverter" />
+    <converters:CounterpartyGroupIdToNameConverter x:Key="CounterpartyGroupIdToNameConverter" />
+    <converters:CounterpartyIdToNameConverter x:Key="CounterpartyIdToNameConverter" />
+    <converters:ContractIdToNameConverter x:Key="ContractIdToNameConverter" />
+    <converters:PriceBankNameConverter x:Key="PriceBankNameConverter" />
+    <converters:PriceBrickNameConverter x:Key="PriceBrickNameConverter" />
+    <converters:PriceFormatBidConverter x:Key="PriceFormatBidConverter" />
+    <converters:PriceFormatAskConverter x:Key="PriceFormatAskConverter" />
+    <converters:PriceBuyHeaderNameConverter x:Key="PriceBuyHeaderNameConverter" />
+    <converters:PriceSellHeaderNameConverter x:Key="PriceSellHeaderNameConverter" />
+    <converters:FormatDateTimeByBuConverter x:Key="FormatDateTimeByBuConverter" />
+    <converters:FormatDateByBuConverter x:Key="FormatDateByBuConverter" />
+    <converters:CurrencyIdToNameConverter x:Key="CurrencyIdToNameConverter" />
+    <converters:CCY1CCY2ToSymbolDecimalPlace x:Key="CCY1CCY2ToSymbolDecimalPlace" />
+    <converters:CountryIdToNameConverter x:Key="CountryIdToNameConverter" />
+    <converters:CurrencyIdToAmountDecimals x:Key="CurrencyIdToAmountDecimals" />
+    <converters:InstrumnetIdToNameConverter x:Key="InstrumnetIdToNameConverter" />
+    <converters:DateTimeEmptyConverter x:Key="DateTimeEmptyConverter" />
+    <converters:BankAcctFormatStrConverter x:Key="BankAcctFormatStrConverter" />
+    <converters:BankAccountIdToNameConverter x:Key="BankAccountIdToNameConverter" />
+    <converters:UserIdToNameConverter x:Key="UserIdToNameConverter" />
+    <converters:FinancialMarketRateSellConverter x:Key="FinancialMarketRateSellConverter" />
+    <converters:FinancialMarketRateBuyConverter x:Key="FinancialMarketRateBuyConverter" />
+    <converters:StatusIdToNameConverter x:Key="StatusIdToNameConverter" />
+    <converters:InstitutionIdToNameConverter x:Key="InstitutionIdToNameConverter" />-->
+
+    <BooleanToVisibilityConverter x:Key="bool2VisibilityConverter" />
+</ResourceDictionary> 

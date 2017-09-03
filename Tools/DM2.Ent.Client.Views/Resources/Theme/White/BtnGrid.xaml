@@ -1,0 +1,121 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style x:Key="btnGrid" TargetType="Button"> 
+            <Setter Property="Height" Value="22"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="Foreground" Value="#333333"/>
+            <Setter Property="Template">
+
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Border x:Name="border1" BorderThickness="0"  Width="{TemplateBinding Width}" SnapsToDevicePixels="true" CornerRadius="3" >
+                                <Border x:Name="border"   BorderThickness="1" Width="{TemplateBinding Width}" SnapsToDevicePixels="true" CornerRadius="2" BorderBrush="#FFA1A1A1">
+                                    <Border.Background>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FFF2F2F2" Offset="0.51"/>
+                                            <GradientStop Color="White" Offset="0.49"/>
+                                            <GradientStop Color="#FFE4E4E4" Offset="0.934"/>
+                                        </LinearGradientBrush>
+                                    </Border.Background>
+
+                                    <ContentPresenter x:Name="contentPresenter"   Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                                </Border>
+                            </Border>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Foreground" Value="#262d36"/>
+                                <Setter Property="Background" TargetName="border">
+                                    <Setter.Value>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FFB8E2FB" Offset="0.977"/>
+                                            <GradientStop Color="#FFB8E2FB" Offset="0.556"/>
+                                            <GradientStop Color="#FFE6F5FD" Offset="0.503"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#FF8199A7"/>
+                            </Trigger>
+
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border">
+                                    <Setter.Value>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FFD0EAF7" Offset="0.007"/>
+                                            <GradientStop Color="#FF70B2D6" Offset="1"/>
+                                            <GradientStop Color="#FFB8E2FB" Offset="0.513"/>
+                                            <GradientStop Color="#FF88C8E9" Offset="0.533"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter Property="Foreground" Value="#061C4B"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#5a7282"/>
+
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="#919191"/>
+                                <Setter Property="BorderBrush" TargetName="border"  Value="#FFB8BBBC"/>
+                                <Setter Property="Background" TargetName="border" Value="#FFF4F4F4"/>
+                                <Setter Property="BorderBrush" TargetName="border1" Value="#ffffff"/>
+                                <Setter Property="Height"  Value="23"/>
+                                <Setter Property="Opacity" TargetName="border1" Value="0.9"/>
+                                <Setter Property="BorderThickness" TargetName="border1" Value="0,0,0,1"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ImageStyle1" TargetType="{x:Type Image}">
+            <Setter Property="FlowDirection" Value="LeftToRight"/>
+        </Style>
+
+        <!--<Setter Property="SnapsToDevicePixels"
+                Value="true" />
+        <Setter Property="OverridesDefaultStyle"
+                Value="true" />
+        <Setter Property="FocusVisualStyle"
+                Value="{StaticResource ButtonFocusVisual}" />
+        <Setter Property="Height"
+                Value="22" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Image Name="img"
+                   Source="/Resources/Images/White/Button/82_24_Normal.png"
+                   Stretch="Fill"
+                   RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+                        <ContentPresenter Content="{TemplateBinding ContentControl.Content}"
+                              HorizontalAlignment="Center"
+                              VerticalAlignment="Center" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver"
+                     Value="True">
+                            <Setter TargetName="img"
+                        Property="Source"
+                        Value="/Resources/Images/White/Button/82_24_Hover.png" />
+                        </Trigger>
+                        <Trigger Property="IsPressed"
+                     Value="True">
+                            <Setter TargetName="img"
+                        Property="Source"
+                        Value="/Resources/Images/White/Button/82_24_Click.png" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled"
+                     Value="False">
+                            <Setter TargetName="img"
+                        Property="Source"
+                        Value="/Resources/Images/White/Button/82_24_Disable.png" />
+                            <Setter Property="Foreground"
+                    Value="#B2B2B2" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>-->
+</ResourceDictionary>

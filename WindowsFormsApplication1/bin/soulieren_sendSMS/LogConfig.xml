@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <log4net>
+
+    <appender name="asyncsocket"
+              type="Infrastructure.Log.SocketAppender">
+      <address value="127.0.0.1"
+               comment="要输出的日志服务器地址" />
+      <port value="4000"
+            comment="日志服务器端口" />
+      <reconnection value="3"
+                    comment="断线重连次数" />
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="[%d][%t] [%a] %C.%M() %nMessage: %m%n" />
+      </layout>
+    </appender>
+
+    <appender name="root-syncfile"
+              type="Infrastructure.Log.FileAppender">
+      <BasedName value="Log\Root\ROOT.LOG"
+                 comment="用于增长日志的基础路径" />
+      <DayUpperLimit value="365"
+                  comment="日志保留天数" />
+      <FileNumberUpperLimit value="20"
+                  comment="文件数量上限" />
+      <Truncation value="ByDaysSize"
+                  comment="日志截断模式，ByDays=按日期分割日志、BySize=按大小分割日志、ByDaysSize=根据日期，生成定量大小的" />
+      <NameFormat value="LongDate"
+                  comment="日志命名模式，Increment=在文件名后追加数字、LongDate=在文件名后追加日期、Random=在文件名后追加随机组合的数字和字母" />
+      <UpperLimit value="50"
+                  comment="单个文件的最大上限，单位为M"/>
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="[%d][%t] [%a] %C.%M() %nMessage: %m%n" />
+      </layout>
+    </appender>
+
+    <appender name="debug-syncfile"
+              type="Infrastructure.Log.FileAppender">
+      <BasedName value="Log\Debug\DEBUG.LOG"
+                 comment="用于增长日志的基础路径" />
+      <DayUpperLimit value="365" />
+      <FileNumberUpperLimit value="20"/>
+      <Truncation value="ByDaysSize" />
+      <NameFormat value="LongDate" />
+      <UpperLimit value="50"/>
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="[%d][%t] [%a] %C.%M() %nMessage: %m%n" />
+      </layout>
+    </appender>
+
+    <appender name="info-syncfile"
+              type="Infrastructure.Log.FileAppender">
+      <BasedName value="Log\Info\INFO.LOG" />
+      <DayUpperLimit value="365" />
+      <FileNumberUpperLimit value="10"/>
+      <Truncation value="ByDaysSize" />
+      <NameFormat value="LongDate" />
+      <UpperLimit value="50"/>
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="[%d][%t] [%a] %C.%M() %nMessage: %m%n" />
+      </layout>
+    </appender>
+
+    <appender name="warn-syncfile"
+              type="Infrastructure.Log.FileAppender">
+      <BasedName value="Log\Warn\WARN.LOG" />
+      <DayUpperLimit value="365" />
+      <FileNumberUpperLimit value="10"/>
+      <Truncation value="ByDaysSize" />
+      <NameFormat value="LongDate" />
+      <UpperLimit value="50"/>
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="[%d][%t] [%a] %C.%M() %nMessage: %m%n" />
+      </layout>
+    </appender>
+
+    <appender name="error-syncfile"
+              type="Infrastructure.Log.FileAppender">
+      <BasedName value="Log\Error\ERROR.LOG" />
+      <DayUpperLimit value="365" />
+      <FileNumberUpperLimit value="10"/>
+      <Truncation value="ByDaysSize" />
+      <NameFormat value="LongDate" />
+      <UpperLimit value="50"/>
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="[%d][%t] [%a] %C.%M() %nMessage: %m%n" />
+      </layout>
+    </appender>
+
+    <!--默认配置，用于兼容其他的第三方-->
+    <root>
+      <level value="Debug" />
+      <appender-ref ref="root-syncfile" />
+    </root>
+
+    <logger name="Debug"
+            additivity="false">
+      <level value="Debug" />
+      <appender-ref ref="debug-syncfile" />
+    </logger>
+
+    <logger name="Info"
+            additivity="false">
+      <level value="Info" />
+      <appender-ref ref="info-syncfile" />
+    </logger>
+
+    <logger name="Warn"
+            additivity="false">
+      <level value="Warn" />
+      <appender-ref ref="warn-syncfile" />
+    </logger>
+
+    <logger name="Error"
+            additivity="false">
+      <level value="Error" />
+      <appender-ref ref="error-syncfile" />
+      <!--将错误信息输出到日志服务器-->
+      <!--<appender-ref ref="asyncsocket" />-->
+
+    </logger>
+  </log4net>
+</configuration>
